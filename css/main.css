@@ -6,6 +6,8 @@ body * {
     box-sizing: border-box;
 }
 
+/* colors classes */
+
 .bg-white {
     background-color: var(--white-color);
 }
@@ -18,6 +20,8 @@ body * {
 .bg-grey {
     background-color: var(--grey-color);
 }
+
+/* basic structure and responsive design */
 
 .container {
     display: inline-block;
@@ -53,3 +57,35 @@ body * {
                 margin: 0;
             }
     }
+
+/* header */
+
+/* hero */
+
+/* headings */
+
+/* about me */
+
+/* services */
+
+/* Completed Projects */
+
+/* education and experience */
+
+/* Freelancer */
+
+/* Our work */
+
+/* Client */
+
+/* Trusted by great people*/
+
+/* Subscribe */
+
+/* Blog */
+
+/* Get in Tuch */
+
+/* footer */
+
+/* Move-up button */
