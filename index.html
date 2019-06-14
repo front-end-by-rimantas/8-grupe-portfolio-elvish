@@ -11,19 +11,63 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="css/menu-style.css">
+    
 </head>
 <body>
     <!-- header start -->
-    <header class="container">
-        <div class="row">
-            header
+    <header class="head-sec">
+       
+            
+            <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+   <div class="row">
+            <div class="col-sm-12">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         
+        <li class="active"><a href="#about">About Me</a></li>
+        <li><a href="#services">Our services</a></li>
+        <li><a href="#project">Completed projects</a></li>
+        <li><a href="#education">Education & Experience</a></li>
+        <li><a href="#work">Our Works</a></li>
+        <li><a href="#client">Our Client</a></li>
+        <li><a href="#subs">Subscribe</a></li>
+        <li><a href="#blog">Our Blog</a></li>
+        <li><a href="#getintouch">Get In Touch</a></li>
+         
+        
+      </ul>
+       
+       
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+   </div>
+            
+            
         </div>
+</nav>
+            
+           
     </header>
     <!-- header end -->
 
     <!-- hero start -->
-    <div class="container bg-black-1">
+    <div class="container bg-black-1" id="about">
         <div class="row">
             I Am A Designer
         </div>
@@ -32,14 +76,14 @@
 
     <!-- about me start -->
     <div class="container">
-        <div class="row">
+        <div class="row" >
             About Me
         </div>
     </div>
     <!-- about me end -->
 
     <!-- Our services start -->
-    <div class="container bg-grey">
+    <div class="container bg-grey" id="services">
         <div class="row">
             Our services
         </div>
@@ -47,7 +91,7 @@
     <!-- Our services end -->
 
     <!-- Completed projects start -->
-    <div class="container bg-black-2">
+    <div class="container bg-black-2" id="project">
         <div class="row">
             Completed projects
         </div>
@@ -55,7 +99,7 @@
     <!-- Completed projects end -->
 
     <!-- Education & Experience start -->
-    <div class="container">
+    <div class="container" id="education">
         <div class="row">
             Education & Experience
         </div>
@@ -71,7 +115,7 @@
     <!-- I Am Available For Freelancer end -->
     
     <!-- Our Works start -->
-    <div class="container">
+    <div class="container" id="work">
         <div class="row">
             Our Works
         </div>
@@ -79,7 +123,7 @@
     <!-- Our Works end -->
 
     <!-- Our Client start -->
-    <div class="container bg-black-2">
+    <div class="container bg-black-2" id="client">
         <div class="row">
             Our Client
         </div>
@@ -95,7 +139,7 @@
     <!-- Trusted by Great People end -->
 
      <!-- Subscribe start -->
-     <div class="container">
+     <div class="container" id="subs">
         <div class="row">
             Subscribe
         </div>
@@ -103,7 +147,7 @@
     <!-- Subscribe end -->
 
      <!-- Our Blog start -->
-     <div class="container bg-grey">
+     <div class="container bg-grey" id="blog">
         <div class="row">
             Our Blog
         </div>
@@ -111,7 +155,7 @@
     <!-- Our Blog end -->
 
     <!-- contact me start -->
-    <div class="container">
+    <div class="container" id="getintouch">
         <div class="row">
             Get In Touch
         </div>
@@ -125,9 +169,11 @@
         </div>
     </footer>
     <!-- footer end -->
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
     <script src="js/data.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/actions.js"></script>
+    
 </body>
 </html>
