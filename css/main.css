@@ -79,11 +79,11 @@ body * {
             .star{
                 display: inline-block;
                 color: var(--black-color-1);
-                font-size: 50px;
+                font-size: 40px;
                 font-family: monospace;
                 font-weight: bolder;
                 width: 30px;
-                height: 40px;
+                height: 30px;
             }
             .leftline{
                 display: inline-block;
