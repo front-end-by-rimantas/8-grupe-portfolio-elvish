@@ -18,6 +18,9 @@ body * {
 .bg-grey {
     background-color: var(--grey-color);
 }
+.font-weight-bold {
+    font-weight: bold;
+}
 
 .container {
     display: inline-block;
@@ -28,7 +31,62 @@ body * {
         display: inline-block;
         width: 1200px;
         margin: 0 calc((100% - 1200px) / 2);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
+        .container > .row > .about-me {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .container > .row > .hello {
+            /* display: inline-block; */
+            font-family: 'Montserrat', sans-serif;
+            width: 90%;
+            text-align: center;
+            font-size: 35px;
+            margin: 0px 45px 40px;
+        }
+            ul.inline-list {    
+                display: inline-block;  
+                list-style: none;
+                font-size: 20px;
+                margin: 20px;
+                color: var(--text-color);
+            }
+            li {
+                display: inline-block;
+            }
+            li::after {
+                content: "";
+                height: 3px;
+                width: 3px;
+                border-radius: 50%;
+                background-color: var(--text-color);
+                margin: 0px 12px;
+                position: relative;
+                display: inline-block;
+                top: -3px;
+            }
+            li.no-style::after {
+                display: none;
+            }
+            p.text-about-me {
+                font-size: 18px;
+                margin: 15px 0px;
+                color: var(--text-color);
+            } 
+        .container > .row > .left {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        }  
+        .container > .row > .right {
+            display: inline-block;
+            width: 47%;
+            margin-left: 3%;
+            float: left;
+        }
 
     @media ( max-width: 1300px ) {
         .container > .row {
@@ -51,5 +109,12 @@ body * {
             .container > .row {
                 width: 100%;
                 margin: 0;
+            }
+            .container > .row > .left {
+                width: 100%;
+            }
+            .container > .row > .right {
+                width: 100%;
+                margin-left: 0;
             }
     }
