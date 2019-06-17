@@ -69,6 +69,48 @@ body * {
     }
 
 /* header */
+ 
+ header {
+    padding: 10px 0;
+    /* position: fixed; */
+    background-color: var(--white-color);
+    /* z-index: 1; */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+header .logo {
+    display: inline-block;
+    float: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 24px;
+    line-height: 30px;
+}
+header nav {
+    display: inline-block;
+    float: right;
+}
+    header nav > a {
+        display: inline-block;
+        float: left;
+        margin: 0 0 0 20px;
+        padding: 0 10px;
+        text-transform: uppercase;
+        color: var(--black-color);
+        text-decoration: none;
+        line-height: 30px;
+        font-weight: bold;
+    }
+        header nav > a:first-child {
+            margin: 0;
+        }
+        header nav > a:hover {
+            color: var(--red-color);
+        }
+        header nav > a.active {
+            background-color: var(--red-color);
+            color: #FFF;
+            border-radius: 15px;
 
 /* hero */
 
