@@ -6,6 +6,8 @@ body * {
     box-sizing: border-box;
 }
 
+/* colors classes */
+
 .bg-white {
     background-color: var(--white-color);
 }
@@ -22,11 +24,106 @@ body * {
     font-weight: bold;
 }
 
+/* basic structure and responsive design */
+
 .container {
     display: inline-block;
     width: 100%;
     padding: 80px 0;
 }
+
+    .container > .row {
+        display: inline-block;
+        width: 1200px;
+    }
+
+    @media ( max-width: 1300px ) {
+        .container > .row {
+            width: 900px;
+            margin: 0 calc((100% - 900px) / 2);
+        }
+    }
+
+    @media ( max-width: 1000px ) {
+        .container > .row {
+            width: 700px;
+            margin: 0 calc((100% - 700px) / 2);
+        }
+    }
+
+    @media ( max-width: 800px ) {
+        .container {
+            padding: 80px 20px;
+        }
+            .container > .row {
+                width: 100%;
+                margin: 0;
+            }
+            .container > .row > .left {
+                width: 100%;
+            }
+            .container > .row > .right {
+                width: 100%;
+                margin-left: 0;
+            }
+    }
+
+/* header */
+
+/* hero */
+
+/* headings */
+        h3{
+        display: inline-block;
+        width: 100%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        color: var(--ck-color-1);
+        font-size: 30px;
+        font-weight: lighter;
+        position: relative;
+        line-height: 60px;    
+    }
+            h3 > span{
+            font-weight: 800;
+            }
+        .block{
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+            .star{
+                display: inline-block;
+                color: var(--black-color-1);
+                font-size: 40px;
+                font-family: monospace;
+                font-weight: bolder;
+                width: 30px;
+                height: 30px;
+            }
+            .leftline{
+                display: inline-block;
+                font-size: 30px;
+                width: 30px;
+                color: rgb(172, 169, 169);
+
+            }
+            .rightline{
+                display: inline-block;
+                font-size: 30px;
+                width: 30px;
+                color: rgb(172, 169, 169);
+            }
+
+/* about me */
+.container {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+}
+
     .container > .row {
         display: inline-block;
         width: 1200px;
@@ -88,33 +185,26 @@ body * {
             float: left;
         }
 
-    @media ( max-width: 1300px ) {
-        .container > .row {
-            width: 900px;
-            margin: 0 calc((100% - 900px) / 2);
-        }
-    }
+/* services */
 
-    @media ( max-width: 1000px ) {
-        .container > .row {
-            width: 700px;
-            margin: 0 calc((100% - 700px) / 2);
-        }
-    }
+/* Completed Projects */
 
-    @media ( max-width: 800px ) {
-        .container {
-            padding: 80px 20px;
-        }
-            .container > .row {
-                width: 100%;
-                margin: 0;
-            }
-            .container > .row > .left {
-                width: 100%;
-            }
-            .container > .row > .right {
-                width: 100%;
-                margin-left: 0;
-            }
-    }
+/* education and experience */
+
+/* Freelancer */
+
+/* Our work */
+
+/* Client */
+
+/* Trusted by great people*/
+
+/* Subscribe */
+
+/* Blog */
+
+/* Get in Tuch */
+
+/* footer */
+
+/* Move-up button */
