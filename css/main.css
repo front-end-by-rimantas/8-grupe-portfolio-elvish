@@ -1,0 +1,210 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+/* colors classes */
+
+.bg-white {
+    background-color: var(--white-color);
+}
+.bg-black-1 {
+    background-color: var(--black-color-1);
+}
+.bg-black-2 {
+    background-color: var(--black-color-2);
+}
+.bg-grey {
+    background-color: var(--grey-color);
+}
+.font-weight-bold {
+    font-weight: bold;
+}
+
+/* basic structure and responsive design */
+
+.container {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+}
+
+    .container > .row {
+        display: inline-block;
+        width: 1200px;
+    }
+
+    @media ( max-width: 1300px ) {
+        .container > .row {
+            width: 900px;
+            margin: 0 calc((100% - 900px) / 2);
+        }
+    }
+
+    @media ( max-width: 1000px ) {
+        .container > .row {
+            width: 700px;
+            margin: 0 calc((100% - 700px) / 2);
+        }
+    }
+
+    @media ( max-width: 800px ) {
+        .container {
+            padding: 80px 20px;
+        }
+            .container > .row {
+                width: 100%;
+                margin: 0;
+            }
+            .container > .row > .left {
+                width: 100%;
+            }
+            .container > .row > .right {
+                width: 100%;
+                margin-left: 0;
+            }
+    }
+
+/* header */
+
+/* hero */
+
+/* headings */
+        h3{
+        display: inline-block;
+        width: 100%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        color: var(--ck-color-1);
+        font-size: 30px;
+        font-weight: lighter;
+        position: relative;
+        line-height: 60px;    
+    }
+            h3 > span{
+            font-weight: 800;
+            }
+        .block{
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+            .star{
+                display: inline-block;
+                color: var(--black-color-1);
+                font-size: 40px;
+                font-family: monospace;
+                font-weight: bolder;
+                width: 30px;
+                height: 30px;
+            }
+            .leftline{
+                display: inline-block;
+                font-size: 30px;
+                width: 30px;
+                color: rgb(172, 169, 169);
+
+            }
+            .rightline{
+                display: inline-block;
+                font-size: 30px;
+                width: 30px;
+                color: rgb(172, 169, 169);
+            }
+
+/* about me */
+.container {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+}
+
+    .container > .row {
+        display: inline-block;
+        width: 1200px;
+        margin: 0 calc((100% - 1200px) / 2);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+        .container > .row > .about-me {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .container > .row > .hello {
+            /* display: inline-block; */
+            font-family: 'Montserrat', sans-serif;
+            width: 90%;
+            text-align: center;
+            font-size: 35px;
+            margin: 0px 45px 40px;
+        }
+            ul.inline-list {    
+                display: inline-block;  
+                list-style: none;
+                font-size: 20px;
+                margin: 20px;
+                color: var(--text-color);
+            }
+            li {
+                display: inline-block;
+            }
+            li::after {
+                content: "";
+                height: 3px;
+                width: 3px;
+                border-radius: 50%;
+                background-color: var(--text-color);
+                margin: 0px 12px;
+                position: relative;
+                display: inline-block;
+                top: -3px;
+            }
+            li.no-style::after {
+                display: none;
+            }
+            p.text-about-me {
+                font-size: 18px;
+                margin: 15px 0px;
+                color: var(--text-color);
+            } 
+        .container > .row > .left {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        }  
+        .container > .row > .right {
+            display: inline-block;
+            width: 47%;
+            margin-left: 3%;
+            float: left;
+        }
+
+/* services */
+
+/* Completed Projects */
+
+/* education and experience */
+
+/* Freelancer */
+
+/* Our work */
+
+/* Client */
+
+/* Trusted by great people*/
+
+/* Subscribe */
+
+/* Blog */
+
+/* Get in Tuch */
+
+/* footer */
+
+/* Move-up button */

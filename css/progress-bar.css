@@ -1,0 +1,50 @@
+.progress-bar {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+    .progress-bar > .texts {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 20px;
+        color: var(--black-color-1);
+    }
+        .progress-bar > .texts > .title {
+            display: inline-block;
+            float: left;
+        }
+        .progress-bar > .texts > .value {
+            display: inline-block;
+            float: right;
+            color: var(--text-color);
+        }
+    .progress-bar > .bar {
+        display: inline-block;
+        width: 100%;
+        height: 4px;
+        background-color: var(--grey-color);
+    }
+        .progress-bar > .bar > .bar-value {
+            display: inline-block;
+            width: 90%;
+            height: 100%;
+        }
+            .progress-bar > .bar > .bar-value > .loading {
+                display: inline-block;
+                background-color: var(--black-color-1);
+                height: 100%;
+                width: 100%;
+                animation-name: augimas;
+                animation-duration: 2s;
+            }
+
+@keyframes augimas {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
