@@ -184,11 +184,87 @@ body * {
             margin-left: 3%;
             float: left;
         }
+        @media ( max-width: 800px ) {
+                .container { 
+                   padding: 80px 20px; 
+               } 
+                .container > .row {
+                    width: 100%;
+                    margin: 0;
+                } 
+                .container > .row > .left {
+                    width: 100%;
+                }
+                .container > .row > .right {
+                    width: 100%;
+                    margin-left: 0;
+                }
+        }
 
 /* services */
 
 /* Completed Projects */
 
+.bg-black-3 {
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url(../img/mountains.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container > .row > .facts {
+    display: inline-block;
+    width: 100%;
+    color: var(--white-color);
+    text-align: center;
+}
+    .facts > .col {
+        display: inline-block;
+        float: left;
+        width: 22%;
+        border: dotted;
+        border-width: thin;
+        height: 150px;
+        margin-left: 10px;
+    }
+    .col:first-child {
+        margin-left: 0px;
+    }
+        .fa {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .facts > .col > .value {
+            font-size: 35px;
+            margin-top: 10px;
+        }
+        .facts > .col > .title {
+            font-size: 13px;
+        }
+    @media ( max-width: 1100px ) {
+        .facts > .col {
+            width: 40%;            
+        }
+        .col:nth-child(3) {
+            margin-left: 0px;
+        }
+        .col:nth-child(3), :nth-child(4) {
+            margin-top: 10px;
+        }
+        .col:nth-child(2), :nth-child(4) {
+            margin-left: 10px;
+        }
+    }
+    @media ( max-width: 800px ) {
+        .facts > .col {
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+        .col:first-child {
+            margin-top: 0px;
+        }
+    }
 /* education and experience */
 
 /* Freelancer */
