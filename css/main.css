@@ -78,7 +78,7 @@ body * {
         margin: 0 calc( ( 100% - 1000px) / 2 );
         color:var(--white-color);
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 90px;
         height: 300px;
     }
         .hero h6{
@@ -94,6 +94,9 @@ body * {
             font-weight: lighter;
             padding: 20px;
             width: 96%;
+            margin:0 20px;
+        }
+        .hero .icon{
             margin:0 20px;
         }
         .hero .icon a{
@@ -125,6 +128,7 @@ body * {
             width:100%;
             height: 50px;
             position: relative;
+            margin-bottom: 20px;
         }
             .mouse{
                 width: 30px;
@@ -145,7 +149,8 @@ body * {
                 text-align: center;
             }
             i.fa{
-                font-size: 25px;
+                font-size: 15px;
+                font-weight:lighter;
             }
                 .scroll{
                     display: inline-block;
