@@ -1,0 +1,14 @@
+.button{
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 15px;
+    width: 160px;
+    left: calc( ( 100% - 160px) / 2 );
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.button:hover{
+    background-color: white;
+    color: black;
+}
