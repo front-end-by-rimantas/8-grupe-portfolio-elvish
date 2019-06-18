@@ -25,7 +25,10 @@ body * {
 }
 .bg-light-grey{
         background-color: var(--lightgrey);
-}
+  //?
+.font-weight-bold {
+    font-weight: bold;
+}//
 
 /* basic structure and responsive design */
 
@@ -38,7 +41,6 @@ body * {
     .container > .row {
         display: inline-block;
         width: 1200px;
-        margin: 0 calc((100% - 1200px) / 2); 
     }
 
     @media ( max-width: 1300px ) {
@@ -62,6 +64,13 @@ body * {
             .container > .row {
                 width: 100%;
                 margin: 0;
+            }
+            .container > .row > .left {
+                width: 100%;
+            }
+            .container > .row > .right {
+                width: 100%;
+                margin-left: 0;
             }
     }
 
@@ -221,11 +230,153 @@ body * {
             }
 
 /* about me */
+.container {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+}
+
+    .container > .row {
+        display: inline-block;
+        width: 1200px;
+        margin: 0 calc((100% - 1200px) / 2);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+        .container > .row > .about-me {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .container > .row > .hello {
+            /* display: inline-block; */
+            font-family: 'Montserrat', sans-serif;
+            width: 90%;
+            text-align: center;
+            font-size: 35px;
+            margin: 0px 45px 40px;
+        }
+            ul.inline-list {    
+                display: inline-block;  
+                list-style: none;
+                font-size: 20px;
+                margin: 20px;
+                color: var(--text-color);
+            }
+            li {
+                display: inline-block;
+            }
+            li::after {
+                content: "";
+                height: 3px;
+                width: 3px;
+                border-radius: 50%;
+                background-color: var(--text-color);
+                margin: 0px 12px;
+                position: relative;
+                display: inline-block;
+                top: -3px;
+            }
+            li.no-style::after {
+                display: none;
+            }
+            p.text-about-me {
+                font-size: 18px;
+                margin: 15px 0px;
+                color: var(--text-color);
+            } 
+        .container > .row > .left {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        }  
+        .container > .row > .right {
+            display: inline-block;
+            width: 47%;
+            margin-left: 3%;
+            float: left;
+        }
+        @media ( max-width: 800px ) {
+                .container { 
+                   padding: 80px 20px; 
+               } 
+                .container > .row {
+                    width: 100%;
+                    margin: 0;
+                } 
+                .container > .row > .left {
+                    width: 100%;
+                }
+                .container > .row > .right {
+                    width: 100%;
+                    margin-left: 0;
+                }
+        }
 
 /* services */
 
 /* Completed Projects */
 
+.bg-black-3 {
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url(../img/mountains.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container > .row > .facts {
+    display: inline-block;
+    width: 100%;
+    color: var(--white-color);
+    text-align: center;
+}
+    .facts > .col {
+        display: inline-block;
+        float: left;
+        width: 22%;
+        border: dotted;
+        border-width: thin;
+        height: 150px;
+        margin-left: 10px;
+    }
+    .col:first-child {
+        margin-left: 0px;
+    }
+        .fa {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .facts > .col > .value {
+            font-size: 35px;
+            margin-top: 10px;
+        }
+        .facts > .col > .title {
+            font-size: 13px;
+        }
+    @media ( max-width: 1100px ) {
+        .facts > .col {
+            width: 40%;            
+        }
+        .col:nth-child(3) {
+            margin-left: 0px;
+        }
+        .col:nth-child(3), :nth-child(4) {
+            margin-top: 10px;
+        }
+        .col:nth-child(2), :nth-child(4) {
+            margin-left: 10px;
+        }
+    }
+    @media ( max-width: 800px ) {
+        .facts > .col {
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+        .col:first-child {
+            margin-top: 0px;
+        }
+    }
 /* education and experience */
 
 /* Freelancer */
