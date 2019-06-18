@@ -20,6 +20,12 @@ body * {
 .bg-grey {
     background-color: var(--grey-color);
 }
+.bg-grey-2{
+    background-color: var(--grey-color-2);
+}
+.bg-light-grey{
+        background-color: var(--lightgrey);
+}
 
 /* basic structure and responsive design */
 
@@ -84,19 +90,21 @@ body * {
         }
         .hero h5{
             display: inline-block;
-            font-size: 40px;
+            font-size: 80px;
             font-weight: lighter;
             padding: 20px;
             width: 96%;
             margin:0 20px;
         }
-        div a{
+        .hero .icon a{
             text-decoration: none;
             color:white;
             padding:5px;
             margin:15px 5px 0 0;
             width: 25px;
             height: 30px;
+            display: inline-block;
+            line-height: 30px;
         }
         .hero .areabutton{
             width: 100%;
@@ -104,10 +112,10 @@ body * {
             height: 100px;
             position: relative;
         }
-        .button{
-            position: absolute;
-            bottom: 0;
-        }
+            .button{
+                position: absolute;
+                bottom: 0;
+            }
         .hero .moving{
             display: inline-block;
             font-weight: bold;
@@ -128,38 +136,40 @@ body * {
                 bottom: 0;
                 left: calc(  ( 100% - 30px) / 2 );
             }
-            .down{
-                transform: rotate(270deg);
+            i{
                 display: inline-block;
-                width: 5px;
-                height: 20px;
-                margin-top: 20px;
                 color:white;
+                width: 25px;
+                height: 25px;
+                margin-top: 15px;
+                text-align: center;
             }
-            .scroll{
-                display: inline-block;
-                animation-name:moving;
-                animation-iteration-count: infinite;
-                animation-duration: 2s;
-                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-                opacity: 1;
-
+            i.fa{
+                font-size: 25px;
             }
-            @keyframes moving{
+                .scroll{
+                    display: inline-block;
+                    animation-name:moving;
+                    animation-iteration-count: infinite;
+                    animation-duration: 2s;
+                    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+                    opacity: 1;
+                }
+                @keyframes moving{
 
                     0% {
-                    margin-top:-30px;
+                        margin-top: -30px;
                     }
-                    20%, 60%, 100% {
-                    margin-top:0px;
-                    }
-                    40% {
+                    30% {
                         margin-top: -15px;
                     }
-                    80% {
+                    60% {
                         margin-top: -5px;
                     }
-            }
+                    20%, 40%, 80%, 100% {
+                        margin-top: 0px;
+                    }
+                }
 /* headings */
         h3{
         display: inline-block;
@@ -228,5 +238,32 @@ body * {
 /* Get in Tuch */
 
 /* footer */
-
+footer {
+    display: inline-block;
+    background-color: var(--light-grey);
+}
+footer.container{
+    padding: 30px 0;
+}
+    footer h4{
+        color:#747F7D;
+        float: left;
+    }
+    .footerIcons{
+        display: inline-block;
+        float: right;
+    }
+    footer a{
+        text-decoration: none;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #747F7D;
+        border-radius: 30px;
+        color:#747F7D;
+        margin-right: 15px;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+    }
 /* Move-up button */
