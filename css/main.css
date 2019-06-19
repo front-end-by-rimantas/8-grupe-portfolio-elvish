@@ -76,6 +76,61 @@ body * {
     }
 
 /* header */
+ 
+#header {
+    padding: 12px 0;
+    position: fixed;
+    background-color: var(--white-color);
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* #header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+} */
+
+#header .logo {
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    color: var(--black-color-1);
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+    /* #header.transparent .logo {
+        color: #FFF;
+    } */
+#header nav {
+    display: inline-block;
+    float: right;
+}
+    #header nav > a {
+        display: inline-block;
+        float: left;
+        margin: 0 0 0 20px;
+        padding: 0 10px;
+        color: var(--black-color-1);
+        text-decoration: none;
+        line-height: 45px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+        /* #header.transparent nav > a {
+            color: #FFF;
+        } */
+        #header nav > a:first-child {
+            margin: 0;
+        }
+        #header nav > a:hover {
+            color: red;
+        }
+        /* #header nav > a.active {
+            background-color: var(--white-color);
+            color: var(--black-color-1);
+            border-radius: 15px; 
+        }*/
 
 /* hero */
 .container_hero{
