@@ -79,7 +79,12 @@ body * {
 
 /* hero */
 .container_hero{
-    background-color: rgb(88, 77, 77);
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url(../img/backgroundphoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
     .hero{
         display: inline-block;
@@ -327,18 +332,19 @@ body * {
 }
 .container > .row > .facts {
     display: inline-block;
-    width: 100%;
+    width: 850px;
+    margin: calc( ( 100% - 850px ) / 2 );
     color: var(--white-color);
     text-align: center;
 }
     .facts > .col {
         display: inline-block;
         float: left;
-        width: 22%;
         border: dotted;
         border-width: thin;
         height: 150px;
-        margin-left: 10px;
+        width: 200px;
+        margin-left: 16px;
     }
     .col:first-child {
         margin-left: 0px;
@@ -403,7 +409,6 @@ footer.container{
     padding: 50px 0 20px 0;
 }
 footer .row{
-    padding: 20px;
     display: inline-block;
     width: 100%;
 }
@@ -411,11 +416,14 @@ footer .row{
         color:var(--grey-color-2);
         float: left;
         display: inline-block;
+        margin:10px;
         line-height: 60px;
     }
     .footerIcons{
         display: inline-block;
         float: right;
+        margin: 10px;
+        line-height: 60px;
     }
     footer .fa{
         font-size: 15px;
