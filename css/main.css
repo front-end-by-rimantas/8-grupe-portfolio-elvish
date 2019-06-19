@@ -25,10 +25,7 @@ body * {
 }
 .bg-light-grey{
         background-color: var(--lightgrey);
-  //?
-.font-weight-bold {
-    font-weight: bold;
-}//
+}
 
 /* basic structure and responsive design */
 
@@ -314,6 +311,54 @@ body * {
         }
 
 /* services */
+
+#services-list.row {
+    display: inline-block;
+    width: 1140px;
+    margin: 0 calc((100% - 1140px) / 2);
+    padding: 20px;
+}
+.service {
+    display: inline-block;
+    width: 31%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 0.1px dotted;
+}
+    .service:nth-child(3n+1) {
+        margin-left: 0;
+    }
+    .service:nth-child(1),
+    .service:nth-child(2),
+    .service:nth-child(3) {
+        margin-top: 0;
+    }
+    #services.container.bg-grey > .row > p {
+        width: 500px;
+        margin: 0 calc((100% - 500px) / 2);
+        margin-top: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #6c757d;
+    }
+    .service i.fa {
+        font-size: 30px;
+        font-weight:lighter;
+        color: black;
+    }
+    .service h3 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #services-list.row > .service > p {
+        color: #6c757d;
+    }
+
+
+/* services end */
 
 /* Completed Projects */
 
