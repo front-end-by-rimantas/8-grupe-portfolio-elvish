@@ -200,13 +200,16 @@ body * {
         font-size: 30px;
         font-weight: lighter;
         position: relative;
-        line-height: 60px;    
+        line-height: 60px; 
+        width: 500px;
+        margin: 0 calc( ( 100% - 500px ) / 2);   
     }
             h3 > span{
             font-weight: 800;
             }
         .block{
-            width: 100%;
+            width: 500px;
+            margin: 0 calc( ( 100% - 500px ) / 2);
             display: flex;
             text-align: center;
             justify-content: center;
@@ -397,7 +400,30 @@ body * {
 /* Subscribe */
 
 /* Blog */
-
+.topBlog{
+display: inline-block;
+width: 500px;
+margin:0 calc( ( 100% - 500px ) / 2);
+}
+.topBlog p{
+    text-align: center;
+    font-size: 13px;
+    color: var(--grey-color-2);
+    padding: 10px;
+}
+.bottomBlog{
+    display: inline-block;
+    width: 800px;
+    margin: 0 calc( ( 100% - 800px ) / 2 );
+}
+.blog{
+    display: inline-block;
+    float: left;
+    width: 32%;
+    margin-left: 2%;
+    margin-top: 15px;
+    padding: 20px;
+}
 /* Get in Tuch */
 
 /* footer */
