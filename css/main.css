@@ -397,6 +397,21 @@ body * {
 /* Subscribe */
 
 /* Blog */
+.row > div p{
+    text-align: center;
+    size: 15px;
+    color: var(--grey-color-2);
+    width: 100%;
+}
+.sections{
+width: 30%;
+display: inline-block;
+padding: 10px;
+}
+div.sections img{
+    width: 300px;
+    height: 200px;
+}
 
 /* Get in Tuch */
 
