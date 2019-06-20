@@ -67,7 +67,7 @@ var blogItems = [
     description:'Vestibulum sit amet libero vel neque dapibus ultrices. Sed sollicitudin est neque, ac dictum ipsum.',
     link:'#',
 }
-
+]
 // services
 
 var services = [

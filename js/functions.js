@@ -23,7 +23,7 @@ for ( var i=0; i<data.length; i++ ) {
 </div>`;
 }
 return HTML;
-
+}
 // services
 
 function generateServices( data ) {
