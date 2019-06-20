@@ -181,7 +181,7 @@ body * {
             height: 100px;
             position: relative;
         }
-            .button{
+        .hero .button{
                 position: absolute;
                 bottom: 0;
             }
@@ -497,6 +497,62 @@ body * {
 
 /* Blog */
 
+.container .row{
+    padding:0 15px;
+    /* width: 1100px;
+    margin: 0 calc( ( 100% - 1100px ) / 2 ); */
+    }
+#top{
+    text-align: center;
+    size: 15px;
+    color: var(--grey-color-2);
+    width: 100%;
+    margin: 40px 0;
+}
+.blog {
+    display: inline-block;
+    text-align: center;
+    width: 32%;
+    float: left;
+    margin-left: 2%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #CCC;
+    overflow: hidden;
+}
+    .blog:nth-child(3n+1) {
+        margin-left: 0;
+    }
+    .blog:nth-child(1),
+    .blog:nth-child(2),
+    .blog:nth-child(3) {
+        margin-top: 0;
+    }
+    .blog > .img {
+        height: 300px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
+    }
+    .blog > h4{
+        padding: 10px;
+    }
+    .blog > h5 {
+        padding: 10px;
+    }
+    .blog > p {
+        padding: 10px;
+        color:var(--grey-color-2);
+    }
+    .blog a{
+        text-decoration: none;
+        color: var(--grey-color-2);
+        font-weight: bold;
+    }
 /* Get in Tuch */
 
 /* footer */
