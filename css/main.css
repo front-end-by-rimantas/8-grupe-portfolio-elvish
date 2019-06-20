@@ -42,6 +42,7 @@ body * {
     .container > .row {
         display: inline-block;
         width: 1200px;
+        margin: 0 calc((100% - 1200px) / 2);
     }
 
     @media ( max-width: 1300px ) {
@@ -224,7 +225,7 @@ body * {
             }
                 .scroll{
                     display: inline-block;
-                    animation-name:moving;
+                    animation-name: moving;
                     animation-iteration-count: infinite;
                     animation-duration: 2s;
                     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -300,7 +301,6 @@ body * {
     .container > .row {
         display: inline-block;
         width: 1200px;
-        margin: 0 calc((100% - 1200px) / 2);
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
         .container > .row > .about-me {
