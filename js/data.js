@@ -40,6 +40,8 @@ var footerIcons = [
         link:'#'
     }
 ]
+// Ourblog
+
 var blogItems = [
 { 
     image:'blog1.jpeg',
@@ -65,4 +67,38 @@ var blogItems = [
     description:'Vestibulum sit amet libero vel neque dapibus ultrices. Sed sollicitudin est neque, ac dictum ipsum.',
     link:'#',
 }
+
+// services
+
+var services = [
+    {
+        icon: 'file-archive-o',
+        title: 'Graphic design',
+        description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
+    },
+    {
+        icon: 'file-image-o',
+        title: 'Unlimited color',
+        description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
+    },
+    {
+        icon: 'paper-plane-o',
+        title: 'Media marketing',
+        description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
+    },
+    {
+        icon: 'wifi',
+        title: 'Unlimited WiFi',
+        description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
+    },
+    {
+        icon: 'desktop',
+        title: 'Responsive Design',
+        description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
+    },
+    {
+        icon: 'file-text-o',
+        title: 'Easy to customize',
+        description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
+    }
 ];

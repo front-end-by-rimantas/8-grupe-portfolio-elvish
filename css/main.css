@@ -26,10 +26,6 @@ body * {
 .bg-light-grey{
     background-color: var(--light-grey);
 }
-  /* //?
-.font-weight-bold {
-    font-weight: bold;
-}// */
 
 /* basic structure and responsive design */
 
@@ -76,6 +72,61 @@ body * {
     }
 
 /* header */
+ 
+#header {
+    padding: 12px 0;
+    position: fixed;
+    background-color: var(--white-color);
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* #header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+} */
+
+#header .logo {
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    color: var(--black-color-1);
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+    /* #header.transparent .logo {
+        color: #FFF;
+    } */
+#header nav {
+    display: inline-block;
+    float: right;
+}
+    #header nav > a {
+        display: inline-block;
+        float: left;
+        margin: 0 0 0 20px;
+        padding: 0 10px;
+        color: var(--black-color-1);
+        text-decoration: none;
+        line-height: 45px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+        /* #header.transparent nav > a {
+            color: #FFF;
+        } */
+        #header nav > a:first-child {
+            margin: 0;
+        }
+        #header nav > a:hover {
+            color: red;
+        }
+        /* #header nav > a.active {
+            background-color: var(--white-color);
+            color: var(--black-color-1);
+            border-radius: 15px; 
+        }*/
 
 /* hero */
 .container_hero{
@@ -320,6 +371,54 @@ body * {
         }
 
 /* services */
+
+#services-list.row {
+    display: inline-block;
+    width: 1140px;
+    margin: 0 calc((100% - 1140px) / 2);
+    padding: 20px;
+}
+.service {
+    display: inline-block;
+    width: 31%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 0.1px dotted;
+}
+    .service:nth-child(3n+1) {
+        margin-left: 0;
+    }
+    .service:nth-child(1),
+    .service:nth-child(2),
+    .service:nth-child(3) {
+        margin-top: 0;
+    }
+    #services.container.bg-grey > .row > p {
+        width: 500px;
+        margin: 0 calc((100% - 500px) / 2);
+        margin-top: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #6c757d;
+    }
+    .service i.fa {
+        font-size: 30px;
+        font-weight:lighter;
+        color: black;
+    }
+    .service h3 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #services-list.row > .service > p {
+        color: #6c757d;
+    }
+
+
+/* services end */
 
 /* Completed Projects */
 
