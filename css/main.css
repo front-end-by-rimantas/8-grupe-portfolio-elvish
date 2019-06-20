@@ -447,14 +447,12 @@ body * {
     }
     .blog > p {
         padding: 10px;
+        color:var(--grey-color-2);
     }
     .blog a{
         text-decoration: none;
         color: var(--grey-color-2);
         font-weight: bold;
-    }
-    .blog > .button:hover{
-        
     }
 /* Get in Tuch */
 

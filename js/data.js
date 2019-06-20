@@ -62,12 +62,7 @@ var blogItems = [
     heading:'There are many variations',
     topic: 'Lifestyle',
     date: '13 February 2018',
-    // block:
-    //     {
-    //         data: '13 February 2018',
-    //         by: 'By Elvato',
-    //     },
     description:'Vestibulum sit amet libero vel neque dapibus ultrices. Sed sollicitudin est neque, ac dictum ipsum.',
     link:'#',
 }
-]
+];
