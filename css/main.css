@@ -522,6 +522,34 @@ body * {
 /* Client */
 
 /* Trusted by great people*/
+.container div > p{
+    text-align: center;
+    color: var(--black-color-2);
+    width: 800px;
+    margin: 0 calc( ( 100% - 800px ) / 2 );
+    padding: 15px 0;
+}
+/* .imgs:nth-child(6n+1) {
+    margin-left: 0;
+}
+.imgs:nth-child(1),
+.imgs:nth-child(2),
+.imgs:nth-child(3),
+.imgs:nth-child(4),
+.imgs:nth-child(5),
+.imgs:nth-child(6) {
+    margin-top: 0;
+} */
+
+.imgs{
+    width: 100%;
+}
+.imgs *{
+    height: 100px;
+    width: 130px;
+    margin: 20px 30px 0;
+    padding-top: 15px;
+}
 
 /* Subscribe */
 
@@ -529,8 +557,6 @@ body * {
 
 .container .row{
     padding:0 15px;
-    /* width: 1100px;
-    margin: 0 calc( ( 100% - 1100px ) / 2 ); */
     }
 #top{
     text-align: center;
