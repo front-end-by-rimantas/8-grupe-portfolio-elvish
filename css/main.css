@@ -496,7 +496,7 @@ body * {
     height: 300px;
     font-family: 'Courier New', Courier, monospace;
 }
-.container > .row > h3{
+.container h2{
     text-align: center;
     font-size: 40px;
     color: white;
