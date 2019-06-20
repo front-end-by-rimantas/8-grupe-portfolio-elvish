@@ -486,6 +486,36 @@ body * {
 /* education and experience */
 
 /* Freelancer */
+.container.free{
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+     url(/img/mountains.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container > .row > h3{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+    size: 35px;
+}
+.container > .row > div.button{
+    border: 2px solid white;
+    border-radius: 1px;
+    background-attachment: transparent;
+    text-align: center;
+    position: absolute;
+    color: white;
+    width: 110px;
+}
+.container div.button:hover{
+    background-color: white;
+    color: black;
+}
 
 /* Our work */
 
