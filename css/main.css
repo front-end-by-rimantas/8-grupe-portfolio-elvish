@@ -74,7 +74,10 @@ body * {
                 width: 100%;
                 margin-left: 0;
             }
+            /* .container > .row > nav > a {
                 display: none;
+                background-color: red;
+            }  */
     }
 
 /* header */
