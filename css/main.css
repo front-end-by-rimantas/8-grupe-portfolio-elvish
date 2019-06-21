@@ -56,13 +56,13 @@ body * {
         .container > .row {
             width: 700px;
             margin: 0 calc((100% - 700px) / 2);
-        }
+            }
     }
 
     @media ( max-width: 800px ) {
         .container {
             padding: 80px 20px;
-        }
+             }
             .container > .row {
                 width: 100%;
                 margin: 0;
@@ -74,6 +74,7 @@ body * {
                 width: 100%;
                 margin-left: 0;
             }
+                display: none;
     }
 
 /* header */
