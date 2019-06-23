@@ -354,13 +354,13 @@ body * {
             float: left;
         }
         @media ( max-width: 800px ) {
-                .container { 
+                /* .container { 
                    padding: 80px 20px; 
                } 
                 .container > .row {
                     width: 100%;
                     margin: 0;
-                } 
+                }  */
                 .container > .row > .left {
                     width: 100%;
                 }
@@ -483,6 +483,8 @@ body * {
             margin-top: 0px;
         }
     }
+
+
 /* education and experience */
 
 /* Freelancer */
@@ -524,6 +526,18 @@ body * {
 /* Trusted by great people*/
 
 /* Subscribe */
+.newsletter {
+    /* display: inline-block; */
+    text-align: center;
+}
+    .newsletter input {
+        padding: 15px 150px 15px 30px;
+        font-size: 17px;
+        color: #4c5667;
+        border: none;
+        border-radius: 30px;
+        background-color: #f1f1f1;
+    }
 
 /* Blog */
 
