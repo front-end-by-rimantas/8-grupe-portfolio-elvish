@@ -102,3 +102,6 @@ var services = [
         description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
     }
 ];
+
+// completed projects
+
