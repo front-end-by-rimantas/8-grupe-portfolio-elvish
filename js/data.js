@@ -86,4 +86,12 @@ var blogItems = [
         description: 'Nulla in leo faucibus, porttitor augue sed, tristique sapien. Aliquam interdum semper euismod. In laoreet lobortis est, sed gravida ex semper et. Phasellus faucibus lorem at arcu congue, at congue justo rutrum. Fusce tempus varius arcu, eget semper diam lobortis eu. Cras sem turpis, consequat sit amet purus et, faucibus tincidunt est.',
         link: '#'
     },
-]
+    {
+        icon: 'file-text-o',
+        title: 'Easy to customize',
+        description: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.'
+    }
+];
+
+// completed projects
+

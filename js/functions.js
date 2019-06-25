@@ -23,3 +23,5 @@ for ( var i=0; i< data.length; i++){
 }
     return HTML;
 }
+
+// completed projects
