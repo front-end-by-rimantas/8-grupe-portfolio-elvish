@@ -72,7 +72,7 @@ body * {
     } */
 
 /* header */
-
+ 
 #header {
     padding: 12px 0;
     position: fixed;
@@ -181,7 +181,7 @@ body * {
             height: 100px;
             position: relative;
         }
-            .button{
+        .hero .button{
                 position: absolute;
                 bottom: 0;
             }
@@ -251,7 +251,7 @@ body * {
         font-size: 30px;
         font-weight: lighter;
         position: relative;
-        line-height: 60px; 
+        line-height: 60px;    
     }
             h3 > span{
             font-weight: 800;
@@ -416,7 +416,7 @@ body * {
     color: var(--white-color);
     text-align: center;
 }
-    .col {
+     .col {
         display: inline-block;
         border: dotted;
         border-width: thin;
