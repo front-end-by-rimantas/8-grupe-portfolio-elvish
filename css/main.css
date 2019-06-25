@@ -90,10 +90,6 @@ body * {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* #header.transparent {
-    background-color: transparent;
-    box-shadow: none;
-} */
 
 #header .logo {
     display: inline-block;
@@ -112,6 +108,19 @@ body * {
     display: inline-block;
     float: right;
 }
+
+        #header nav > .active::after {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--black-color-1);
+            position: absolute;
+            border-radius: 50%;
+            bottom: 0%;
+            left: calc((100% - 10px) / 2);
+           }
+
     #header nav > a {
         display: inline-block;
         float: left;
@@ -120,22 +129,25 @@ body * {
         color: var(--black-color-1);
         text-decoration: none;
         line-height: 45px;
+        position: relative;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
-        /* #header.transparent nav > a {
-            color: #FFF;
-        } */
+
         #header nav > a:first-child {
             margin: 0;
         }
-        #header nav > a:hover {
-            color: red;
-        }
-        /* #header nav > a.active {
-            background-color: var(--white-color);
-            color: var(--black-color-1);
-            border-radius: 15px; 
-        }*/
+        #header nav > a:hover::after {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background-color: var(--black-color-1);
+            position: absolute;
+            border-radius: 50%;
+            bottom: 0;
+            left: calc((100% - 10px) / 2);
+            }
+
 
 /* hero */
 .container_hero{
