@@ -105,3 +105,24 @@ var services = [
 
 // completed projects
 
+var facts = [
+    {
+        icon: 'clock-o',
+        value: '654',
+        title: 'Working hours'
+    },
+    {
+        icon: 'gift',
+        value: '6400',
+        title: 'Completed projects'
+    },
+    {
+        icon: 'user',
+        value: '2389',
+        title: 'No.of Clients'
+    },{
+        icon: 'users',
+        value: '653',
+        title: 'Team Member'
+    }
+]

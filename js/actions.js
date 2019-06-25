@@ -11,3 +11,4 @@ document.getElementById('services-list').innerHTML = generateServices( services 
 
 // Completed projects
 
+
