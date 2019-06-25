@@ -522,33 +522,25 @@ body * {
 /* Client */
 
 /* Trusted by great people*/
-.container div > p{
+.container > .row > div > p{
     text-align: center;
     color: var(--black-color-2);
     width: 800px;
     margin: 0 calc( ( 100% - 800px ) / 2 );
     padding: 15px 0;
 }
-/* .imgs:nth-child(6n+1) {
-    margin-left: 0;
-}
-.imgs:nth-child(1),
-.imgs:nth-child(2),
-.imgs:nth-child(3),
-.imgs:nth-child(4),
-.imgs:nth-child(5),
-.imgs:nth-child(6) {
-    margin-top: 0;
-} */
 
 .imgs{
-    width: 100%;
+    display: inline-block;
+    float: left;
+    padding-top: 20px;
+    padding-left: 70px;
+
 }
 .imgs *{
-    height: 130px;
-    width: 145px;
-    margin: 30px 20px 0;
-    padding: 15px 10px 0;
+    height: 115px;
+    width: 15%;
+    display: inline-block;
 }
 
 /* Subscribe */
@@ -577,6 +569,7 @@ body * {
     border-radius: 8px;
     box-shadow: 0 4px 8px #CCC;
     overflow: hidden;
+    position: relative;
 }
     .blog:nth-child(3n+1) {
         margin-left: 0;
@@ -600,9 +593,10 @@ body * {
     .blog > h5 {
         padding: 10px;
     }
-    .blog > p {
+    .blog .p {
         padding: 10px;
         color:var(--grey-color-2);
+        position:absolute;
     }
     .blog a{
         text-decoration: none;
