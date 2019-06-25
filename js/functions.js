@@ -37,3 +37,5 @@ function generateServices( data ) {
     }
     return HTML;
 }
+
+// completed projects

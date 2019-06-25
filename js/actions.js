@@ -8,3 +8,6 @@ document.getElementById('blog_items').innerHTML = generateBlog ( blogItems );
 // services
 
 document.getElementById('services-list').innerHTML = generateServices( services );
+
+// Completed projects
+

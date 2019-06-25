@@ -40,7 +40,7 @@ body * {
         width: 1200px;
     }
 
-    @media ( max-width: 1300px ) {
+    /* @media ( max-width: 1300px ) {
         .container > .row {
             width: 900px;
             margin: 0 calc((100% - 900px) / 2);
@@ -69,7 +69,7 @@ body * {
                 width: 100%;
                 margin-left: 0;
             }
-    }
+    } */
 
 /* header */
  
@@ -353,30 +353,11 @@ body * {
             margin-left: 3%;
             float: left;
         }
-        @media ( max-width: 800px ) {
-                .container { 
-                   padding: 80px 20px; 
-               } 
-                .container > .row {
-                    width: 100%;
-                    margin: 0;
-                } 
-                .container > .row > .left {
-                    width: 100%;
-                }
-                .container > .row > .right {
-                    width: 100%;
-                    margin-left: 0;
-                }
-        }
 
 /* services */
 
 #services-list.row {
     display: inline-block;
-    width: 1140px;
-    margin: 0 calc((100% - 1140px) / 2);
-    padding: 20px;
 }
 .service {
     display: inline-block;
@@ -386,7 +367,7 @@ body * {
     margin-top: 10px;
     padding: 20px;
     text-align: center;
-    border: 0.1px dotted;
+    /* border: 0.1px dotted; */
 }
     .service:nth-child(3n+1) {
         margin-left: 0;
@@ -431,18 +412,16 @@ body * {
 }
 .container > .row > .facts {
     display: inline-block;
-    width: 850px;
-    margin: calc( ( 100% - 850px ) / 2 );
+    width: 100%;
     color: var(--white-color);
     text-align: center;
 }
     .facts > .col {
         display: inline-block;
-        float: left;
         border: dotted;
         border-width: thin;
         height: 150px;
-        width: 200px;
+        width: 220px;
         margin-left: 16px;
     }
     .col:first-child {
@@ -459,30 +438,7 @@ body * {
         .facts > .col > .title {
             font-size: 13px;
         }
-    @media ( max-width: 1100px ) {
-        .facts > .col {
-            width: 40%;            
-        }
-        .col:nth-child(3) {
-            margin-left: 0px;
-        }
-        .col:nth-child(3), :nth-child(4) {
-            margin-top: 10px;
-        }
-        .col:nth-child(2), :nth-child(4) {
-            margin-left: 10px;
-        }
-    }
-    @media ( max-width: 800px ) {
-        .facts > .col {
-            width: 100%;
-            margin-top: 10px;
-            margin-left: 0px;
-        }
-        .col:first-child {
-            margin-top: 0px;
-        }
-    }
+
 /* education and experience */
 
 /* Freelancer */
@@ -524,6 +480,18 @@ body * {
 /* Trusted by great people*/
 
 /* Subscribe */
+.newsletter {
+    /* display: inline-block; */
+    text-align: center;
+}
+    .newsletter input {
+        padding: 15px 150px 15px 30px;
+        font-size: 17px;
+        color: #4c5667;
+        border: none;
+        border-radius: 30px;
+        background-color: #f1f1f1;
+    }
 
 /* Blog */
 
@@ -542,7 +510,7 @@ body * {
 .blog {
     display: inline-block;
     text-align: center;
-    width: 32%;
+    width: 31%;
     float: left;
     margin-left: 2%;
     margin-top: 15px;
@@ -552,14 +520,14 @@ body * {
     box-shadow: 0 4px 8px #CCC;
     overflow: hidden;
 }
-    .blog:nth-child(3n+1) {
+    /* .blog:nth-child(3n+1) {
         margin-left: 0;
     }
     .blog:nth-child(1),
     .blog:nth-child(2),
     .blog:nth-child(3) {
         margin-top: 0;
-    }
+    } */
     .blog > .img {
         height: 300px;
         height: 200px;
@@ -634,3 +602,88 @@ footer .row{
       }
 
 /* Move-up button */
+
+/* Responsive design */
+/* Basic structure */
+
+    @media ( max-width: 1300px ) {
+        .container > .row {
+            width: 1000px;
+            margin: 0 calc((100% - 1000px) / 2);
+        }
+    }
+
+    @media ( max-width: 1000px ) {
+        .container > .row {
+            width: 800px;
+            margin: 0 calc((100% - 800px) / 2);
+        }
+        .service {
+            width: 50%;
+            margin: 0;
+        }
+            .service > h3 {
+                line-height: 20px;
+                padding: 20px;
+            }
+  
+    /* Completed projects */
+    
+            .facts > .col {
+            width: 48%;            
+        }
+            .facts > .col:nth-child(2n+1) {
+                margin-left: 0px;
+            }
+            .facts > .col:nth-child(3), .col:nth-child(4) {
+                margin-top: 16px;
+        }
+
+    /* Our blog */
+        .blog {
+            width: 100%;
+        }
+    }
+
+   /* Basic structure */
+
+    @media ( max-width: 800px ) {
+        .container {
+            padding: 80px 20px;
+        }
+            .container > .row {
+                width: 100%;
+                margin: 0;
+            }
+    
+    /* About me */
+
+                .container > .row > .left {
+                    width: 100%;
+                }
+                .container > .row > .right {
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+    /* Our services */
+    
+                .service {
+                    width: 100%;
+                    margin: 0;
+                }
+        
+        /* Completed Projects */
+
+            .facts > .col {
+                width: 100%;
+                margin-top: 10px;
+                margin-left: 0px;
+            }
+                .col:first-child {
+                    margin-top: 0px;
+                }
+    }
+
+
+
