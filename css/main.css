@@ -362,7 +362,7 @@ body * {
     color: var(--white-color);
     text-align: center;
 }
-    .facts > .col {
+    .col {
         display: inline-block;
         border: dotted;
         border-width: thin;
