@@ -43,14 +43,14 @@ function generateServices( data ) {
 
 //ourClient
 function generateTestimonials( data ) {
-var HTML = '',
+var HTML = '';
 for ( var i=0; i<data.length; i++ ) {
-    HTML += ' <div class="allTestimonials">\
-    < img '+data[i].logo+' >\
-    <h3> '+data[i].author+'</h3>\
-    <h5> '+data[i].possition+'\
-    <p> '+data[i].text+'\
-    </div>'
+    HTML += '<div class="allTestimonials">\
+    <img src="'+data[i].logo+'" alt="" >\
+    <h5>'+data[i].author+'</h5>\
+    <h6>'+data[i].possition+'</h6>\
+    <p>'+data[i].text+'</p>\
+    </div>';
 }
 return HTML;
 }

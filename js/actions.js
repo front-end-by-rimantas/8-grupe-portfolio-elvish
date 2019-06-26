@@ -11,4 +11,5 @@ document.getElementById('services-list').innerHTML = generateServices( services 
 
 // Completed projects
 
-
+// OurClient
+document.getElementById('listOfTestimonials').innerHTML = generateTestimonials( list_Testimonials );
