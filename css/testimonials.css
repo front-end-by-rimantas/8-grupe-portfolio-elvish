@@ -1,0 +1,38 @@
+#listOfTestimonials{
+    text-align: center;
+    display: inline-block;
+    color:var(--white-color);
+    }
+        #listOfTestimonials img{
+            margin-top: 30px;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            position: static;
+            left: calc( ( 100% - 100px) / 2 );
+        } 
+        #listOfTestimonials h5{
+            padding-top:20px;
+            font-size: 18px;
+        }
+        #listOfTestimonials h6{
+            padding-bottom: 20px;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        #listOfTestimonials p{
+            margin: 0 300px;
+        }
+div .dots{
+    width: 15px;
+    height: 7px;
+    border-radius: 30px;
+    background-color: grey;
+    display: inline-block;
+    margin-top: 30px;
+    cursor: pointer;
+}
+div .dots:hover{
+    background-color: white;
+}

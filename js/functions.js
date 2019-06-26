@@ -52,5 +52,8 @@ for ( var i=0; i<data.length; i++ ) {
     <p>'+data[i].text+'</p>\
     </div>';
 }
+for ( var i=0; i<data.length; i++){
+    HTML+= `<div class="dots" ></div>`;
+}
 return HTML;
 }
