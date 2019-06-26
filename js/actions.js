@@ -13,3 +13,12 @@ document.getElementById('services-list').innerHTML = generateServices( services 
 
 // OurClient
 document.getElementById('listOfTestimonials').innerHTML = generateTestimonials( list_Testimonials );
+
+var testimonialsData0 = document.getElementById('0');
+var testimonialsData1 = document.getElementById('1');
+var testimonialsData2 = document.getElementById('2');
+
+testimonialsData0.addEventListener( 'click', showTestimonials0);
+testimonialsData1.addEventListener( 'click', showTestimonials1);
+testimonialsData2.addEventListener( 'click', showTestimonials2);
+ 
