@@ -39,3 +39,18 @@ function generateServices( data ) {
 }
 
 // completed projects
+
+
+//ourClient
+function generateTestimonials( data ) {
+var HTML = '',
+for ( var i=0; i<data.length; i++ ) {
+    HTML += ' <div class="allTestimonials">\
+    < img '+data[i].logo+' >\
+    <h3> '+data[i].author+'</h3>\
+    <h5> '+data[i].possition+'\
+    <p> '+data[i].text+'\
+    </div>'
+}
+return HTML;
+}
