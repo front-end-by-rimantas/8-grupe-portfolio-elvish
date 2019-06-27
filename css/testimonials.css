@@ -3,11 +3,25 @@
     width: 100%;
     color:var(--white-color);
 }
-    .allTestimonials > .list {
+    /* .allTestimonials > .list {
         display: inline-block;
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 40px;  
+        animation-name:changing;
+        animation-iteration-count: infinite;
+        animation-duration: 8s;
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        opacity: 1;
     }
+    @keyframes changing{
+
+        0% {
+            margin-left: 100%
+        }
+        100% {
+            margin-left: -100%;
+        }
+    }   */
         .allTestimonials > .list > .allTestimonials {
             display: none;
             width: 100%;
@@ -16,11 +30,6 @@
             .allTestimonials > .list > .allTestimonials.active {
                 display: inline-block;
             }
-/* #listOfTestimonials{
-    text-align: center;
-    display: inline-block;
-    color:var(--white-color);
-    } */
         .allTestimonials img{
             margin-top: 30px;
             width: 50px;
@@ -41,6 +50,7 @@
 
         .allTestimonials p{
             margin: 0 300px;
+            margin-bottom: 30px;
         }
 .dots{
     width: 15px;
@@ -48,10 +58,14 @@
     border-radius: 30px;
     background-color: grey;
     display: inline-block;
-    margin-top: 30px;
     cursor: pointer;
-    margin: 17px 5px;
+    margin: 20px 5px;
 }
 div .dots:hover{
     background-color: white;
+    width: 20px;
+}
+.dotsBlock{
+    width: 85px;
+    margin-left: calc( ( 100% - 85px ) / 2 );
 }

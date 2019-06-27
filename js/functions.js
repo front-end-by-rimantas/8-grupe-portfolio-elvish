@@ -53,7 +53,7 @@ for ( var i=0; i<data.length; i++ ) {
     </div>`;
 }
 HTML+='</div>';
-
+HTML+= '<div class="dotsBlock">';
 for ( var i=0; i<data.length; i++){
     HTML+= `<div id="${i}" class="dots" ></div>`;
 }
