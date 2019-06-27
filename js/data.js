@@ -39,7 +39,7 @@ var footerIcons = [
         icon: 'google-plus',
         link:'#'
     }
-]
+];
 // Ourblog
 
 var blogItems = [
@@ -67,7 +67,7 @@ var blogItems = [
     description:'Vestibulum sit amet libero vel neque dapibus ultrices. Sed sollicitudin est neque, ac dictum ipsum.',
     link:'#',
 }
-]
+];
 // services
 
 var services = [
@@ -104,6 +104,31 @@ var services = [
 ];
 
 // completed projects
+
+//testimonials- ourClient
+
+var list_Testimonials = [
+{
+logo: 'img//userlogo.png',
+author:'Edwards Evans',
+possition:'Google',
+text: 'The most well-known dummy text is the \'Lorem Ipsum\', which is said to have originated in the 16th century. This ancient dummy text is also incomprehensible, but it imitates the rhythm of most European languages in Latin script.',
+},
+{
+    logo: 'img//userlogo.png',
+    author:'Antonio Hernandez',
+    possition:'Google',
+    text: ' This ancient dummy text is also incomprehensible, but it imitates the rhythm of most European languages in Latin script.',
+},
+    {
+        logo: 'img//userlogo.png',
+        author:'Kirk McFall',
+        possition:'Google',
+        text: 'The most well-known dummy text is the \'Lorem Ipsum\', which is said to have originated in the 16th century.',
+    }
+];
+
+
 
 // education and experience
 

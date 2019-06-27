@@ -528,6 +528,24 @@ body * {
 /* Our work */
 
 /* Client */
+.bg-black-2 {
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url(../img/mountains.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-black-2 *{
+    color: var(--white-color);
+}
+ #white{
+    text-align: center;
+    width: 600px;
+    margin: 0 calc( ( 100% - 600px ) / 2 );
+    padding: 15px 0; 
+    color: var(--white-color);
+}
 
 /* Trusted by great people*/
 .container > .row > div > p{
