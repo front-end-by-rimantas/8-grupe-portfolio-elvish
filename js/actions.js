@@ -11,4 +11,9 @@ document.getElementById('services-list').innerHTML = generateServices( services 
 
 // Completed projects
 
+// Education and experience
+
+// portfolio
+document.getElementById('education_list').innerHTML = generateEducation( education );
+
 
