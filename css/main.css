@@ -90,26 +90,30 @@ body * {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+    #header.transparent {
+        background-color: transparent;
+        box-shadow: none;
+    }
 
-#header .logo {
-    display: inline-block;
-    float: left;
-    text-decoration: none;
-    color: var(--black-color-1);
-    font-size: 35px;
-    line-height: 45px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-    /* #header.transparent .logo {
-        color: #FFF;
-    } */
+    #header .logo {
+        display: inline-block;
+        float: left;
+        text-decoration: none;
+        color: var(--black-color-1);
+        font-size: 35px;
+        line-height: 45px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+        #header.transparent .logo {
+            color: #FFF;
+        }
 #header nav {
     display: inline-block;
     float: right;
 }
 
-        #header nav > .active::after {
+        #header nav > a.active::after {
             content: "";
             display: inline-block;
             width: 6px;
