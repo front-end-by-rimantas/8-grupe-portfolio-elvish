@@ -40,6 +40,22 @@ function generateServices( data ) {
 
 // completed projects
 
+// education and experience
+
+function generateEducation( data ) {
+    var HTML = '';
+
+    data.forEach( (education) => {
+        HTML += `<div class="edu">
+                        <div class="period">${education.period}</div>
+                        <div class="about">
+                            <h4>${education.position}</h4>
+                            <span>${education.description}</span>
+                        </div>
+                </div>`;
+    });
+        return HTML;
+}
 
 //ourClient
 function generateTestimonials( data ) {
@@ -75,5 +91,3 @@ function showTestimonials2 (value) {
     document.querySelector('.allTestimonials.active').classList.remove('active');
     document.querySelector('.allTestimonials[data-index="'+2+'"]').classList.add('active');
 }
-
- 

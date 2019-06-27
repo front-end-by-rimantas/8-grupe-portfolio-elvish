@@ -130,5 +130,37 @@ text: 'The most well-known dummy text is the \'Lorem Ipsum\', which is said to h
 
 
 
+// education and experience
 
-
+var education = [
+    {
+        period: '2010 - 2014',
+        position: 'Studied at Cambridge University',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'
+    },
+    {
+        period: '2010 - 2014',
+        position: 'Senior Graphic Designer',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2014 - 2016',
+        position: 'Master in Computer Science',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2014 - 2016',
+        position: 'Web Developer',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2016 - 2018',
+        position: 'UI/UX Designer',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2016 - 2018',
+        position: 'Freelancer and Themeforest',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    }
+];
