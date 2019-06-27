@@ -164,3 +164,39 @@ var education = [
         description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
     }
 ];
+
+
+//OurWork
+
+var gallery_items =[
+{
+    galleryPhoto:'img//1.jpg',
+    topic:'Category',
+    title:'Project title',
+},
+{
+    galleryPhoto:'img//2.jpg',
+    topic:'Category',
+    title:'Project title',
+},
+{
+    galleryPhoto:'img//3.jpg',
+    topic:'Category',
+    title:'Project title',
+},
+{
+    galleryPhoto:'img//4.jpg',
+    topic:'Category',
+    title:'Project title',
+},
+{
+    galleryPhoto:'img//5.jpg',
+    topic:'Category',
+    title:'Project title',
+},
+{
+    galleryPhoto:'img//6.jpg',
+    topic:'Category',
+    title:'Project title',
+}
+];

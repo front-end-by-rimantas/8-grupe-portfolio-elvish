@@ -27,4 +27,6 @@ testimonialsData2.addEventListener( 'click', showTestimonials2);
 // portfolio
 document.getElementById('education_list').innerHTML = generateEducation( education );
 
- 
+//ourwork
+
+document.getElementById('gallery_list').innerHTML = generateGallery( gallery_items);

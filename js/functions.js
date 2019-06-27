@@ -56,13 +56,25 @@ function generateEducation( data ) {
     });
         return HTML;
 }
+//ourWork
+function generateGallery (data) {
+    var HTML = '<div class="galleryBlock">';
+    for (var i=0; i<data.length; i++) {
+        HTML+= `<div class="gallery">
+        <img src="${data[i].galleryPhoto}" alt="gallary">
+        <span>${data[i].topic}</span>
+        <h6>${data[i].title}</h6>
+        </div>`;
+    }
+    return HTML;
+}
 
 //ourClient
 function generateTestimonials( data ) {
 var HTML = '<div class="list">';
 for ( var i=0; i<data.length; i++ ) {
     HTML += `<div class="allTestimonials ${i === 0 ? 'active' : ''}" data-index="${i}">
-    <img src="${data[i].logo}" alt="" >
+    <img src="${data[i].logo}" alt="logotip" >
     <h5>${data[i].author}</h5>
     <h6>${data[i].possition}</h6>
     <p>${data[i].text}</p>
