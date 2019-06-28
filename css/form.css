@@ -1,0 +1,34 @@
+form {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+}
+    form label {
+        font-weight: bold;
+    }
+    form input {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        border: 1px solid var(--grey-color-2);
+        line-height: 40px;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    form textarea {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        border: 1px solid var(--grey-color-2);
+        line-height: 40px;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    form > .actions {
+        display: inline-block;
+        width: 100%;
+    }

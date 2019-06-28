@@ -15,6 +15,13 @@ document.getElementById('services-list').innerHTML = generateServices( services 
 document.getElementById('listOfTestimonials').innerHTML = generateTestimonials( list_Testimonials );
 
 
+// get in touch 
+
+document.querySelector('#contact .address_info').innerHTML = generateContactInfo( contactInfo );
+document.querySelector('#contact .form').innerHTML = generateForm( contactForm );
+
+
+
 var testimonialsData0 = document.getElementById('0');
 var testimonialsData1 = document.getElementById('1');
 var testimonialsData2 = document.getElementById('2');
