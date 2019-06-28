@@ -39,7 +39,7 @@ var footerIcons = [
         icon: 'google-plus',
         link:'#'
     }
-]
+];
 // Ourblog
 
 var blogItems = [
@@ -67,7 +67,7 @@ var blogItems = [
     description:'Vestibulum sit amet libero vel neque dapibus ultrices. Sed sollicitudin est neque, ac dictum ipsum.',
     link:'#',
 }
-]
+];
 // services
 
 var services = [
@@ -104,6 +104,7 @@ var services = [
 ];
 
 // completed projects
+
 
 // get in touch
 
@@ -235,3 +236,64 @@ var contactForm = {
         }
     ]
 };
+
+//testimonials- ourClient
+
+var list_Testimonials = [
+{
+logo: 'img//userlogo.png',
+author:'Edwards Evans',
+possition:'Google',
+text: 'The most well-known dummy text is the \'Lorem Ipsum\', which is said to have originated in the 16th century. This ancient dummy text is also incomprehensible, but it imitates the rhythm of most European languages in Latin script.',
+},
+{
+    logo: 'img//userlogo.png',
+    author:'Antonio Hernandez',
+    possition:'Google',
+    text: ' This ancient dummy text is also incomprehensible, but it imitates the rhythm of most European languages in Latin script.',
+},
+    {
+        logo: 'img//userlogo.png',
+        author:'Kirk McFall',
+        possition:'Google',
+        text: 'The most well-known dummy text is the \'Lorem Ipsum\', which is said to have originated in the 16th century.',
+    }
+];
+
+
+
+// education and experience
+
+var education = [
+    {
+        period: '2010 - 2014',
+        position: 'Studied at Cambridge University',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'
+    },
+    {
+        period: '2010 - 2014',
+        position: 'Senior Graphic Designer',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2014 - 2016',
+        position: 'Master in Computer Science',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2014 - 2016',
+        position: 'Web Developer',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2016 - 2018',
+        position: 'UI/UX Designer',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    },
+    {
+        period: '2016 - 2018',
+        position: 'Freelancer and Themeforest',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'    
+    }
+];
+

@@ -40,6 +40,7 @@ function generateServices( data ) {
 
 // completed projects
 
+
 // get in touch
 
 function generateContactInfo( data ) {
@@ -116,3 +117,56 @@ function generateForm( data ) {
 
     return HTML;
 }
+
+// education and experience
+
+function generateEducation( data ) {
+    var HTML = '';
+
+    data.forEach( (education) => {
+        HTML += `<div class="edu">
+                        <div class="period">${education.period}</div>
+                        <div class="about">
+                            <h4>${education.position}</h4>
+                            <span>${education.description}</span>
+                        </div>
+                </div>`;
+    });
+        return HTML;
+}
+
+//ourClient
+function generateTestimonials( data ) {
+var HTML = '<div class="list">';
+for ( var i=0; i<data.length; i++ ) {
+    HTML += `<div class="allTestimonials ${i === 0 ? 'active' : ''}" data-index="${i}">
+    <img src="${data[i].logo}" alt="" >
+    <h5>${data[i].author}</h5>
+    <h6>${data[i].possition}</h6>
+    <p>${data[i].text}</p>
+    </div>`;
+}
+HTML+='</div>';
+HTML+= '<div class="dotsBlock">';
+for ( var i=0; i<data.length; i++){
+    HTML+= `<div id="${i}" class="dots" ></div>`;
+}
+return HTML;
+}
+
+function showTestimonials0 (value) {
+    console.log(value);
+    document.querySelector('.allTestimonials.active').classList.remove('active');
+    document.querySelector('.allTestimonials[data-index="'+0+'"]').classList.add('active');
+}
+
+function showTestimonials1 (value) {
+    document.querySelector('.allTestimonials.active').classList.remove('active');
+    document.querySelector('.allTestimonials[data-index="'+1+'"]').classList.add('active');
+}
+
+function showTestimonials2 (value) {
+    document.querySelector('.allTestimonials.active').classList.remove('active');
+    document.querySelector('.allTestimonials[data-index="'+2+'"]').classList.add('active');
+}
+

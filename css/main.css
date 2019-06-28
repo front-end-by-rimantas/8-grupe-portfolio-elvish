@@ -38,6 +38,7 @@ body * {
     .container > .row {
         display: inline-block;
         width: 1200px;
+        margin: 0 calc((100% - 1200px) / 2);
     }
 
 
@@ -75,13 +76,13 @@ body * {
         .container > .row {
             width: 700px;
             margin: 0 calc((100% - 700px) / 2);
-        }
+            }
     }
 
     @media ( max-width: 800px ) {
         .container {
             padding: 80px 20px;
-        }
+             }
             .container > .row {
                 width: 100%;
                 margin: 0;
@@ -93,7 +94,13 @@ body * {
                 width: 100%;
                 margin-left: 0;
             }
-    } */
+
+            /* .container > .row > nav > a {
+                display: none;
+                background-color: red;
+            }  */
+    }
+
 
 /* header */
  
@@ -105,28 +112,41 @@ body * {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* #header.transparent {
-    background-color: transparent;
-    box-shadow: none;
-} */
+    #header.transparent {
+        background-color: transparent;
+        box-shadow: none;
+    }
 
-#header .logo {
-    display: inline-block;
-    float: left;
-    text-decoration: none;
-    color: var(--black-color-1);
-    font-size: 35px;
-    line-height: 45px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-    /* #header.transparent .logo {
-        color: #FFF;
-    } */
+    #header .logo {
+        display: inline-block;
+        float: left;
+        text-decoration: none;
+        color: var(--black-color-1);
+        font-size: 35px;
+        line-height: 45px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+        #header.transparent .logo {
+            color: #FFF;
+        }
 #header nav {
     display: inline-block;
     float: right;
 }
+
+        #header nav > a.active::after {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--black-color-1);
+            position: absolute;
+            border-radius: 50%;
+            bottom: 0%;
+            left: calc((100% - 10px) / 2);
+           }
+
     #header nav > a {
         display: inline-block;
         float: left;
@@ -135,22 +155,25 @@ body * {
         color: var(--black-color-1);
         text-decoration: none;
         line-height: 45px;
+        position: relative;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
-        /* #header.transparent nav > a {
-            color: #FFF;
-        } */
+
         #header nav > a:first-child {
             margin: 0;
         }
-        #header nav > a:hover {
-            color: red;
-        }
-        /* #header nav > a.active {
-            background-color: var(--white-color);
-            color: var(--black-color-1);
-            border-radius: 15px; 
-        }*/
+        #header nav > a:hover::after {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background-color: var(--black-color-1);
+            position: absolute;
+            border-radius: 50%;
+            bottom: 0;
+            left: calc((100% - 10px) / 2);
+            }
+
 
 /* hero */
 .container_hero{
@@ -244,7 +267,7 @@ body * {
             }
                 .scroll{
                     display: inline-block;
-                    animation-name:moving;
+                    animation-name: moving;
                     animation-iteration-count: infinite;
                     animation-duration: 2s;
                     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -320,7 +343,6 @@ body * {
     .container > .row {
         display: inline-block;
         width: 1200px;
-        margin: 0 calc((100% - 1200px) / 2);
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
         .container > .row > .about-me {
@@ -465,6 +487,58 @@ body * {
 
 /* education and experience */
 
+#education_list {
+    display: grid;
+    grid-template-areas:
+        ". .";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px 60px;
+    place-items: start;
+}
+    #education_list > .edu {
+        display: inline-block;
+        height: 200px;
+        width: 400px;
+        border: 1px solid #e7e7e7;
+        border-radius: 8px;
+        padding: 30px;
+        position: relative;
+    }
+    #education_list > .edu::after {
+        content: "";
+        height: 111%;
+        left: 0;
+        background-color: #e7e7e7;
+        margin-left: -23px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+    }
+        #education_list > .edu > .period {
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        #education_list > .edu > .period::after {
+            border-radius: 50%;
+            content: "";
+            height: 15px;
+            width: 15px;
+            background-color: #000;
+            position: absolute;
+            left: -30px;
+            z-index: 1;
+        }
+        #education_list > .edu .about > h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-transform: capitalize;    
+        }
+
 /* Freelancer */
 .container.free{
     background:
@@ -500,6 +574,24 @@ body * {
 /* Our work */
 
 /* Client */
+.bg-black-2 {
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url(../img/mountains.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-black-2 *{
+    color: var(--white-color);
+}
+ #white{
+    text-align: center;
+    width: 600px;
+    margin: 0 calc( ( 100% - 600px ) / 2 );
+    padding: 15px 0; 
+    color: var(--white-color);
+}
 
 /* Trusted by great people*/
 .container > .row > div > p{
@@ -729,6 +821,16 @@ footer .row{
             }
             .facts > .col:nth-child(3), .col:nth-child(4) {
                 margin-top: 16px;
+            }
+
+    /* Education and Experience */
+    
+        #education_list {
+            grid-template-areas: ".";
+            grid-template-columns: 1fr;
+        }
+            #education_list > .edu {
+                width: 100%;
             }
 
     /* Our blog */
