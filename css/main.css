@@ -40,6 +40,30 @@ body * {
         width: 1200px;
     }
 
+
+    .col-1, .col-2, .col-3, .col-4,
+    .col-5, .col-6, .col-7, .col-8,
+    .col-9, .col-10, .col-11, .col-12 {
+        display: inline-block;
+        float: left;
+        padding: 0 10px;
+        min-height: 1px;
+    }
+
+    .col-12 { width: 100%; }
+    .col-11 { width: calc(100% / 12 * 11); }
+    .col-10 { width: calc(100% / 12 * 10); }
+    .col-9 { width: 75%; }
+    .col-8 { width: calc(100% / 12 * 8); }
+    .col-7 { width: calc(100% / 12 * 7); }
+    .col-6 { width: 50%; }
+    .col-5 { width: calc(100% / 12 * 5); }
+    .col-4 { width: calc(100% / 12 * 4); }
+    .col-3 { width: 25%; }
+    .col-2 { width: calc(100% / 12 * 2); }
+    .col-1 { width: calc(100% / 12); }
+
+
     /* @media ( max-width: 1300px ) {
         .container > .row {
             width: 900px;
@@ -499,12 +523,18 @@ body * {
     }
 /* Subscribe */
 .newsletter {
-    /* display: inline-block; */
+    display: inline-block;
     text-align: center;
 }
+    .newsletter form {
+        width: 0;
+    }
     .newsletter input {
+        max-width: 550px;
+        margin: 0;
         padding: 15px 150px 15px 30px;
         font-size: 17px;
+        line-height: 0;
         color: #4c5667;
         border: none;
         border-radius: 30px;
@@ -569,7 +599,40 @@ body * {
         color: var(--grey-color-2);
         font-weight: bold;
     }
-/* Get in Tuch */
+/* Get in Touch */
+
+#contact.row > .address_info {
+    display: inline-block;
+    float: left;
+    width: 35%;
+}
+    .address_info > .info-box {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+        .address_info > .info-box > i {
+            display: inline-block;
+            color: #4c5667;
+            font-size: 30px;
+        }
+        .address_info > .info-box > h4 {
+            margin: 15px 0px 0px;
+        }
+        .address_info > .info-box > div > a {
+                text-decoration: none;
+                color: #4c5667;
+        }
+    #contact .form {
+        display: inline-block;
+        float: right;
+        width: 60%;
+    }
+    #contact .form .actions .btn {
+        float: right;
+    }
+
+
 
 /* footer */
 footer {
@@ -658,8 +721,7 @@ footer .row{
             }
   
     /* Completed projects */
-    
-            .facts > .col {
+        .facts > .col {
             width: 48%;            
         }
             .facts > .col:nth-child(2n+1) {
@@ -667,14 +729,25 @@ footer .row{
             }
             .facts > .col:nth-child(3), .col:nth-child(4) {
                 margin-top: 16px;
-        }
+            }
 
     /* Our blog */
         .blog {
             width: 100%;
         }
-    }
 
+    /* Get in touch */
+        #contact.row > .address_info {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #contact .form {
+            width: 100%;
+        }
+        .col-6 {
+            width: 100%;
+        }
+    }
 
    /* Basic structure */
 

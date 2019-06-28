@@ -104,3 +104,134 @@ var services = [
 ];
 
 // completed projects
+
+// get in touch
+
+var contactInfo = [
+    {
+        icon: 'mobile',
+        title: 'Call us on',
+        info: [
+            {
+                type: 'text',
+                value: '+123 456 789'
+            }
+        ]
+    },
+    {
+        icon: 'envelope-o',
+        title: 'Email us at',
+        info: [
+            {
+                type: 'link',
+                value: 'example@gmail.com'
+            },
+        ]
+    },
+    {
+        icon: 'map-marker',
+        title: 'Visit office',
+        info: [
+            {
+                type: 'text',
+                value: 'Wallstreet 111, NY, USA'
+            },
+        ]
+    }
+];
+
+var contactForm = {
+    fields: [
+        {
+            type: 'input',
+            attr: [
+                {
+                    name: 'type',
+                    value: 'text'
+                },
+                {
+                    name: 'value',
+                    value: ''
+                },
+                {
+                    name: 'placeholder',
+                    value: 'Your name..'
+                },
+                {
+                    name: 'label',
+                    value: 'Name'
+                }
+            ],
+            className: ['col-6'],
+            required: true
+        },
+        {
+            type: 'input',
+            attr: [
+                {
+                    name: 'type',
+                    value: 'email'
+                },
+                {
+                    name: 'value',
+                    value: ''
+                },
+                {
+                    name: 'placeholder',
+                    value: 'Your email...'
+                },
+                {
+                    name: 'label',
+                    value: 'Email address'
+                },
+            ],
+            className: ['col-6'],
+            required: true
+        },
+        {
+            type: 'input',
+            attr: [
+                {
+                    name: 'type',
+                    value: 'text'
+                },
+                {
+                    name: 'value',
+                    value: ''
+                },
+                {
+                    name: 'placeholder',
+                    value: 'Your subject...'
+                },
+                {
+                    name: 'label',
+                    value: 'Subject'
+                }
+            ],
+            className: ['col-12'],
+            required: false
+        },
+        {
+            type: 'textarea',
+            attr: [
+                {
+                    name: 'placeholder',
+                    value: 'Your message ...'
+                },
+                {
+                    name: 'label',
+                    value: 'Message'
+                }
+            ],
+            value: 'Message',
+            className: ['col-12'],
+            required: true
+        }
+    ],
+    actions: [
+        {
+            style: 'black',
+            text: 'Send message'
+        }
+    ]
+};
