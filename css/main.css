@@ -75,7 +75,7 @@ body * {
                 display: none;
                 background-color: red;
             }  */
-    }
+    
 
 
 /* header */
@@ -86,7 +86,7 @@ body * {
     background-color: var(--white-color);
     z-index: 1;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
+    }
 
     #header.transparent {
         background-color: transparent;
@@ -138,6 +138,7 @@ body * {
         #header nav > a:first-child {
             margin: 0;
         }
+
         #header nav > a:hover::after {
             content: "";
             display: inline-block;
