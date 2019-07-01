@@ -60,16 +60,31 @@ function generateEducation( data ) {
 }
 //ourWork
 function generateGallery (data) {
-    var HTML = '<div class="galleryBlock">';
-    for (var i=0; i<data.length; i++) {
-        HTML+= `<div class="gallery">
-        <img src="${data[i].galleryPhoto}" alt="gallary">
-        <span>${data[i].topic}</span>
-        <h6>${data[i].title}</h6>
+    var HTML ='',
+    work;
+    
+    data.forEach(( work,i) => {
+console.log( (i +1) + ')' + work.tag);
+        // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
+        HTML += `<div class="galleryBlock">
+        <div class= "absolute">
+            <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto});"> 
+            </div>
+            <div class= "blackside">
+                <h6> ${data[i].topic} </h6>
+                <span> ${data[i].title} </span>
+                </div>
+            </div>
         </div>`;
-    }
-    return HTML;
+    });
+
+// for(var i=0;  i<data.length; i++){
+// work = data[i];
+// console.log( (i +1) + ')' + work.tag);//TAS PATS KAIP SU FOREACH
+
+return HTML;
 }
+    
 
 //ourClient
 function generateTestimonials( data ) {

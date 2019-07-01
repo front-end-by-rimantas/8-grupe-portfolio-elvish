@@ -170,33 +170,39 @@ var education = [
 
 var gallery_items =[
 {
-    galleryPhoto:'img//1.jpg',
+    galleryPhoto:'1.jpg',
     topic:'Category',
     title:'Project title',
+    tag:'webdesign work wordpress',
 },
 {
-    galleryPhoto:'img//2.jpg',
+    galleryPhoto:'2.jpg',
     topic:'Category',
     title:'Project title',
+    tag: 'seo webdesign work',
 },
 {
-    galleryPhoto:'img//3.jpg',
+    galleryPhoto:'3.jpg',
     topic:'Category',
     title:'Project title',
+    tag: 'seo wordpress',
 },
 {
-    galleryPhoto:'img//4.jpg',
+    galleryPhoto:'4.jpg',
     topic:'Category',
     title:'Project title',
+    tag:'work wordpress',
 },
 {
-    galleryPhoto:'img//5.jpg',
+    galleryPhoto:'5.jpg',
     topic:'Category',
     title:'Project title',
+    tag: 'seo webdesign',
 },
 {
-    galleryPhoto:'img//6.jpg',
+    galleryPhoto:'6.jpg',
     topic:'Category',
     title:'Project title',
+    tag: 'webdesign',
 }
 ];

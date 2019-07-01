@@ -1,25 +1,57 @@
-.container div.galleryBlock{
+
+#gallery_list{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-left: 0 auto;
-    max-width: 1200px;
-    grid-column-gap: 10px;
-    grid-auto-rows: 300px;
+    width: 100%;
+    grid-template-areas:
+     ". . .";/* bus 3 kazkokie stulpeliai, taskais zymimi stulpeliai be pavadinimo*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+    place-items: start; 
 }
+    #gallery_list  .galleryBlock{
+        display: inline-block;
+        width:100%;
+        border-radius: 2px;
+        box-shadow:  0 0 3px gray;
+        position: relative;
+    }
+        
+        #gallery_list .galleryBlock::before{
+            content: "";
+            display: inline-block;
+            width:1px;
+            height: 0;
+            padding-bottom: calc(100% - 4px);
+        }
+        #gallery_list .galleryBlock .absolute{
+            position: absolute;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            }
+    #gallery_list .galleryBlock .blackside{
+        position: absolute;
+        top: 0;
+        text-align: center;
+    }
+        
+        #gallery_list .galleryBlock .galleryPhoto{
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
 
-.gallery > .galleryBlock > .gallery img{
-height: 100%;
-width: 100%;
-display: inline-block;
+        
+        #gallery_list > .galleryBlock > .span{
+                /* position: absolute;
+                top:0;
+                left:0;
+                display: inline-block; */
+        }
 
-}
- .gallery > .galleryBlock > .gallery span{
-position: absolute;
-top:0;
-left:0;
-display: inline-block;
-}
-.gallery > .galleryBlock > .gallery h6{
-    position: absolute;
-    display: inline-block;
-}
+        #gallery_list > .galleryBlock > h6{
+                /* position: absolute;
+                display: inline-block; */
+        }
