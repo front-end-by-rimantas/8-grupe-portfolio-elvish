@@ -21,6 +21,8 @@ for ( var i=0; i<data.length; i++ ) {
     <p>${data[i].description}</p>
     <a href="${data[i].link}">Read more...</a>
 </div>`;
+
+HTML
 }
 return HTML;
 }
@@ -134,13 +136,40 @@ function generateEducation( data ) {
     });
         return HTML;
 }
+//ourWork
+function generateGallery (data) {
+    var HTML ='',
+    work;
+    
+    data.forEach(( work,i) => {
+console.log( (i +1) + ')' + work.tag);
+        // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
+        HTML += `<div class="galleryBlock">
+        <div class= "absolute">
+            <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto});"> 
+            </div>
+            <div class= "blackside">
+                <h6> ${data[i].topic} </h6>
+                <span> ${data[i].title} </span>
+                </div>
+            </div>
+        </div>`;
+    });
+
+// for(var i=0;  i<data.length; i++){
+// work = data[i];
+// console.log( (i +1) + ')' + work.tag);//TAS PATS KAIP SU FOREACH
+
+return HTML;
+}
+    
 
 //ourClient
 function generateTestimonials( data ) {
 var HTML = '<div class="list">';
 for ( var i=0; i<data.length; i++ ) {
     HTML += `<div class="allTestimonials ${i === 0 ? 'active' : ''}" data-index="${i}">
-    <img src="${data[i].logo}" alt="" >
+    <img src="${data[i].logo}" alt="logotip" >
     <h5>${data[i].author}</h5>
     <h6>${data[i].possition}</h6>
     <p>${data[i].text}</p>

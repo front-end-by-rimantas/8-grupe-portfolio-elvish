@@ -297,3 +297,44 @@ var education = [
     }
 ];
 
+
+//OurWork
+
+var gallery_items =[
+{
+    galleryPhoto:'1.jpg',
+    topic:'Category',
+    title:'Project title',
+    tag:'webdesign work wordpress',
+},
+{
+    galleryPhoto:'2.jpg',
+    topic:'Category',
+    title:'Project title',
+    tag: 'seo webdesign work',
+},
+{
+    galleryPhoto:'3.jpg',
+    topic:'Category',
+    title:'Project title',
+    tag: 'seo wordpress',
+},
+{
+    galleryPhoto:'4.jpg',
+    topic:'Category',
+    title:'Project title',
+    tag:'work wordpress',
+},
+{
+    galleryPhoto:'5.jpg',
+    topic:'Category',
+    title:'Project title',
+    tag: 'seo webdesign',
+},
+{
+    galleryPhoto:'6.jpg',
+    topic:'Category',
+    title:'Project title',
+    tag: 'webdesign',
+}
+];
