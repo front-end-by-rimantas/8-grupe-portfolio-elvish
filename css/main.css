@@ -139,6 +139,10 @@ body * {
         color: #FFF;
     }
 
+            #header.transparent nav > a.active::after {
+                background-color: #FFF;
+            }
+
         #header nav > a:first-child {
             margin: 0;
         }
@@ -171,7 +175,7 @@ body * {
         width: 1000px;
         margin: 0 calc( ( 100% - 1000px) / 2 );
         color:var(--white-color);
-        margin-top: 20px;
+        margin-top: 180px;
         margin-bottom: 90px;
         height: 300px;
     }

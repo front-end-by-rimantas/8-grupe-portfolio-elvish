@@ -54,7 +54,7 @@ function headerScrollDetector() {
 
 function headerStyle() {
     var scroll = window.scrollY,
-        limit = 80,
+        limit = 30,
         element = document.getElementById('header'),
         clname = '';
     if ( scroll > limit ) {
