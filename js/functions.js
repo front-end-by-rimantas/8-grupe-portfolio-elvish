@@ -42,6 +42,84 @@ function generateServices( data ) {
 
 // completed projects
 
+
+// get in touch
+
+function generateContactInfo( data ) {
+    var HTML = '',
+        infoListHTML = '',
+        infoElement;
+
+    for ( var i=0; i<data.length; i++ ) {
+        infoListHTML = '';
+
+        for ( var p=0; p<data[i].info.length; p++ ) {
+            infoElement = data[i].info[p];
+
+            if ( infoElement.type === 'text' ) {
+                infoListHTML += `<p>${infoElement.value}</p>`;
+            }
+
+            if ( infoElement.type === 'link' ) {
+                infoListHTML += `<a href="mailto:${infoElement.value}">${infoElement.value}</a>`;
+            }
+        }
+
+        HTML += `<div class="info-box">
+                    <i class="fa fa-${data[i].icon}"></i>
+                    <h4>${data[i].title}:</h4>
+                    <div>${infoListHTML}</div>
+                </div>`;
+    }
+
+    return HTML;
+}
+
+function generateForm( data ) {
+    var HTML = '<form>',
+        field,
+        attrHTML = '',
+        attrInfo,
+        classNames = '';
+
+    for ( var i=0; i<data.fields.length; i++ ) {
+        field = data.fields[i];
+        attrHTML = '';
+        classNames = '';
+
+        for ( var a=0; a<field.attr.length; a++ ) {
+            attrInfo = field.attr[a];
+            attrHTML += `${attrInfo.name}="${attrInfo.value}"`;
+        }
+
+        classNames = field.className.join(' ');
+        
+        if ( field.type === 'input' ) {
+            HTML += `<div class="${classNames}">
+                        <label for="">${attrInfo.value}</label>
+                        <input ${attrHTML}>
+                    </div>`;
+        }
+        if ( field.type === 'textarea' ) {
+            HTML += `<div class="${classNames}">
+                        <label for="">${attrInfo.value}</label>
+                        <textarea ${attrHTML}></textarea>
+                    </div>`;
+        }
+    }
+    HTML += '<div class="actions">';
+        for ( var i=0; i<data.actions.length; i++ ) {
+            HTML += `<div class="col-12">
+                        <div class="btn btn-${data.actions[i].style}">${data.actions[i].text}</div>
+                    </div>`;
+        }
+    HTML += '</div>';
+    
+    HTML += '</form>';
+
+    return HTML;
+}
+
 // education and experience
 
 function generateEducation( data ) {
@@ -120,3 +198,4 @@ function showTestimonials2 (value) {
     document.querySelector('.allTestimonials.active').classList.remove('active');
     document.querySelector('.allTestimonials[data-index="'+2+'"]').classList.add('active');
 }
+
