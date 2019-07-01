@@ -1,5 +1,13 @@
 "use strict";
 
+// general_header
+
+window.addEventListener("scroll", function(){
+    headerScrollDetector();
+    headerStyle();
+});
+
+// hero icons, footer icons, blog items
 
 document.getElementById('hero_icons').innerHTML = generateIcons( heroIcons );
 document.getElementById('footer_icons').innerHTML = generateIcons( footerIcons );
