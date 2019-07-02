@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Potfolio</title>
+    <title>Potfolio-Elvish</title>
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/buttons.css">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/testimonials.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- header start -->
@@ -20,14 +21,14 @@
         <div class="row">
             <a href="#" class="logo">Elvish</a>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Education</a>
-                <a href="#">Work</a>
-                <a href="#">Client</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a href="#" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#education">Education</a>
+                <a href="#work">Work</a>
+                <a href="#client">Client</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -52,7 +53,7 @@
     </div>
     <!-- hero end -->
     <!-- about me start -->
-    <div class="container">
+    <div id="about" class="container">
         <div class="row">
             <h3><span> About </span> Me</h3>
             <div class="block">
@@ -158,37 +159,7 @@
             </div>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  </p>
         <div id="services-list" class="row">
-            <!-- <div class="service">
-                <i class="fa fa-file-archive-o"></i>
-                <h3>Graphic design</h3>
-                <p>The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.</p>
-            </div>
-            <div class="service">
-                <i class="fa fa-file-image-o"></i>
-                <h3>Unlimited color</h3>
-                <p>The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.</p>
-            </div>
-            <div class="service">
-                <i class="fa fa-paper-plane-o"></i>
-                <h3>Media marketing</h3>
-                <p>The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.</p>
-            </div>
-            <div class="service">
-                <i class="fa fa-wifi"></i>
-                <h3>Unlimited WiFi</h3>
-                <p>The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.</p>
-            </div>
-            <div class="service">
-                <i class="fa fa-desktop"></i>
-                <h3>Responsive Design</h3>
-                <p>The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.</p>
-            </div>
-            <div class="service">
-                <i class="fa fa-file-text-o"></i>
-                <h3>Easy to customize</h3>
-                <p>The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.</p>
-            </div>                  -->
-
+            
         </div>
         </div>
     </div>
@@ -197,44 +168,28 @@
     <!-- Completed projects start -->
     <div class="container bg-black-3">
         <div class="row">
-            <div class="facts">
-                <div class="col">
-                    <div class="fa fa-clock-o"></div>
-                    <div class="value">654</div>
-                    <div class="title">Working hours</div>
-                </div>
-                <div class="col">
-                    <div class="fa fa-gift"></div>
-                    <div class="value">6400</div>
-                    <div class="title">Completed projects</div>
-                </div>
-                <div class="col">
-                    <div class="fa fa-user"></div>
-                    <div class="value">2389</div>
-                    <div class="title">No.of Clients</div>
-                </div>
-                <div class="col">
-                    <div class="fa fa-users"></div>
-                    <div class="value">653</div>
-                    <div class="title">Team Member</div>
-                </div>
-            </div>
+            <div id="facts_list" class="row"></div>
         </div>
     </div>
     <!-- Completed projects end -->
 
-    <!-- Education & Experiskence start -->
-    <div class="container">
-        <div class="row">
+    <!-- Education & Experience start -->
+    <div id="education" class="container">
+          <div class="row">
             <h3><span>Education &#38 Experience</span></h3>
             <div class="block">
                     <div class="rightline"> &#8212</div>
                     <div class="star"> * </div>
                     <div class="leftline"> &#8212</div>
+            </div>
+                <div id="top">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                 </div>
+            <div id="education_list" class="row">
+            </div>
         </div>
     </div>
-    <!-- Education & Experiskence end -->
+    <!-- Education & Experience end -->
 
     <!-- I Am Available For Freelancer start -->
     <div class="container free">
@@ -246,7 +201,7 @@
     <!-- I Am Available For Freelancer end -->
     
     <!-- Our Works start -->
-    <div class="container">
+    <div id="work" class="container">
         <div class="row">
             <h3>Our <span> Works </span></h3>
             <div class="block">
@@ -254,12 +209,12 @@
                     <div class="star"> * </div>
                     <div class="leftline"> &#8212</div>
                 </div>
+                    <div id='gallery_list' class="gallery"></div>
         </div>
     </div>
     <!-- Our Works end -->
-
     <!-- Our Client start -->
-    <div class="container bg-black-2">
+    <div id="client" class="container bg-black-2">
         <div class="row">
             <h3>Our <span> Client </span></h3>
             <div class="block">
@@ -267,6 +222,13 @@
                     <div class="star"> * </div>
                     <div class="leftline"> &#8212</div>
                 </div>
+                <div>
+                    <p id='white'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  </p>
+                </div>
+                <div class="allTestimonials" id='listOfTestimonials'>
+                <div class="dotsBlock"><div class= "dots"></div> </div>
+                </div>
+                
         </div>
     </div>
     <!-- Our Client end -->
@@ -281,16 +243,15 @@
                     <div class="leftline"> &#8212</div>
             </div>
             <div>
-                <!-- dfghjk -->
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  </p>
             </div>
             <div class="line" id='line'>
-                <div> <img src="/img/1.png" alt="first"> </div>
-                <div> <img src="/img/2.png" alt="second"> </div>
-                <div> <img src="/img/3.png" alt="third"> </div>
-                <div> <img src="/img/4.png" alt="fourth"> </div>
-                <div> <img src="/img/5.png" alt="fifth"> </div>
-                <div> <img src="/img/6.png" alt="sixth"> </div>
+                <div> <img src="img/1.png" alt="first"> </div>
+                <div> <img src="img/2.png" alt="second"> </div>
+                <div> <img src="img/3.png" alt="third"> </div>
+                <div> <img src="img/4.png" alt="fourth"> </div>
+                <div> <img src="img/5.png" alt="fifth"> </div>
+                <div> <img src="img/6.png" alt="sixth"> </div>
             </div>
         </div>
     </div>
@@ -319,7 +280,7 @@
     <!-- Subscribe end -->
 
      <!-- Our Blog start -->
-     <div class="container bg-grey">
+     <div id="blog" class="container bg-grey">
         <div class="row">
             <h3>Our<span> Blog </span></h3>
             <div class="block">
@@ -340,14 +301,21 @@
     <!-- Our Blog end -->
 
     <!-- contact me start -->
-    <div class="container">
+    <div id="contact" class="container">
         <div class="row">
-               <h3>Get In<span> touch </span></h3> 
-               <div class="block">
-                    <div class="rightline"> &#8212</div>
-                    <div class="star"> * </div>
-                    <div class="leftline"> &#8212</div>
-                </div>
+            <h3>Get In<span> touch </span></h3> 
+            <div class="block">
+                <div class="rightline"> &#8212</div>
+                <div class="star"> * </div>
+                <div class="leftline"> &#8212</div>
+            </div>
+            <div id="top">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+        </div>
+        <div id="contact" class="row">
+            <div class="address_info">Address</div>
+            <div class="form">Form</div>
         </div>
     </div>
     <!-- contact me end -->
