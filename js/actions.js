@@ -19,6 +19,8 @@ document.getElementById('services-list').innerHTML = generateServices( services 
 
 // Completed projects
 
+document.getElementById('facts_list').innerHTML  = generateFacts (facts);
+
 // OurClient
 document.getElementById('listOfTestimonials').innerHTML = generateTestimonials( list_Testimonials );
 
@@ -39,8 +41,11 @@ testimonialsData1.addEventListener( 'click', showTestimonials1);
 testimonialsData2.addEventListener( 'click', showTestimonials2);
 // Education and experience
 
-// portfolio
+
 document.getElementById('education_list').innerHTML = generateEducation( education );
+
+
+// portfolio
 
 //ourwork
 
