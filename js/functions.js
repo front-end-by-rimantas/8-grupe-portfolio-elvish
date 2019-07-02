@@ -196,9 +196,9 @@ function generateEducation( data ) {
 }
 //ourWork
 function generateGallery (data) {
-    var HTML ='',
+    var HTML =`<div class="filter"><div class = "listCLick">ALL </div></div> <div class="list">`,
     work;
-    
+
     data.forEach(( work,i) => {
 console.log( (i +1) + ')' + work.tag);
         // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
@@ -207,12 +207,13 @@ console.log( (i +1) + ')' + work.tag);
             <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto});"> 
             </div>
             <div class= "blackside">
-                <h6> ${data[i].topic} </h6>
-                <span> ${data[i].title} </span>
+                <h6> ${work.topic} </h6>
+                <span> ${work.title} </span>
                 </div>
             </div>
         </div>`;
     });
+    HTML+= `</div>`
 
 // for(var i=0;  i<data.length; i++){
 // work = data[i];
@@ -236,23 +237,15 @@ for ( var i=0; i<data.length; i++ ) {
 HTML+='</div>';
 HTML+= '<div class="dotsBlock">';
 for ( var i=0; i<data.length; i++){
-    HTML+= `<div id="number${i}" class="dots" id= [i]></div>`;
+    HTML+= `<div id="number${i}" class="dots" data-index="${i}"></div>`;
 }
 return HTML;
 }
 
-function showTestimonials0 (value) {
-    console.log(value);
+function showTestimonial (value) {
+    console.log(value.target.getAttribute('data-index'));
+
     document.querySelector('.allTestimonials.active').classList.remove('active');
-    document.querySelector('.allTestimonials[data-index="'+0+'"]').classList.add('active');
+    document.querySelector('.allTestimonials[data-index="'+value.target.getAttribute('data-index')+'"]').classList.add('active');
 }
 
-function showTestimonials1 (value) {
-    document.querySelector('.allTestimonials.active').classList.remove('active');
-    document.querySelector('.allTestimonials[data-index="'+1+'"]').classList.add('active');
-}
-
-function showTestimonials2 (value) {
-    document.querySelector('.allTestimonials.active').classList.remove('active');
-    document.querySelector('.allTestimonials[data-index="'+2+'"]').classList.add('active');
-}

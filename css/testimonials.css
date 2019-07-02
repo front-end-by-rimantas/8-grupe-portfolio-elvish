@@ -1,14 +1,14 @@
-.allTestimonials {
+.all_testimonials {
     display: inline-block;
     width: 100%;
     color:var(--white-color);
 }
-      .allTestimonials .list {
+      .all_testimonials .list {
           width: 100%;
         display: inline-block;
         margin-bottom: 20px;  
         animation-name:changing;
-        animation-iteration-count: inherit;
+        animation-iteration-count: infinite;
         animation-duration: 10s;
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
         opacity: 1;
