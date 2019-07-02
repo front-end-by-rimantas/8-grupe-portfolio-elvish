@@ -105,6 +105,28 @@ var services = [
 
 // completed projects
 
+var facts = [
+    {
+        icon: 'clock-o',
+        counter_value: '654',
+        title: 'Working hours.'
+    },
+    {
+        icon: 'gift',
+        counter_value: '6400',
+        title: 'Completed projects'
+    },
+    {
+        icon: 'user',
+        counter_value: '2389',
+        title: 'No.of Clients'
+    },
+    {
+        icon: 'users',
+        counter_value: '653',
+        title: 'Team member'
+    }
+];
 
 // get in touch
 

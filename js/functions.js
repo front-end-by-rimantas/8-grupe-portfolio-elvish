@@ -40,6 +40,18 @@ function generateServices( data ) {
 
 // completed projects
 
+function generateFacts( data ) {
+    var HTML = '';
+    for ( var j=0; j<data.length; j++ ) {
+        HTML += '<div class="col">\
+                    <j class="fa fa-'+data[j].icon+'"></j>\
+                    <div class="counter_value">'+data[j].counter_value+'</div>\
+                    <div class="title">'+data[j].title+'</div>\
+                </div>';
+    }
+    return HTML;
+}
+
 
 // get in touch
 

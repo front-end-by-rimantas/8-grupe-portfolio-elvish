@@ -64,44 +64,6 @@ body * {
     .col-2 { width: calc(100% / 12 * 2); }
     .col-1 { width: calc(100% / 12); }
 
-
-    /* @media ( max-width: 1300px ) {
-        .container > .row {
-            width: 900px;
-            margin: 0 calc((100% - 900px) / 2);
-        }
-    }
-
-    @media ( max-width: 1000px ) {
-        .container > .row {
-            width: 700px;
-            margin: 0 calc((100% - 700px) / 2);
-            }
-    }
-
-    @media ( max-width: 800px ) {
-        .container {
-            padding: 80px 20px;
-             }
-            .container > .row {
-                width: 100%;
-                margin: 0;
-            }
-            .container > .row > .left {
-                width: 100%;
-            }
-            .container > .row > .right {
-                width: 100%;
-                margin-left: 0;
-            }
-
-            /* .container > .row > nav > a {
-                display: none;
-                background-color: red;
-            }  */
-    
-
-
 /* header */
  
 #header {
@@ -384,9 +346,7 @@ body * {
                 display: none;
             }
             p.text-about-me {
-                font-size: 18px;
-                margin: 15px 0px;
-                color: var(--text-color);
+                font-size: 17px;
             } 
         .container > .row > .left {
             display: inline-block;
@@ -429,7 +389,7 @@ body * {
         margin-top: 15px;
         margin-bottom: 30px;
         text-align: center;
-        color: #6c757d;
+        color: var(--text-color);
     }
     .service i.fa {
         font-size: 30px;
@@ -456,7 +416,7 @@ body * {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.container > .row > .facts {
+#facts_list {
     display: inline-block;
     width: 100%;
     color: var(--white-color);
@@ -477,11 +437,11 @@ body * {
             font-size: 20px;
             margin-top: 20px;
         }
-        .facts > .col > .value {
+        #facts_list > .col > .counter_value {
             font-size: 35px;
             margin-top: 10px;
         }
-        .facts > .col > .title {
+        #facts_list .title {
             font-size: 13px;
         }
 
@@ -586,19 +546,15 @@ body * {
     color: var(--white-color);
 }
  #white{
-    text-align: center;
-    width: 600px;
-    margin: 0 calc( ( 100% - 600px ) / 2 );
-    padding: 15px 0; 
     color: var(--white-color);
 }
 
 /* Trusted by great people*/
 .container > .row > div > p{
     text-align: center;
-    color: var(--black-color-2);
-    width: 800px;
-    margin: 0 calc( ( 100% - 800px ) / 2 );
+    color: var(--text-color);
+    width: 500px;
+    margin: 0 calc( ( 100% - 500px ) / 2 );
     padding: 15px 0;
 }
 #line{
@@ -627,7 +583,7 @@ body * {
         padding: 15px 150px 15px 30px;
         font-size: 17px;
         line-height: 0;
-        color: #4c5667;
+        color: var(--input-color);
         border: none;
         border-radius: 30px;
         background-color: #f1f1f1;
@@ -813,13 +769,13 @@ footer .row{
             }
   
     /* Completed projects */
-        .facts > .col {
+        #facts_list > .col {
             width: 48%;            
         }
-            .facts > .col:nth-child(2n+1) {
+            #facts_list > .col:nth-child(2n+1) {
                 margin-left: 0px;
             }
-            .facts > .col:nth-child(3), .col:nth-child(4) {
+            #facts_list > .col:nth-child(3), .col:nth-child(4) {
                 margin-top: 16px;
             }
 
@@ -881,7 +837,7 @@ footer .row{
         
         /* Completed Projects */
 
-            .facts > .col {
+            #facts_list > .col {
                 width: 100%;
                 margin-top: 10px;
                 margin-left: 0px;
