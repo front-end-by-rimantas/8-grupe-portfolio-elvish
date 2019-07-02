@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/testimonials.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- header start -->
@@ -21,13 +22,13 @@
             <a href="#" class="logo">Elvish</a>
             <nav>
                 <a href="#" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Education</a>
-                <a href="#">Work</a>
-                <a href="#">Client</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#education">Education</a>
+                <a href="#work">Work</a>
+                <a href="#client">Client</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -52,7 +53,7 @@
     </div>
     <!-- hero end -->
     <!-- about me start -->
-    <div class="container">
+    <div id="about" class="container">
         <div class="row">
             <h3><span> About </span> Me</h3>
             <div class="block">
@@ -174,7 +175,7 @@
 
     <!-- Education & Experience start -->
     <div class="container">
-        <div class="row">
+          <div class="row">
             <h3><span>Education &#38 Experience</span></h3>
             <div class="block">
                     <div class="rightline"> &#8212</div>
@@ -200,7 +201,7 @@
     <!-- I Am Available For Freelancer end -->
     
     <!-- Our Works start -->
-    <div class="container">
+    <div id="work" class="container">
         <div class="row">
             <h3>Our <span> Works </span></h3>
             <div class="block">
@@ -208,11 +209,12 @@
                     <div class="star"> * </div>
                     <div class="leftline"> &#8212</div>
                 </div>
+                    <div id='gallery_list' class="gallery"></div>
         </div>
     </div>
     <!-- Our Works end -->
     <!-- Our Client start -->
-    <div class="container bg-black-2">
+    <div id="client" class="container bg-black-2">
         <div class="row">
             <h3>Our <span> Client </span></h3>
             <div class="block">
@@ -244,12 +246,12 @@
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  </p>
             </div>
             <div class="line" id='line'>
-                <div> <img src="/img/1.png" alt="first"> </div>
-                <div> <img src="/img/2.png" alt="second"> </div>
-                <div> <img src="/img/3.png" alt="third"> </div>
-                <div> <img src="/img/4.png" alt="fourth"> </div>
-                <div> <img src="/img/5.png" alt="fifth"> </div>
-                <div> <img src="/img/6.png" alt="sixth"> </div>
+                <div> <img src="img/1.png" alt="first"> </div>
+                <div> <img src="img/2.png" alt="second"> </div>
+                <div> <img src="img/3.png" alt="third"> </div>
+                <div> <img src="img/4.png" alt="fourth"> </div>
+                <div> <img src="img/5.png" alt="fifth"> </div>
+                <div> <img src="img/6.png" alt="sixth"> </div>
             </div>
         </div>
     </div>
@@ -278,7 +280,7 @@
     <!-- Subscribe end -->
 
      <!-- Our Blog start -->
-     <div class="container bg-grey">
+     <div id="blog" class="container bg-grey">
         <div class="row">
             <h3>Our<span> Blog </span></h3>
             <div class="block">
@@ -299,7 +301,7 @@
     <!-- Our Blog end -->
 
     <!-- contact me start -->
-    <div class="container">
+    <div id="contact" class="container">
         <div class="row">
             <h3>Get In<span> touch </span></h3> 
             <div class="block">

@@ -72,7 +72,7 @@ body * {
     background-color: var(--white-color);
     z-index: 1;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
+    }
 
     #header.transparent {
         background-color: transparent;
@@ -121,9 +121,18 @@ body * {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
+    #header.transparent nav > a {
+        color: #FFF;
+    }
+
+            #header.transparent nav > a.active::after {
+                background-color: #FFF;
+            }
+
         #header nav > a:first-child {
             margin: 0;
         }
+
         #header nav > a:hover::after {
             content: "";
             display: inline-block;
@@ -152,7 +161,7 @@ body * {
         width: 1000px;
         margin: 0 calc( ( 100% - 1000px) / 2 );
         color:var(--white-color);
-        margin-top: 20px;
+        margin-top: 180px;
         margin-bottom: 90px;
         height: 300px;
     }
@@ -535,6 +544,7 @@ body * {
 
 /* Client */
 .bg-black-2 {
+    overflow-x:hidden; 
     background:
     linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
     url(../img/mountains.png);

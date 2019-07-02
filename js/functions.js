@@ -8,6 +8,64 @@ function generateIcons( data ) {
     return HTML;
 }
 
+// header
+
+function elementHeight( path ) {
+    var height = parseFloat(window.getComputedStyle( document.querySelector( path ) ).height);
+    return height;
+}
+
+function headerScrollDetector() {
+    var sections = [],
+        scroll = window.scrollY + elementHeight('header'),
+        links = document.querySelectorAll('header nav > a'),
+        headerLinkCount = links.length,
+        top = document.getElementById('education').offsetTop,
+        sectionID = '',
+        activeSectionIndex = 0,
+        clname = '';
+
+    // searching for section index user is looking at
+    for ( var i=0; i<headerLinkCount; i++ ) {
+        sectionID = links[i].getAttribute('href');
+        if ( sectionID === '#' ) {
+            sections.push(0);
+            continue;
+        }
+        top = document.querySelector(sectionID).offsetTop;
+        sections.push(top);
+        if ( top <= scroll ) {
+            activeSectionIndex = i;
+        } else {
+            break;
+        }
+    }
+
+    // remove class "active" from all links
+    for ( var i=0; i<links.length; i++ ) {
+        clname = ' ' + links[i].className + ' ';
+        clname = clname.replace(" active ", " ");
+        links[i].className = clname;
+    }
+    // add class "active" to particular link
+    links[activeSectionIndex].className += ' active';
+    
+}
+
+function headerStyle() {
+    var scroll = window.scrollY,
+        limit = 30,
+        element = document.getElementById('header'),
+        clname = '';
+    if ( scroll > limit ) {
+        clname = ' ' + element.className + ' ';
+        clname = clname.replace(" transparent ", " ");
+        element.className = clname;
+    } else {
+        element.className += ' transparent';
+    }
+}
+
 // Ourblog
 
 function generateBlog (data) {
@@ -21,6 +79,8 @@ for ( var i=0; i<data.length; i++ ) {
     <p>${data[i].description}</p>
     <a href="${data[i].link}">Read more...</a>
 </div>`;
+
+HTML
 }
 return HTML;
 }
@@ -146,13 +206,40 @@ function generateEducation( data ) {
     });
         return HTML;
 }
+//ourWork
+function generateGallery (data) {
+    var HTML ='',
+    work;
+    
+    data.forEach(( work,i) => {
+console.log( (i +1) + ')' + work.tag);
+        // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
+        HTML += `<div class="galleryBlock">
+        <div class= "absolute">
+            <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto});"> 
+            </div>
+            <div class= "blackside">
+                <h6> ${data[i].topic} </h6>
+                <span> ${data[i].title} </span>
+                </div>
+            </div>
+        </div>`;
+    });
+
+// for(var i=0;  i<data.length; i++){
+// work = data[i];
+// console.log( (i +1) + ')' + work.tag);//TAS PATS KAIP SU FOREACH
+
+return HTML;
+}
+    
 
 //ourClient
 function generateTestimonials( data ) {
 var HTML = '<div class="list">';
 for ( var i=0; i<data.length; i++ ) {
     HTML += `<div class="allTestimonials ${i === 0 ? 'active' : ''}" data-index="${i}">
-    <img src="${data[i].logo}" alt="" >
+    <img src="${data[i].logo}" alt="logotip" >
     <h5>${data[i].author}</h5>
     <h6>${data[i].possition}</h6>
     <p>${data[i].text}</p>
@@ -161,7 +248,7 @@ for ( var i=0; i<data.length; i++ ) {
 HTML+='</div>';
 HTML+= '<div class="dotsBlock">';
 for ( var i=0; i<data.length; i++){
-    HTML+= `<div id="${i}" class="dots" ></div>`;
+    HTML+= `<div id="number${i}" class="dots" id= [i]></div>`;
 }
 return HTML;
 }
@@ -181,4 +268,3 @@ function showTestimonials2 (value) {
     document.querySelector('.allTestimonials.active').classList.remove('active');
     document.querySelector('.allTestimonials[data-index="'+2+'"]').classList.add('active');
 }
-
