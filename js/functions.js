@@ -196,9 +196,26 @@ function generateEducation( data ) {
 }
 //ourWork
 function generateGallery (data) {
-    var HTML =`<div class="filter"><div class = "listCLick">ALL </div></div> <div class="list">`,
-    work;
+    var HTML ='<div class="filter"><div class = "listCLick">ALL </div>';
+    var words = [];//words= tuscias naujas array
 
+    data.forEach((work) => {//eina per duotus data , work= 1 sekcijos is data gallery_items duomenys
+        for( var i=0;i<work.tag.length;i++)
+            words.push(work.tag[i])//eidamas per visus array elementus, sudeda juos i viena array 
+    })
+    
+    console.log(words)//ats visi buvo elementai is array(14)
+    var a = []
+
+    for (var i=0; i<words.length; i++)
+        if (a.indexOf(words[i]) === -1 && words[i] !== '')// naujame array(tai a) is zodziu imam po viena ir jeigu lygus -1(naujamelementui) arba nera tuscias tada i ta a array supushina unique reiksmes
+            a.push(words[i]);
+console.log(a);
+
+ a.forEach(newLine => {
+     HTML+=`<div class= "listClick"> ${newLine} </div>`
+ });
+ HTML+='</div> <div class="list">'
     data.forEach(( work,i) => {
 console.log( (i +1) + ')' + work.tag);
         // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
@@ -238,6 +255,7 @@ HTML+='</div>';
 HTML+= '<div class="dotsBlock">';
 for ( var i=0; i<data.length; i++){
     HTML+= `<div id="number${i}" class="dots" data-index="${i}"></div>`;
+    
 }
 return HTML;
 }
