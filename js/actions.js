@@ -30,9 +30,9 @@ document.querySelector('#contact .form').innerHTML = generateForm( contactForm )
 
 
 
-var testimonialsData0 = document.getElementById('0');
-var testimonialsData1 = document.getElementById('1');
-var testimonialsData2 = document.getElementById('2');
+var testimonialsData0 = document.getElementById('number0');
+var testimonialsData1 = document.getElementById('number1');
+var testimonialsData2 = document.getElementById('number2');
 
 testimonialsData0.addEventListener( 'click', showTestimonials0);
 testimonialsData1.addEventListener( 'click', showTestimonials1);

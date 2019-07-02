@@ -584,6 +584,7 @@ body * {
 
 /* Client */
 .bg-black-2 {
+    overflow-x:hidden; 
     background:
     linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
     url(../img/mountains.png);
