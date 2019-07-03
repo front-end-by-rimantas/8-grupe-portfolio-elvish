@@ -217,11 +217,11 @@ console.log(a);
  });
  HTML+='</div> <div class="list">'
     data.forEach(( work,i) => {
-console.log( (i +1) + ')' + work.tag);
+console.log( (i +1) + ')' + work.tag );
         // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
         HTML += `<div class="galleryBlock">
         <div class= "absolute">
-            <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto});"> 
+            <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto})"> 
             </div>
             <div class= "blackside">
                 <h6> ${work.topic} </h6>
