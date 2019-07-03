@@ -196,7 +196,7 @@ function generateEducation( data ) {
 }
 //ourWork
 function generateGallery (data) {
-    var HTML ='<div class="filter"><div class = "listCLick">ALL </div>';
+    var HTML ='<div class="filter"><div id = "all" class = "listCLick">ALL </div>';
     var words = [];//words= tuscias naujas array
 
     data.forEach((work) => {//eina per duotus data , work= 1 sekcijos is data gallery_items duomenys
