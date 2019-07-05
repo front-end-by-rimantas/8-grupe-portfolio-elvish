@@ -71,7 +71,7 @@ function headerStyle() {
 function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "grid") {
-      x.style.display = "none";
+      x.style.display = "";
     } else {
       x.style.display = "grid";
     }

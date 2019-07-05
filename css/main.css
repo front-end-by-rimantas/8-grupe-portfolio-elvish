@@ -136,6 +136,11 @@ body * {
         float: right;
     }
 
+     #header .bars {
+        display: none;
+                           
+    }
+
         #header nav > a.active::after {
             content: "";
             display: inline-block;
@@ -184,13 +189,11 @@ body * {
             left: calc((100% - 10px) / 2);
             }
 
- 
+            #header.transparent nav > a:hover::after {
+                background-color: #FFF; 
+            }
         
-        /* #myLinks {
-            display: inline-block;
-           
-        } */
-       
+             
 
 /* hero */
 .container_hero{
