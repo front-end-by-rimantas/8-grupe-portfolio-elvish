@@ -147,7 +147,7 @@ body * {
 
 
 /* hero */
-.container_hero{
+#container_hero{
     background:
     linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
     url(../img/backgroundphoto.jpg);
@@ -158,12 +158,13 @@ body * {
     .hero{
         display: inline-block;
         text-align: center;
-        width: 1000px;
-        margin: 0 calc( ( 100% - 1000px) / 2 );
+        width: 100%;
+        /* width: 1000px;
+        margin: 0 calc( ( 100% - 1000px) / 2 ); */
         color:var(--white-color);
         margin-top: 180px;
         margin-bottom: 90px;
-        height: 300px;
+        /* height: 300px; */
     }
         .hero h6{
             font-size: 20px;
