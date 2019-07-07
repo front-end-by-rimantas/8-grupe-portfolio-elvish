@@ -37,7 +37,7 @@
                 height: 100%;
                 width: 100%;
                 animation-name: augimas;
-                animation-duration: 2s;
+                animation-duration: 3s;
             }
 
 @keyframes augimas {

@@ -109,7 +109,7 @@ var facts = [
     {
         icon: 'clock-o',
         counter_value: '654',
-        title: 'Working hours.'
+        title: 'Working hours'
     },
     {
         icon: 'gift',
