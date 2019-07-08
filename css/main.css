@@ -98,12 +98,7 @@ body * {
         float: right;
     }
 
-     #header .bars {
-        display: none;
-                           
-    }
-
-        #header nav > a.active::after {
+    #header nav > a.active::after {
             content: "";
             display: inline-block;
             width: 6px;
