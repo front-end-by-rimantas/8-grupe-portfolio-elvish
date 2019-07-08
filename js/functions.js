@@ -20,7 +20,7 @@ function headerScrollDetector() {
         scroll = window.scrollY + elementHeight('header'),
         links = document.querySelectorAll('header nav > a'),
         headerLinkCount = links.length,
-        top = document.getElementById('education').offsetTop,
+        top = document.getElementById('about').offsetTop,
         sectionID = '',
         activeSectionIndex = 0,
         clname = '';
@@ -66,6 +66,18 @@ function headerStyle() {
     }
 }
 
+// Vertical mobile navbar
+
+function MobMenuIcon() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "grid") {
+      x.style.display = "";
+    } else {
+      x.style.display = "grid";
+    }
+  }
+
+
 // Ourblog
 
 function generateBlog (data) {
@@ -105,13 +117,36 @@ function generateFacts( data ) {
     for ( var j=0; j<data.length; j++ ) {
         HTML += '<div class="col">\
                     <j class="fa fa-'+data[j].icon+'"></j>\
-                    <div class="counter_value">'+data[j].counter_value+'</div>\
+                    <p class="counter_value" id='+data[j].icon+' data-index='+data[j].icon+'></p>\
                     <div class="title">'+data[j].title+'</div>\
                 </div>';
     }
     return HTML;
 }
+        // animated counting ...
 
+function animatedCounter (id, end) {
+    var obj = document.getElementById(id),
+        start = 0,
+        current = start,
+        duration = 3000,        // ms
+        stepping = 100,         // how many steps to execute the counter
+        increment = end > start ? (end / stepping) : (-end / stepping),
+        timer;
+            
+            if(obj.textContent == 0) {
+                timer = setInterval(() => {  
+                    current += increment;
+                    obj.textContent = Math.floor(current);
+        
+                    if (current >= end) {
+                        obj.textContent = end;
+                        clearInterval(timer);        // stops the execution of timer
+                    }
+                }, duration / stepping );  
+            }
+    return;
+}
 
 // get in touch
 
@@ -208,23 +243,48 @@ function generateEducation( data ) {
 }
 //ourWork
 function generateGallery (data) {
-    var HTML ='',
-    work;
+    var HTML ='<div class="filter"><div class = "listCLick" "active" id = "all" >ALL </div>';
+    var words = [];//words= tuscias naujas array
+
+    data.forEach((work) => {//eina per duotus data , work= 1 sekcijos is data gallery_items duomenys
+        for( var i=0;i<work.tag.length;i++)
+            words.push(work.tag[i])//eidamas per visus array elementus, sudeda juos i viena array 
+    })
     
+    console.log(words)//ats visi buvo elementai is array(14)
+    var a = []
+
+    for (var i=0; i<words.length; i++)
+        if (a.indexOf(words[i]) === -1 && words[i] !== '')// naujame array(tai a) is zodziu imam po viena ir jeigu lygus -1(naujamelementui) arba nera tuscias tada i ta a array supushina unique reiksmes
+            a.push(words[i]);
+
+console.log(a);
+ a.forEach(newLine => {
+     
+HTML+=`<div  class= "listClick"> ${newLine}  </div>`
+     
+ });
+ HTML+='</div> <div class="list">'
+ 
+//CIA REIKIA PRISKIRTI KIEKVIENAM PO UNIQUE ID
+ //tagu names reikia priskirti atitinkamus img pagal data
+ // newLine ID priskirti prie tagnames
+
     data.forEach(( work,i) => {
-console.log( (i +1) + ')' + work.tag);
+console.log( (i +1) + ')' + work.tag );
         // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
-        HTML += `<div class="galleryBlock">
+        HTML += `<div class="galleryBlock" data-index="${i}">
         <div class= "absolute">
-            <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto});"> 
+            <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto})"> 
             </div>
             <div class= "blackside">
-                <h6> ${data[i].topic} </h6>
-                <span> ${data[i].title} </span>
+                <h6> ${work.topic} </h6>
+                <span> ${work.title} </span>
                 </div>
             </div>
         </div>`;
     });
+    HTML+= `</div>`
 
 // for(var i=0;  i<data.length; i++){
 // work = data[i];
@@ -232,7 +292,37 @@ console.log( (i +1) + ')' + work.tag);
 
 return HTML;
 }
-    
+
+function filterWork( event ) {
+    console.log(event.target.innerText);
+    var tag = event.target.innerText,           //paspaudus ant mygtuku,consolej atsiranda ju pavadinimas
+        visibleIndexes = [];
+
+    if ( tag === 'ALL' ) {
+        for ( let i=0; i<gallery_items.length; i++ ) {
+            visibleIndexes.push(i);
+        }
+    } else {
+        for ( let i=0; i<gallery_items.length; i++ ) {
+            let item = gallery_items[i];
+            if ( item.tag.indexOf(tag) >= 0 ) {
+                visibleIndexes.push(i);
+            }
+        }
+    }
+
+    console.log( visibleIndexes );
+   
+    document.querySelectorAll('#gallery_list .galleryBlock').forEach( (work, index) =>{
+        if ( visibleIndexes.indexOf(index) >= 0 ) {
+            work.style.display='inline-block';
+        } else {
+            work.style.display='none';
+        }
+    });
+
+}
+    console.log(gallery_items)
 
 //ourClient
 function generateTestimonials( data ) {
@@ -248,23 +338,22 @@ for ( var i=0; i<data.length; i++ ) {
 HTML+='</div>';
 HTML+= '<div class="dotsBlock">';
 for ( var i=0; i<data.length; i++){
-    HTML+= `<div id="number${i}" class="dots" id= [i]></div>`;
+    HTML+= `<div id="number${i}" class="dots" data-index="${i}"></div>`;
 }
 return HTML;
 }
 
-function showTestimonials0 (value) {
-    console.log(value);
-    document.querySelector('.allTestimonials.active').classList.remove('active');
-    document.querySelector('.allTestimonials[data-index="'+0+'"]').classList.add('active');
-}
+function showTestimonial (value) {
+    console.log(value.target.getAttribute('data-index'));
 
-function showTestimonials1 (value) {
     document.querySelector('.allTestimonials.active').classList.remove('active');
-    document.querySelector('.allTestimonials[data-index="'+1+'"]').classList.add('active');
+    document.querySelector('.allTestimonials[data-index="'+value.target.getAttribute('data-index')+'"]').classList.add('active');
 }
-
-function showTestimonials2 (value) {
-    document.querySelector('.allTestimonials.active').classList.remove('active');
-    document.querySelector('.allTestimonials[data-index="'+2+'"]').classList.add('active');
-}
+function showAll (data) {
+    var all = document.getElementById('all');
+        all.classList.add("classAll");
+  }
+  function photo (data) {    
+    var allPhoto = document.querySelectorAll('.absolute > .galleryPhoto');
+    allPhoto.classList.add("classAll");
+  }

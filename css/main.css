@@ -70,8 +70,9 @@ body * {
     padding: 12px 0;
     position: fixed;
     background-color: var(--white-color);
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    
     }
 
     #header.transparent {
@@ -92,10 +93,15 @@ body * {
         #header.transparent .logo {
             color: #FFF;
         }
-#header nav {
-    display: inline-block;
-    float: right;
-}
+    #header nav {
+        display: inline-block;
+        float: right;
+    }
+
+     #header .bars {
+        display: none;
+                           
+    }
 
         #header nav > a.active::after {
             content: "";
@@ -109,21 +115,21 @@ body * {
             left: calc((100% - 10px) / 2);
            }
 
-    #header nav > a {
-        display: inline-block;
-        float: left;
-        margin: 0 0 0 20px;
-        padding: 0 10px;
-        color: var(--black-color-1);
-        text-decoration: none;
-        line-height: 45px;
-        position: relative;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+        #header nav > a {
+            display: inline-block;
+            float: left;
+            margin: 0 0 0 20px;
+            padding: 0 10px;
+            color: var(--black-color-1);
+            text-decoration: none;
+            line-height: 45px;
+            position: relative;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
 
-    #header.transparent nav > a {
-        color: #FFF;
-    }
+            #header.transparent nav > a {
+                color: #FFF;
+            }
 
             #header.transparent nav > a.active::after {
                 background-color: #FFF;
@@ -145,9 +151,14 @@ body * {
             left: calc((100% - 10px) / 2);
             }
 
+            #header.transparent nav > a:hover::after {
+                background-color: #FFF; 
+            }
+        
+             
 
 /* hero */
-.container_hero{
+#container_hero{
     background:
     linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
     url(../img/backgroundphoto.jpg);
@@ -158,12 +169,13 @@ body * {
     .hero{
         display: inline-block;
         text-align: center;
-        width: 1000px;
-        margin: 0 calc( ( 100% - 1000px) / 2 );
+        width: 100%;
+        /* width: 1000px;
+        margin: 0 calc( ( 100% - 1000px) / 2 ); */
         color:var(--white-color);
         margin-top: 180px;
         margin-bottom: 90px;
-        height: 300px;
+        /* height: 300px; */
     }
         .hero h6{
             font-size: 20px;
@@ -393,12 +405,12 @@ body * {
         margin-top: 0;
     }
     #services.container.bg-grey > .row > p {
-        width: 500px;
-        margin: 0 calc((100% - 500px) / 2);
-        margin-top: 15px;
-        margin-bottom: 30px;
         text-align: center;
         color: var(--text-color);
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 0;
     }
     .service i.fa {
         font-size: 30px;
@@ -410,7 +422,7 @@ body * {
         font-weight: bold;
     }
     #services-list.row > .service > p {
-        color: #6c757d;
+        color: var(--text-color);
     }
 
 
@@ -512,7 +524,7 @@ body * {
 .container.free{
     background:
     linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
-     url(/img/mountains.png);
+     url(../img/mountains.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -563,8 +575,9 @@ body * {
 .container > .row > div > p{
     text-align: center;
     color: var(--text-color);
-    width: 500px;
-    margin: 0 calc( ( 100% - 500px ) / 2 );
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 15px 0;
 }
 #line{
@@ -590,7 +603,7 @@ body * {
     .newsletter input {
         max-width: 550px;
         margin: 0;
-        padding: 15px 150px 15px 30px;
+        padding: 15px 30px;
         font-size: 17px;
         line-height: 0;
         color: var(--input-color);
@@ -688,6 +701,7 @@ body * {
     }
     #contact .form .actions .btn {
         float: right;
+        border-radius: 5px;
     }
 
 
@@ -740,7 +754,30 @@ footer .row{
                 transform: rotate(360deg);
       }
 
-/* Move-up button */
+/* Back-to-top button */
+
+
+.back_top {
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    height: 35px;
+    width: 35px;
+    background-color: var(--black-color-1);
+    z-index: 1;
+    border-radius: 3px;
+    right: 20px;
+}
+
+.back_top > i {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#backtop.transparent {
+    display: none;
+}
+
 
 /* Responsive design */
 /* Basic structure */
@@ -822,11 +859,66 @@ footer .row{
     @media ( max-width: 800px ) {
         .container {
             padding: 80px 20px;
+            
         }
             .container > .row {
                 width: 100%;
                 margin: 0;
+                
             }
+
+    /* Header */
+
+    #header nav {
+        display: none;
+        width: 100%;
+
+        }
+
+            #header nav > a:hover::after {
+               left: 25px;
+              
+            }
+
+            #header nav > a.active::after {
+                left: 25px;
+
+            }
+
+
+        #header nav > a {
+            display: inline-block;
+        
+
+        }
+
+            #header nav > a:first-child {
+                margin: 0 0 0 20px;
+            }
+
+        #header .bars {
+            display: inline-block;
+            float: right;
+            margin-right: 65px;
+            margin-top: 10px;
+            width: 26px;
+                       
+        }
+
+        #header .fa.fa-bars {
+            display: inline-block;
+            color: black;
+            font-size: 30px;
+            margin-right: 40px;
+            margin-top: 0px;
+            
+        }
+        
+              #header.transparent .bars {
+                  background-color: #FFF;
+              }
+
+    }
     
     /* About me */
 
@@ -855,7 +947,7 @@ footer .row{
                 .col:first-child {
                     margin-top: 0px;
                 }
-    }
+    
 
 
 

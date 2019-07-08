@@ -20,7 +20,10 @@
     <header id="header" class="container">
         <div class="row">
             <a href="#" class="logo">Elvish</a>
-            <nav>
+            <a href="javascript:void(0);" class="bars" onclick="MobMenuIcon()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <nav id="myLinks">
                 <a href="#" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
@@ -34,8 +37,9 @@
     </header>
     <!-- header end -->
     <!-- hero start -->
-    <div class="container_hero">
-        <div class="hero">
+    <div id="container_hero" class="container">		
+        <div class="row">
+            <div class="hero">
             <h6>Hello &#38 Welcome</h6>
             <h5>I Am  <div class="moving">A Designer</div></h5>
             <div id="hero_icons" class="icon">
@@ -205,11 +209,11 @@
         <div class="row">
             <h3>Our <span> Works </span></h3>
             <div class="block">
-                    <div class="rightline"> &#8212</div>
-                    <div class="star"> * </div>
-                    <div class="leftline"> &#8212</div>
-                </div>
-                    <div id='gallery_list' class="gallery"></div>
+                <div class="rightline"> &#8212</div>
+                <div class="star"> * </div>
+                <div class="leftline"> &#8212</div>
+            </div>
+            <div id='gallery_list' class="gallery"></div>
         </div>
     </div>
     <!-- Our Works end -->
@@ -327,8 +331,18 @@
             <div id="footer_icons" class="footerIcons">
                 <!-- <a href="#" target="_blank" class="fa fa-facebook"></a> -->
             </div>
+        </div>
     </footer>
     <!-- footer end -->
+
+    <!-- Back-to-top -->
+
+        <a id = "backtop" href="#" class ="back_top"> 
+            <i class="fa fa-angle-up"> </i> 
+        </a>
+
+
+    <!-- Back-to-top -->
 
     <script src="js/data.js"></script>
     <script src="js/functions.js"></script>

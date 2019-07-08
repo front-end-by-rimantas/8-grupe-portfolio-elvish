@@ -109,7 +109,7 @@ var facts = [
     {
         icon: 'clock-o',
         counter_value: '654',
-        title: 'Working hours.'
+        title: 'Working hours'
     },
     {
         icon: 'gift',
@@ -327,36 +327,36 @@ var gallery_items =[
     galleryPhoto:'1.jpg',
     topic:'Category',
     title:'Project title',
-    tag:'webdesign work wordpress',
+    tag:['webdesign', 'work','wordpress'],
 },
 {
     galleryPhoto:'2.jpg',
     topic:'Category',
     title:'Project title',
-    tag: 'seo webdesign work',
+    tag: ['seo', 'webdesign', 'work'],
 },
 {
     galleryPhoto:'3.jpg',
     topic:'Category',
     title:'Project title',
-    tag: 'seo wordpress',
+    tag: ['seo', 'wordpress'],
 },
 {
     galleryPhoto:'4.jpg',
     topic:'Category',
     title:'Project title',
-    tag:'work wordpress',
+    tag:['work', 'wordpress'],
 },
 {
     galleryPhoto:'5.jpg',
     topic:'Category',
     title:'Project title',
-    tag: 'seo webdesign',
+    tag: ['seo', 'webdesign'],
 },
 {
     galleryPhoto:'6.jpg',
     topic:'Category',
     title:'Project title',
-    tag: 'webdesign',
+    tag: ['webdesign'],
 }
 ];

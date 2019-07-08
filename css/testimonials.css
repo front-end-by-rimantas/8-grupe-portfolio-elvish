@@ -1,14 +1,14 @@
-.allTestimonials {
+.all_testimonials {
     display: inline-block;
     width: 100%;
     color:var(--white-color);
 }
-      .allTestimonials .list {
+      .all_testimonials .list {
           width: 100%;
         display: inline-block;
         margin-bottom: 20px;  
         animation-name:changing;
-        animation-iteration-count: inherit;
+        animation-iteration-count: infinite;
         animation-duration: 10s;
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
         opacity: 1;
@@ -61,9 +61,13 @@
         }
 
         .allTestimonials p{
-            margin: 0 300px;
+            /* margin: 0 300px;
+            height: 100px; */
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 10px;
-            height: 100px;
         }
 .dots{
     width: 15px;
