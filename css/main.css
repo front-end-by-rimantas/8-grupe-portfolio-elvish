@@ -598,15 +598,21 @@ body * {
         width: 0;
     }
     .newsletter input {
-        max-width: 550px;
+        /* max-width: 550px; */
+        width: 71%;
         margin: 0;
-        padding: 15px 30px;
+        padding: 14px 160px 14px 30px;
         font-size: 17px;
         line-height: 0;
         color: var(--input-color);
         border: none;
         border-radius: 30px;
         background-color: #f1f1f1;
+    }
+    .newsletter button.btn {
+        position: absolute;
+        right: 16%;
+        top: 0;
     }
 
 /* Blog */
