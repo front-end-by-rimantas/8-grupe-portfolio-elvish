@@ -68,7 +68,7 @@ function headerStyle() {
 
 // Vertical mobile navbar
 
-function myFunction() {
+function MobMenuIcon() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "grid") {
       x.style.display = "";
