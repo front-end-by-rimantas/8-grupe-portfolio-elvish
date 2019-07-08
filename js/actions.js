@@ -26,7 +26,6 @@ var testimonials = document.querySelectorAll('.dotsBlock > .dots').forEach( item
     item.addEventListener('click', showTestimonial);
 });
 
-
 // testimonialsData0.addEventListener( 'click', showTestimonials0);
 
 // get in touch 
@@ -44,3 +43,7 @@ document.getElementById('education_list').innerHTML = generateEducation( educati
 //ourwork
 
 document.getElementById('gallery_list').innerHTML = generateGallery( gallery_items);
+
+document.querySelectorAll('#gallery_list .filter > div').forEach (filter =>{
+    filter.addEventListener('click', filterWork)
+});

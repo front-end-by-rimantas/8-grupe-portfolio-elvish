@@ -311,7 +311,7 @@ var gallery_items =[
     galleryPhoto:'2.jpg',
     topic:'Category',
     title:'Project title',
-    tag: ['seo', 'webdesign', 'work', 'work'],
+    tag: ['seo', 'webdesign', 'work'],
 },
 {
     galleryPhoto:'3.jpg',

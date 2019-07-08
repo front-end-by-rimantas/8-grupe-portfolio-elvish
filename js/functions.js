@@ -196,7 +196,7 @@ function generateEducation( data ) {
 }
 //ourWork
 function generateGallery (data) {
-    var HTML ='<div class="filter"><div id = "all" class = "listCLick">ALL </div>';
+    var HTML ='<div class="filter"><div class = "listCLick" "active" id = "all" >ALL </div>';
     var words = [];//words= tuscias naujas array
 
     data.forEach((work) => {//eina per duotus data , work= 1 sekcijos is data gallery_items duomenys
@@ -210,16 +210,23 @@ function generateGallery (data) {
     for (var i=0; i<words.length; i++)
         if (a.indexOf(words[i]) === -1 && words[i] !== '')// naujame array(tai a) is zodziu imam po viena ir jeigu lygus -1(naujamelementui) arba nera tuscias tada i ta a array supushina unique reiksmes
             a.push(words[i]);
-console.log(a);
 
+console.log(a);
  a.forEach(newLine => {
-     HTML+=`<div class= "listClick"> ${newLine} </div>`
+     
+HTML+=`<div  class= "listClick"> ${newLine}  </div>`
+     
  });
  HTML+='</div> <div class="list">'
+ 
+//CIA REIKIA PRISKIRTI KIEKVIENAM PO UNIQUE ID
+ //tagu names reikia priskirti atitinkamus img pagal data
+ // newLine ID priskirti prie tagnames
+
     data.forEach(( work,i) => {
 console.log( (i +1) + ')' + work.tag );
         // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
-        HTML += `<div class="galleryBlock">
+        HTML += `<div class="galleryBlock" data-index="${i}">
         <div class= "absolute">
             <div class="galleryPhoto" style= "background-image: url(img//${work.galleryPhoto})"> 
             </div>
@@ -238,7 +245,37 @@ console.log( (i +1) + ')' + work.tag );
 
 return HTML;
 }
-    
+
+function filterWork( event ) {
+    console.log(event.target.innerText);
+    var tag = event.target.innerText,           //paspaudus ant mygtuku,consolej atsiranda ju pavadinimas
+        visibleIndexes = [];
+
+    if ( tag === 'ALL' ) {
+        for ( let i=0; i<gallery_items.length; i++ ) {
+            visibleIndexes.push(i);
+        }
+    } else {
+        for ( let i=0; i<gallery_items.length; i++ ) {
+            let item = gallery_items[i];
+            if ( item.tag.indexOf(tag) >= 0 ) {
+                visibleIndexes.push(i);
+            }
+        }
+    }
+
+    console.log( visibleIndexes );
+   
+    document.querySelectorAll('#gallery_list .galleryBlock').forEach( (work, index) =>{
+        if ( visibleIndexes.indexOf(index) >= 0 ) {
+            work.style.display='inline-block';
+        } else {
+            work.style.display='none';
+        }
+    });
+
+}
+    console.log(gallery_items)
 
 //ourClient
 function generateTestimonials( data ) {
@@ -255,7 +292,6 @@ HTML+='</div>';
 HTML+= '<div class="dotsBlock">';
 for ( var i=0; i<data.length; i++){
     HTML+= `<div id="number${i}" class="dots" data-index="${i}"></div>`;
-    
 }
 return HTML;
 }
@@ -266,4 +302,11 @@ function showTestimonial (value) {
     document.querySelector('.allTestimonials.active').classList.remove('active');
     document.querySelector('.allTestimonials[data-index="'+value.target.getAttribute('data-index')+'"]').classList.add('active');
 }
-
+function showAll (data) {
+    var all = document.getElementById('all');
+        all.classList.add("classAll");
+  }
+  function photo (data) {    
+    var allPhoto = document.querySelectorAll('.absolute > .galleryPhoto');
+    allPhoto.classList.add("classAll");
+  }
