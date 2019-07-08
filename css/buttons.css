@@ -7,6 +7,7 @@
     width: 160px;
     left: calc( ( 100% - 160px) / 2 );
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
 }
 .button:hover{
     background-color: white;

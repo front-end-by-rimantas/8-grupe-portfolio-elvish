@@ -105,13 +105,36 @@ function generateFacts( data ) {
     for ( var j=0; j<data.length; j++ ) {
         HTML += '<div class="col">\
                     <j class="fa fa-'+data[j].icon+'"></j>\
-                    <div class="counter_value">'+data[j].counter_value+'</div>\
+                    <p class="counter_value" id='+data[j].icon+' data-index='+data[j].icon+'></p>\
                     <div class="title">'+data[j].title+'</div>\
                 </div>';
     }
     return HTML;
 }
+        // animated counting ...
 
+function animatedCounter (id, end) {
+    var obj = document.getElementById(id),
+        start = 0,
+        current = start,
+        duration = 3000,        // ms
+        stepping = 100,         // how many steps to execute the counter
+        increment = end > start ? (end / stepping) : (-end / stepping),
+        timer;
+            
+            if(obj.textContent == 0) {
+                timer = setInterval(() => {  
+                    current += increment;
+                    obj.textContent = Math.floor(current);
+        
+                    if (current >= end) {
+                        obj.textContent = end;
+                        clearInterval(timer);        // stops the execution of timer
+                    }
+                }, duration / stepping );  
+            }
+    return;
+}
 
 // get in touch
 

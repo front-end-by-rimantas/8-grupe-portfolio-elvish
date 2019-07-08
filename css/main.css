@@ -592,7 +592,7 @@ body * {
     .newsletter input {
         max-width: 550px;
         margin: 0;
-        padding: 15px 150px 15px 30px;
+        padding: 15px 30px;
         font-size: 17px;
         line-height: 0;
         color: var(--input-color);
@@ -690,6 +690,7 @@ body * {
     }
     #contact .form .actions .btn {
         float: right;
+        border-radius: 5px;
     }
 
 

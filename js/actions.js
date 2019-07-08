@@ -20,6 +20,9 @@ document.getElementById('services-list').innerHTML = generateServices( services 
 // Completed projects
 
 document.getElementById('facts_list').innerHTML  = generateFacts (facts);
+for ( var i = 0; i < facts.length; i++){
+    animatedCounter( facts[i].icon, facts[i].counter_value );
+}
 
 // OurClient
 document.getElementById('listOfTestimonials').innerHTML = generateTestimonials( list_Testimonials );
