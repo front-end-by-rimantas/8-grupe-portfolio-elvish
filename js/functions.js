@@ -266,10 +266,6 @@ HTML+=`<div  class= "listClick"> ${newLine}  </div>`
  });
  HTML+='</div> <div class="list">'
  
-//CIA REIKIA PRISKIRTI KIEKVIENAM PO UNIQUE ID
- //tagu names reikia priskirti atitinkamus img pagal data
- // newLine ID priskirti prie tagnames
-
     data.forEach(( work,i) => {
 console.log( (i +1) + ')' + work.tag );
         // work=data[1] gavo duomenys ir eina per kiekviena elementa, data i pakeicia i work'a,
