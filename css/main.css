@@ -70,8 +70,9 @@ body * {
     padding: 12px 0;
     position: fixed;
     background-color: var(--white-color);
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    
     }
 
     #header.transparent {
@@ -92,10 +93,15 @@ body * {
         #header.transparent .logo {
             color: #FFF;
         }
-#header nav {
-    display: inline-block;
-    float: right;
-}
+    #header nav {
+        display: inline-block;
+        float: right;
+    }
+
+     #header .bars {
+        display: none;
+                           
+    }
 
         #header nav > a.active::after {
             content: "";
@@ -109,21 +115,21 @@ body * {
             left: calc((100% - 10px) / 2);
            }
 
-    #header nav > a {
-        display: inline-block;
-        float: left;
-        margin: 0 0 0 20px;
-        padding: 0 10px;
-        color: var(--black-color-1);
-        text-decoration: none;
-        line-height: 45px;
-        position: relative;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+        #header nav > a {
+            display: inline-block;
+            float: left;
+            margin: 0 0 0 20px;
+            padding: 0 10px;
+            color: var(--black-color-1);
+            text-decoration: none;
+            line-height: 45px;
+            position: relative;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
 
-    #header.transparent nav > a {
-        color: #FFF;
-    }
+            #header.transparent nav > a {
+                color: #FFF;
+            }
 
             #header.transparent nav > a.active::after {
                 background-color: #FFF;
@@ -145,6 +151,11 @@ body * {
             left: calc((100% - 10px) / 2);
             }
 
+            #header.transparent nav > a:hover::after {
+                background-color: #FFF; 
+            }
+        
+             
 
 /* hero */
 #container_hero{
@@ -848,11 +859,66 @@ footer .row{
     @media ( max-width: 800px ) {
         .container {
             padding: 80px 20px;
+            
         }
             .container > .row {
                 width: 100%;
                 margin: 0;
+                
             }
+
+    /* Header */
+
+    #header nav {
+        display: none;
+        width: 100%;
+
+        }
+
+            #header nav > a:hover::after {
+               left: 25px;
+              
+            }
+
+            #header nav > a.active::after {
+                left: 25px;
+
+            }
+
+
+        #header nav > a {
+            display: inline-block;
+        
+
+        }
+
+            #header nav > a:first-child {
+                margin: 0 0 0 20px;
+            }
+
+        #header .bars {
+            display: inline-block;
+            float: right;
+            margin-right: 65px;
+            margin-top: 10px;
+            width: 26px;
+                       
+        }
+
+        #header .fa.fa-bars {
+            display: inline-block;
+            color: black;
+            font-size: 30px;
+            margin-right: 40px;
+            margin-top: 0px;
+            
+        }
+        
+              #header.transparent .bars {
+                  background-color: #FFF;
+              }
+
+    }
     
     /* About me */
 
@@ -881,7 +947,7 @@ footer .row{
                 .col:first-child {
                     margin-top: 0px;
                 }
-    }
+    
 
 
 

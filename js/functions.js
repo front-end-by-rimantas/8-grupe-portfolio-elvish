@@ -20,7 +20,7 @@ function headerScrollDetector() {
         scroll = window.scrollY + elementHeight('header'),
         links = document.querySelectorAll('header nav > a'),
         headerLinkCount = links.length,
-        top = document.getElementById('education').offsetTop,
+        top = document.getElementById('about').offsetTop,
         sectionID = '',
         activeSectionIndex = 0,
         clname = '';
@@ -65,6 +65,18 @@ function headerStyle() {
         element.className += ' transparent';
     }
 }
+
+// Vertical mobile navbar
+
+function MobMenuIcon() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "grid") {
+      x.style.display = "";
+    } else {
+      x.style.display = "grid";
+    }
+  }
+
 
 // Ourblog
 
