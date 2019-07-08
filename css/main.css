@@ -97,7 +97,9 @@ body * {
         display: inline-block;
         float: right;
     }
-
+     #header .bars {
+        display: none;
+     }
     #header nav > a.active::after {
             content: "";
             display: inline-block;
@@ -854,13 +856,11 @@ footer .row{
     @media ( max-width: 800px ) {
         .container {
             padding: 80px 20px;
-            
-        }
+     }
             .container > .row {
                 width: 100%;
                 margin: 0;
-                
-            }
+             }
 
     /* Header */
 
@@ -913,8 +913,6 @@ footer .row{
                   background-color: #FFF;
               }
 
-    }
-    
     /* About me */
 
                 .container > .row > .left {
@@ -942,6 +940,7 @@ footer .row{
                 .col:first-child {
                     margin-top: 0px;
                 }
+    }
     
 
 
