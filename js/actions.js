@@ -27,6 +27,11 @@ for ( var i = 0; i < facts.length; i++){
 // OurClient
 document.getElementById('listOfTestimonials').innerHTML = generateTestimonials( list_Testimonials );
 
+var testimonials = document.querySelectorAll('.dotsBlock > .dots').forEach( item => {
+    item.addEventListener('click', showTestimonial);
+});
+
+// testimonialsData0.addEventListener( 'click', showTestimonials0);
 
 // get in touch 
 
@@ -35,13 +40,6 @@ document.querySelector('#contact .form').innerHTML = generateForm( contactForm )
 
 
 
-var testimonialsData0 = document.getElementById('number0');
-var testimonialsData1 = document.getElementById('number1');
-var testimonialsData2 = document.getElementById('number2');
-
-testimonialsData0.addEventListener( 'click', showTestimonials0);
-testimonialsData1.addEventListener( 'click', showTestimonials1);
-testimonialsData2.addEventListener( 'click', showTestimonials2);
 // Education and experience
 
 
@@ -53,3 +51,7 @@ document.getElementById('education_list').innerHTML = generateEducation( educati
 //ourwork
 
 document.getElementById('gallery_list').innerHTML = generateGallery( gallery_items);
+
+document.querySelectorAll('#gallery_list .filter > div').forEach (filter =>{
+    filter.addEventListener('click', filterWork)
+});

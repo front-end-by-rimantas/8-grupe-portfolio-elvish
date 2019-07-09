@@ -1,14 +1,51 @@
 
-#gallery_list{
+#gallery_list .list {
     display: grid;
     width: 100%;
     grid-template-areas:
-     ". . .";/* bus 3 kazkokie stulpeliai, taskais zymimi stulpeliai be pavadinimo*/
+     ". . .";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 30px;
     place-items: start; 
 }
+    .gallery .filter {
+        display: inline-block;
+        float: left;
+        margin:0  calc( ( 100% - 650px ) / 2 );
+    }
+        .gallery .filter *{
+            padding: 30px;
+            text-align: right;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .gallery .listClick{
+            text-align: left;
+        }
+    #all::before{
+    content: " ";
+        width:5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--grey-color-2);
+        float: right;
+        margin-left: 12px; 
+        margin-top: 10px;
+    }
+        .gallery .listClick::before {
+            content: " ";
+            width:5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--grey-color-2);
+            float: right;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .gallery .listClick:last-child:before {
+        display: none;  
+        }
     #gallery_list  .galleryBlock{
         display: inline-block;
         width:100%;
@@ -30,28 +67,51 @@
             left:0;
             right: 0;
             bottom: 0;
-            }
-    #gallery_list .galleryBlock .blackside{
+        }
+            #gallery_list .galleryBlock .galleryPhoto{
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                transition: .5s ease-out;
+                /* backface-visibility: hidden; */
+            }       
+    #gallery_list .galleryBlock .blackside {
+        opacity: 0;
         position: absolute;
         top: 0;
-        text-align: center;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
     }
-        
-        #gallery_list .galleryBlock .galleryPhoto{
-            height: 100%;
-            background-position: center;
-            background-size: cover;
+        #gallery_list .galleryBlock .blackside span{
+            position: absolute;
+            bottom: 40%;
+            display: inline-block; 
+            font-size: 30px; 
+            width: 100%;
+            text-align: center;
         }
+        #gallery_list .galleryBlock .blackside h6{
+                position: absolute;
+                top: 40%;
+                display: inline-block;
+                font-size: 20px;
+                text-align: center;
+                font-weight: lighter;
+                color: var(--grey-color-1);
+                width: 100%;
+        }
+            .absolute:hover{
+                opacity: 1;
+                background:linear-gradient(to right, rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.90));
+            }      
+            .galleryPhoto:hover {
+            opacity: 0.5;
+            background:linear-gradient(to right, rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.90));
+            }   
+            #gallery_list .galleryBlock .blackside:hover {
+                opacity: 1;
+                background:linear-gradient(to right, rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.80));
+            }   
 
-        
-        #gallery_list > .galleryBlock > .span{
-                /* position: absolute;
-                top:0;
-                left:0;
-                display: inline-block; */
-        }
-
-        #gallery_list > .galleryBlock > h6{
-                /* position: absolute;
-                display: inline-block; */
-        }
