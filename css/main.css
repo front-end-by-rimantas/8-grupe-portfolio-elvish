@@ -814,7 +814,22 @@ footer .row{
                 line-height: 20px;
                 padding: 20px;
             }
-  
+        #gallery_list .galleryBlock .blackside span{
+            position: absolute;
+            bottom: 30%;
+        }
+        .gallery .filter{
+            
+        margin:0;
+        width: 100%;
+        } 
+        .gallery .filter *{
+            padding: 20px;
+        }
+        .gallery .listClick:last-child{
+            
+            padding-left: 38px;
+        }
     /* Completed projects */
         #facts_list > .col {
             width: 48%;            
@@ -866,7 +881,11 @@ footer .row{
                 margin: 0;
                 
             }
-
+            #gallery_list .galleryBlock .blackside span{
+                position: absolute;
+                bottom: 20%;
+                font-size: 20px;
+            }
     /* Header */
 
     #header nav {
