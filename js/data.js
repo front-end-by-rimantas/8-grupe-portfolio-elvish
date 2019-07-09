@@ -327,36 +327,36 @@ var gallery_items =[
     galleryPhoto:'1.jpg',
     topic:'Category',
     title:'Project title',
-    tag:['webdesign', 'work','wordpress'],
+    tag:[ 'Work','Wordpress'],
 },
 {
     galleryPhoto:'2.jpg',
     topic:'Category',
     title:'Project title',
-    tag: ['seo', 'webdesign', 'work'],
+    tag: [ 'Webdesign', 'Work'],
 },
 {
     galleryPhoto:'3.jpg',
     topic:'Category',
     title:'Project title',
-    tag: ['seo', 'wordpress'],
+    tag: ['Seo'],
 },
 {
     galleryPhoto:'4.jpg',
     topic:'Category',
     title:'Project title',
-    tag:['work', 'wordpress'],
+    tag:['Work', 'Wordpress'],
 },
 {
     galleryPhoto:'5.jpg',
     topic:'Category',
     title:'Project title',
-    tag: ['seo', 'webdesign'],
+    tag: ['Seo', 'Webdesign'],
 },
 {
     galleryPhoto:'6.jpg',
     topic:'Category',
     title:'Project title',
-    tag: ['webdesign'],
+    tag: ['Webdesign', 'Seo'],
 }
 ];
