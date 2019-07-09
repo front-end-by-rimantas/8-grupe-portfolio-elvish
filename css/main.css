@@ -93,16 +93,13 @@ body * {
         #header.transparent .logo {
             color: #FFF;
         }
-    #header nav {
-        display: inline-block;
-        float: right;
-    }
-
-     #header .bars {
-        display: none;
-                           
-    }
-
+#header nav {
+    display: inline-block;
+    float: right;
+}
+#header .bars {
+    display: none;
+}
         #header nav > a.active::after {
             content: "";
             display: inline-block;
@@ -630,15 +627,21 @@ body * {
         width: 0;
     }
     .newsletter input {
-        max-width: 550px;
+        /* max-width: 550px; */
+        width: 71%;
         margin: 0;
-        padding: 15px 30px;
+        padding: 14px 160px 14px 30px;
         font-size: 17px;
         line-height: 0;
         color: var(--input-color);
         border: none;
         border-radius: 30px;
         background-color: #f1f1f1;
+    }
+    .newsletter button.btn {
+        position: absolute;
+        right: 16%;
+        top: 0;
     }
 
 /* Blog */
@@ -819,14 +822,15 @@ footer .row{
         
         /* greatpeople*/
         .line{
-        width: 200px;
-        margin: 0 calc(( 100% - 200px ) / 2 );
+        width: 750px;
+        margin: 0 calc(( 100% - 750px ) / 2 );
         }
         #line{
-            display: grid;
-            grid-template-columns: repeat(1, 170px);
+            /* display: grid; */
+            grid-template-columns: repeat(3, 170px);
             grid-auto-rows: 100px;
             grid-row-gap: 20px;
+            grid-column-gap: 120px;
         }
     }
 
@@ -916,41 +920,28 @@ footer .row{
                 font-size: 20px;
             }
     /* Header */
-
-    #header nav {
+     #header nav {
         display: none;
         width: 100%;
-
+    }
+        #header nav > a:hover::after {
+            left: 25px;
         }
-
-            #header nav > a:hover::after {
-               left: 25px;
-              
-            }
-
-            #header nav > a.active::after {
-                left: 25px;
-
-            }
-
-
+        #header nav > a.active::after {
+            left: 25px;
+        }
         #header nav > a {
             display: inline-block;
-        
-
         }
-
-            #header nav > a:first-child {
-                margin: 0 0 0 20px;
-            }
-
+        #header nav > a:first-child {
+            margin: 0 0 0 20px;
+        }
         #header .bars {
             display: inline-block;
             float: right;
             margin-right: 65px;
             margin-top: 10px;
             width: 26px;
-                       
         }
 
         #header .fa.fa-bars {
@@ -959,15 +950,11 @@ footer .row{
             font-size: 30px;
             margin-right: 40px;
             margin-top: 0px;
-            
         }
-        
-              #header.transparent .bars {
-                  background-color: #FFF;
-              }
-
-    }
-    
+            #header.transparent .bars {
+                background-color: #FFF;
+            }
+         
     /* About me */
 
                 .container > .row > .left {
@@ -978,14 +965,14 @@ footer .row{
                     margin-left: 0;
                 }
 
-    /* Our services */
+/* Our services */
     
                 .service {
                     width: 100%;
                     margin: 0;
                 }
         
-        /* Completed Projects */
+/* Completed Projects */
 
             #facts_list > .col {
                 width: 100%;
@@ -995,7 +982,41 @@ footer .row{
                 .col:first-child {
                     margin-top: 0px;
                 }
+/* greatpeople*/
+        .line{
+            width: 500px;
+            margin: 0 calc(( 100% - 500px ) / 2 );
+            }
+            #line{
+                /* display: grid; */
+                grid-template-columns: repeat(2, 170px);
+                grid-auto-rows: 100px;
+                grid-row-gap: 30px;
+                grid-column-gap: 120px;
+            }
+    }
+/* Basic structure */
+
+    @media ( max-width: 600px ) {
+        .container {
+            padding: 80px 20px;
+        }
+            .container > .row {
+                width: 100%;
+                margin: 0;
+            }
+/* greatpeople*/
+        .line {
+            width: 170px;
+            margin: 0 calc(( 100% - 170px ) / 2 );
+            }
+        #line {
+            grid-template-columns: repeat(1, 170px);
+        }
+    }
+    
     
                 body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; }  /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+
 
 
