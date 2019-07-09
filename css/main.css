@@ -93,14 +93,14 @@ body * {
         #header.transparent .logo {
             color: #FFF;
         }
-#header nav {
-    display: inline-block;
-    float: right;
-}
-#header .bars {
-    display: none;
-}
-        #header nav > a.active::after {
+    #header nav {
+        display: inline-block;
+        float: right;
+    }
+     #header .bars {
+        display: none;
+     }
+    #header nav > a.active::after {
             content: "";
             display: inline-block;
             width: 6px;
@@ -151,8 +151,6 @@ body * {
             #header.transparent nav > a:hover::after {
                 background-color: #FFF; 
             }
-        
-             
 
 /* hero */
 #container_hero{
@@ -907,20 +905,19 @@ footer .row{
     @media ( max-width: 800px ) {
         .container {
             padding: 80px 20px;
-            
         }
             .container > .row {
                 width: 100%;
                 margin: 0;
-                
             }
             #gallery_list .galleryBlock .blackside span{
                 position: absolute;
                 bottom: 20%;
                 font-size: 20px;
             }
-    /* Header */
-     #header nav {
+
+      /* Header */     
+      #header nav {
         display: none;
         width: 100%;
     }
@@ -943,7 +940,6 @@ footer .row{
             margin-top: 10px;
             width: 26px;
         }
-
         #header .fa.fa-bars {
             display: inline-block;
             color: black;
@@ -954,8 +950,8 @@ footer .row{
             #header.transparent .bars {
                 background-color: #FFF;
             }
-         
-    /* About me */
+      
+      /* About me */
 
                 .container > .row > .left {
                     width: 100%;
@@ -1016,7 +1012,3 @@ footer .row{
     }
     
     body{ margin:0; font:normal 100% Arial, Helvetica, sans-serif; }  /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
-
-
-
-
