@@ -192,6 +192,35 @@ body * {
             width: 96%;
             margin:0 20px;
         }
+        .hero span:before{
+            content: "";
+            animation: animate infinite 20s;
+        }
+        @keyframes animate{
+            5%{
+                content: "A Developer";
+                opacity: 1;
+            }
+            15%{
+                opacity: 0;
+            }
+
+            40%{
+                content: "Elvish Walters";
+                opacity: 1;
+            }
+            55%{
+                opacity: 0;
+            }
+            70%{
+
+                content: "A Designer";
+                opacity: 1;
+            }
+             90%{
+                opacity: 0;
+            }
+        };
         .hero .icon{
             margin:0 20px;
         }
