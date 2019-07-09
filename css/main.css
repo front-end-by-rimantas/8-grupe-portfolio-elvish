@@ -158,7 +158,7 @@ body * {
 #container_hero{
     background:
     linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
-    url(../img/backgroundphoto.jpg);
+    url(../img/elvishas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -189,6 +189,35 @@ body * {
             width: 96%;
             margin:0 20px;
         }
+        .hero span:before{
+            content: "";
+            animation: animate infinite 20s;
+        }
+        @keyframes animate{
+            5%{
+                content: "A Developer";
+                opacity: 1;
+            }
+            15%{
+                opacity: 0;
+            }
+
+            40%{
+                content: "Elvish Walters";
+                opacity: 1;
+            }
+            55%{
+                opacity: 0;
+            }
+            70%{
+
+                content: "A Designer";
+                opacity: 1;
+            }
+             90%{
+                opacity: 0;
+            }
+        };
         .hero .icon{
             margin:0 20px;
         }
@@ -818,7 +847,22 @@ footer .row{
                 line-height: 20px;
                 padding: 20px;
             }
-  
+        #gallery_list .galleryBlock .blackside span{
+            position: absolute;
+            bottom: 30%;
+        }
+        .gallery .filter{
+            
+        margin:0;
+        width: 100%;
+        } 
+        .gallery .filter *{
+            padding: 20px;
+        }
+        .gallery .listClick:last-child{
+            
+            padding-left: 38px;
+        }
     /* Completed projects */
         #facts_list > .col {
             width: 48%;            
@@ -870,9 +914,12 @@ footer .row{
                 margin: 0;
                 
             }
-
-     /* Header */
-
+            #gallery_list .galleryBlock .blackside span{
+                position: absolute;
+                bottom: 20%;
+                font-size: 20px;
+            }
+    /* Header */
      #header nav {
         display: none;
         width: 100%;
@@ -968,8 +1015,8 @@ footer .row{
         }
     }
     
-    
-                body{ margin:0; font:normal 100% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+    body{ margin:0; font:normal 100% Arial, Helvetica, sans-serif; }  /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+
 
 
 

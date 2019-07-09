@@ -261,7 +261,7 @@ function generateGallery (data) {
 console.log(a);
  a.forEach(newLine => {
      
-HTML+=`<div  class= "listClick"> ${newLine}  </div>`
+HTML+=`<div  id = 'listCLick' class= "listClick"> ${newLine}  </div>`
      
  });
  HTML+='</div> <div class="list">'
@@ -345,11 +345,3 @@ function showTestimonial (value) {
     document.querySelector('.allTestimonials.active').classList.remove('active');
     document.querySelector('.allTestimonials[data-index="'+value.target.getAttribute('data-index')+'"]').classList.add('active');
 }
-function showAll (data) {
-    var all = document.getElementById('all');
-        all.classList.add("classAll");
-  }
-  function photo (data) {    
-    var allPhoto = document.querySelectorAll('.absolute > .galleryPhoto');
-    allPhoto.classList.add("classAll");
-  }
