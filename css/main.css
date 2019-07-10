@@ -343,7 +343,7 @@ body * {
             }
 
 /* about me */
-.container {
+/* .container {
     display: inline-block;
     width: 100%;
     padding: 80px 0;
@@ -353,7 +353,7 @@ body * {
         display: inline-block;
         width: 1200px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+    } */
         .container > .row > .about-me {
             display: inline-block;
             width: 100%;
