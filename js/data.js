@@ -44,7 +44,7 @@ var footerIcons = [
 
 var blogItems = [
 { 
-    image:'blog-1.jpg',
+    image:[{ img:'blog-1.jpg'}],
     heading:'There are many variations',
     topic: 'Lifestyle',
     date: '13 February 2018',
@@ -52,7 +52,7 @@ var blogItems = [
     link:'#',
 },
 { 
-    image:'blog-2.jpg',
+    image:[{ img:'blog-2.jpg'}],
     heading:'There are many variations',
     topic: 'Lifestyle',
     date: '13 February 2018',
@@ -60,9 +60,18 @@ var blogItems = [
     link:'#',
 },
 { 
-    image:'blog-3.jpg',
-    image1:'blog-4.jpg',
-    image2:'blog-5.jpg',
+    image:[
+        {
+           img: 'blog-3.jpg',
+        },
+        {
+            img: 'blog-4.jpg',
+        },
+        {
+            img: 'blog-5.jpg'
+        }
+        ],
+        
     heading:'There are many variations',
     topic: 'Lifestyle',
     date: '13 February 2018',

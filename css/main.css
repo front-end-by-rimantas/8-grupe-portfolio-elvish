@@ -706,6 +706,9 @@ body * {
         margin-top:10px;
         padding: 10px 5px 5px 5px;
     }
+    .blog #number0{
+        margin-left:-100%;
+    }
 /* Get in Touch */
 
 #contact.row > .address_info {

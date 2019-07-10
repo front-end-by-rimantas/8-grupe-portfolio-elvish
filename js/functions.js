@@ -83,11 +83,17 @@ function MobMenuIcon() {
 function generateBlog (data) {
 var HTML ='';
 for ( var i=0; i<data.length; i++ ) {
-    HTML=HTML+ `<div class="blog">
-    <div class="img" style="background-image: url(img//${data[i].image})" ></div>
-    <div class="img" style="background-image: url(img//${data[i].image1})"></div>
-    <div class="img" style="background-image: url(img//${data[i].image2})" ></div>
-    <h4>${data[i].heading}</h4>
+    
+    HTML=HTML+ `<div class="blog">`
+    if(data[i].image.length> 1){
+        for(var img0 = 0; img0< data[i].image.length; img0++){
+            console.log(data[i].image[img0].img)
+           HTML+= `<div class="img" id= "number${img0}" style="background-image: url(img//${data[i].image[img0].img} )" data-index="${img0}"></div>`
+        }
+    } else{
+        HTML+=`<div class="img" style="background-image: url(img//${data[i].image[0].img})" ></div>`
+    }
+    HTML+=`<h4>${data[i].heading}</h4>
     <h5>${data[i].topic}</h5>
     <span> ${data[i].date} <b>By Envato</b> </span>
     <p>${data[i].description}</p>
@@ -98,6 +104,7 @@ HTML
 }
 return HTML;
 }
+
 // services
 
 function generateServices( data ) {
