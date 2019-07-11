@@ -85,13 +85,19 @@ var HTML ='';
 for ( var i=0; i<data.length; i++ ) {
     
     HTML=HTML+ `<div class="blog">`
+    if(i==data.length-1){
+        HTML+=`<div class= "btns">
+                    <div class= "imgLeft" data-index="${i}"> < </div>
+                    <div class="imgRight"data-index="${i}"> > </div>
+                </div>`
+}
     if(data[i].image.length> 1){
         for(var img0 = 0; img0< data[i].image.length; img0++){
             console.log(data[i].image[img0].img)
-           HTML+= `<div class="img" id= "number${img0}" style="background-image: url(img//${data[i].image[img0].img} )" data-index="${img0}"></div>`
+           HTML+= ` <img  class="img threeImg id= "number${img0}" src="img//${data[i].image[img0].img}" data-index="${img0}">`
         }
     } else{
-        HTML+=`<div class="img" style="background-image: url(img//${data[i].image[0].img})" ></div>`
+        HTML+=` <img class="img" src="img//${data[i].image[0].img}" data-index="${img0}" >`
     }
     HTML+=`<h4>${data[i].heading}</h4>
     <h5>${data[i].topic}</h5>
@@ -99,12 +105,26 @@ for ( var i=0; i<data.length; i++ ) {
     <p>${data[i].description}</p>
     <a href="${data[i].link}">Read more...</a>
 </div>`;
-
-HTML
 }
 return HTML;
 }
 
+function btnsWork(data){
+//     var direction = '',
+//         listElement = document.querySelector('img .img threeImg'),
+//         current_index = parseInt( listElement.style.marginLeft ) / -100,
+//         next_index = 0;
+
+    
+//    if ( data.target.className.indexOf('.imgLeft')>= 1 ) {
+//     direction = -1;
+// }
+
+// document.querySelector('img.active').classList.remove('active');
+// document.querySelector('.active[data-index="'+ data.target.getAttribute('data-index')+'"]').classList.add('active');
+
+return;
+}
 // services
 
 function generateServices( data ) {

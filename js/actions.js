@@ -55,3 +55,9 @@ document.getElementById('gallery_list').innerHTML = generateGallery( gallery_ite
 document.querySelectorAll('#gallery_list .filter > div').forEach (filter =>{
     filter.addEventListener('click', filterWork)
 });
+
+
+
+var btns = document.querySelectorAll('.btns').forEach( item => {
+    item.addEventListener('click', btnsWork);
+});
