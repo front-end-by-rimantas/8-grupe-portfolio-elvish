@@ -93,14 +93,14 @@ body * {
         #header.transparent .logo {
             color: #FFF;
         }
-#header nav {
-    display: inline-block;
-    float: right;
-}
-#header .bars {
-    display: none;
-}
-        #header nav > a.active::after {
+    #header nav {
+        display: inline-block;
+        float: right;
+    }
+     #header .bars {
+        display: none;
+     }
+    #header nav > a.active::after {
             content: "";
             display: inline-block;
             width: 6px;
@@ -151,8 +151,6 @@ body * {
             #header.transparent nav > a:hover::after {
                 background-color: #FFF; 
             }
-        
-             
 
 /* hero */
 #container_hero{
@@ -942,7 +940,7 @@ footer .row{
         }
 
 /* Header */
-     #header nav {
+    #header nav {
         display: none;
         width: 100%;
     }
@@ -965,7 +963,6 @@ footer .row{
             margin-top: 10px;
             width: 26px;
         }
-
         #header .fa.fa-bars {
             display: inline-block;
             color: black;
@@ -1061,7 +1058,6 @@ footer .row{
         }
     }
     
-    /* body{ margin:0; font:normal 100% Arial, Helvetica, sans-serif; }   */
     /* ---- particles.js container ---- */ 
     #particles-js { 
         position:absolute; 
@@ -1102,7 +1098,3 @@ footer .row{
     .count-particles{ 
         border-radius: 0 0 3px 3px; 
     }
-
-
-
-
