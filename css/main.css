@@ -507,8 +507,6 @@ body * {
 }
     #education_list > .edu {
         display: inline-block;
-        height: 200px;
-        width: 400px;
         border: 1px solid #e7e7e7;
         border-radius: 8px;
         padding: 30px;
