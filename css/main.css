@@ -162,16 +162,25 @@ body * {
     background-size: cover;
     background-position: center;
 }
+
+#container_hero:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    background-size: 100% 100%;
+    background-image: url(../img/bottom-color.png);
+}
+
     .hero{
         display: inline-block;
         text-align: center;
         width: 100%;
-        /* width: 1000px;
-        margin: 0 calc( ( 100% - 1000px) / 2 ); */
         color:var(--white-color);
         margin-top: 180px;
         margin-bottom: 90px;
-        /* height: 300px; */
     }
         .hero h6{
             font-size: 20px;
@@ -185,35 +194,32 @@ body * {
             font-size: 80px;
             font-weight: lighter;
             padding: 20px;
-            width: 96%;
-            margin:0 20px;
+            width: 100%;
         }
         .hero span:before{
             content: "";
-            animation: animate infinite 20s;
+            animation: animate infinite 25s;
         }
         @keyframes animate{
-            5%{
+            0% {
+                content: "Elvish Walters";
+                opacity: 1;  
+            }
+            20% {
+                opacity: 0;
+            }
+            40% {
                 content: "A Developer";
                 opacity: 1;
             }
-            15%{
+            60% {
                 opacity: 0;
             }
-
-            40%{
-                content: "Elvish Walters";
-                opacity: 1;
-            }
-            55%{
-                opacity: 0;
-            }
-            70%{
-
+            80% {
                 content: "A Designer";
                 opacity: 1;
             }
-             90%{
+            100% {
                 opacity: 0;
             }
         };
@@ -360,12 +366,11 @@ body * {
             margin-bottom: 40px;
         }
         .container > .row > .hello {
-            /* display: inline-block; */
             font-family: 'Montserrat', sans-serif;
-            width: 90%;
+            width: 100%;
             text-align: center;
             font-size: 35px;
-            margin: 0px 45px 40px;
+            margin-bottom: 40px;
         }
             ul.inline-list {    
                 display: inline-block;  
@@ -419,7 +424,6 @@ body * {
     margin-top: 10px;
     padding: 20px;
     text-align: center;
-    /* border: 0.1px dotted; */
 }
     .service:nth-child(3n+1) {
         margin-left: 0;
@@ -474,7 +478,7 @@ body * {
         border-width: thin;
         height: 150px;
         width: 220px;
-        margin-left: 16px;
+        margin-left: 13px;
     }
     .col:first-child {
         margin-left: 0px;
@@ -504,8 +508,6 @@ body * {
 }
     #education_list > .edu {
         display: inline-block;
-        height: 200px;
-        width: 400px;
         border: 1px solid #e7e7e7;
         border-radius: 8px;
         padding: 30px;
@@ -553,7 +555,7 @@ body * {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
+    min-height: 300px;
     font-family: 'Courier New', Courier, monospace;
 }
 .container h2{
@@ -571,6 +573,7 @@ body * {
     position: absolute;
     color: white;
     width: 110px;
+    left: calc( ( 100% - 110px) / 2 );
 }
 .container div.button:hover{
     background-color: white;
@@ -626,10 +629,9 @@ body * {
         width: 0;
     }
     .newsletter input {
-        /* max-width: 550px; */
         width: 88%;
         margin: 0;
-        padding: 14px 160px 14px 30px;
+        padding: 14px 145px 14px 30px;
         font-size: 17px;
         line-height: 0;
         color: var(--input-color);
@@ -641,6 +643,7 @@ body * {
         position: absolute;
         right: 7%;
         top: 0;
+        width: 120px;
     }
 
 /* Blog */
@@ -769,8 +772,6 @@ body * {
         border-radius: 5px;
     }
 
-
-
 /* footer */
 footer {
     display: inline-block;
@@ -821,7 +822,6 @@ footer .row{
 
 /* Back-to-top button */
 
-
 .back_top {
     text-align: center;
     position: fixed;
@@ -847,31 +847,36 @@ footer .row{
 /* Responsive design */
 /* Basic structure */
 
-    @media ( max-width: 1300px ) {
-        .container > .row {
-            width: 1000px;
-            margin: 0 calc((100% - 1000px) / 2);
-        }
+@media ( max-width: 1300px ) {
+    .container > .row {
+        width: 980px;
+        margin: 0 calc((100% - 980px) / 2);
+    }
         
-        /* greatpeople*/
+/* greatpeople*/
         .line{
         width: 750px;
         margin: 0 calc(( 100% - 750px ) / 2 );
         }
         #line{
-            /* display: grid; */
             grid-template-columns: repeat(3, 170px);
             grid-auto-rows: 100px;
             grid-row-gap: 20px;
             grid-column-gap: 120px;
         }
-    }
+}
 
-    @media ( max-width: 1000px ) {
-        .container > .row {
-            width: 800px;
-            margin: 0 calc((100% - 800px) / 2);
-        }
+@media ( max-width: 1000px ) {
+    .container > .row {
+        width: 780px;
+        margin: 0 calc((100% - 780px) / 2);
+    }
+/* header */    
+    #header nav > a {
+        margin: 0;
+    }
+/* services */
+
         .service {
             width: 50%;
             margin: 0;
@@ -880,23 +885,8 @@ footer .row{
                 line-height: 20px;
                 padding: 20px;
             }
-        #gallery_list .galleryBlock .blackside span{
-            position: absolute;
-            bottom: 30%;
-        }
-        .gallery .filter{
-            
-        margin:0;
-        width: 100%;
-        } 
-        .gallery .filter *{
-            padding: 20px;
-        }
-        .gallery .listClick:last-child{
-            
-            padding-left: 38px;
-        }
-    /* Completed projects */
+
+/* Completed projects */
         #facts_list > .col {
             width: 48%;            
         }
@@ -904,11 +894,10 @@ footer .row{
                 margin-left: 0px;
             }
             #facts_list > .col:nth-child(3), .col:nth-child(4) {
-                margin-top: 16px;
+                margin-top: 13px;
             }
 
-    /* Education and Experience */
-    
+/* Education and Experience */
         #education_list {
             grid-template-areas: ".";
             grid-template-columns: 1fr;
@@ -916,13 +905,29 @@ footer .row{
             #education_list > .edu {
                 width: 100%;
             }
+            
+/* Our Works */
+        #gallery_list .list {
+            grid-template-areas: ". .";
+            grid-template-columns: 1fr 1fr;
+        }
 
-    /* Our blog */
+        #gallery_list .galleryBlock .blackside span{
+            position: absolute;
+            bottom: 30%;
+        }
+        .gallery .filter {
+        margin: 20px 0px;
+        width: 100%;
+        text-align: center;
+        } 
+        
+/* Our blog */
         .blog {
             width: 100%;
         }
 
-    /* Get in touch */
+/* Get in touch */
         #contact.row > .address_info {
             width: 100%;
             margin-bottom: 20px;
@@ -933,26 +938,21 @@ footer .row{
         .col-6 {
             width: 100%;
         }
+}
+
+/* Basic structure */
+
+@media ( max-width: 800px ) {
+    .container {
+        padding: 80px 20px;
     }
-
-   /* Basic structure */
-
-    @media ( max-width: 800px ) {
-        .container {
-            padding: 80px 20px;
+        .container > .row {
+            width: 100%;
+            margin: 0;
         }
-            .container > .row {
-                width: 100%;
-                margin: 0;
-            }
-            #gallery_list .galleryBlock .blackside span{
-                position: absolute;
-                bottom: 20%;
-                font-size: 20px;
-            }
 
-      /* Header */     
-      #header nav {
+/* Header */
+    #header nav {
         display: none;
         width: 100%;
     }
@@ -965,13 +965,13 @@ footer .row{
         #header nav > a {
             display: inline-block;
         }
-        #header nav > a:first-child {
+        /* #header nav > a:first-child {
             margin: 0 0 0 20px;
-        }
+        } */
         #header .bars {
             display: inline-block;
             float: right;
-            margin-right: 65px;
+            margin-right: 40px;
             margin-top: 10px;
             width: 26px;
         }
@@ -985,9 +985,11 @@ footer .row{
             #header.transparent .bars {
                 background-color: #FFF;
             }
-      
-      /* About me */
-
+        .hero h5 {
+            font-size: 40px;
+        }
+         
+/* About me */
                 .container > .row > .left {
                     width: 100%;
                 }
@@ -997,45 +999,74 @@ footer .row{
                 }
 
 /* Our services */
-    
                 .service {
                     width: 100%;
                     margin: 0;
                 }
         
 /* Completed Projects */
-
             #facts_list > .col {
                 width: 100%;
-                margin-top: 10px;
+                margin-top: 13px;
                 margin-left: 0px;
             }
                 .col:first-child {
                     margin-top: 0px;
                 }
+/* Our Works */
+
+    .gallery .filter * {
+        padding: 20px;
+    }
+
+    #gallery_list .list {
+        grid-template-areas: ".";
+        grid-template-columns: auto;
+        width: 80%;
+        margin: 10%;
+    }
+            #gallery_list .galleryBlock .blackside span{
+                position: absolute;
+                bottom: 20%;
+                font-size: 20px;
+            }
 /* greatpeople*/
         .line{
             width: 500px;
             margin: 0 calc(( 100% - 500px ) / 2 );
             }
-            #line{
-                /* display: grid; */
-                grid-template-columns: repeat(2, 170px);
-                grid-auto-rows: 100px;
-                grid-row-gap: 30px;
-                grid-column-gap: 120px;
-            }
-    }
+        #line{
+            /* display: grid; */
+            grid-template-columns: repeat(2, 170px);
+            grid-auto-rows: 100px;
+            grid-row-gap: 30px;
+            grid-column-gap: 120px;
+        }
+}
 /* Basic structure */
 
-    @media ( max-width: 600px ) {
-        .container {
-            padding: 80px 20px;
+@media ( max-width: 600px ) {
+    .container {
+        padding: 80px 20px;
+    }
+        .container > .row {
+            width: 100%;
+            margin: 0;
         }
-            .container > .row {
-                width: 100%;
-                margin: 0;
-            }
+/* hero */
+        .hero {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+/* headings */
+        h3 {
+            line-height: 40px;    
+        }
+/* Our Works */
+
+    .gallery .filter * {
+        padding: 10px;
+    }
 /* greatpeople*/
         .line {
             width: 170px;
@@ -1046,5 +1077,11 @@ footer .row{
         }
     }
     
-    #particles-js{ position:absolute; width: 80%; height: 100%; background-repeat: no-repeat;
-     background-size: cover; background-position: 50% 50%; } 
+#particles-js{ 
+  position:absolute; 
+  width: 80%; 
+  height: 100%; 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: 50% 50%; 
+} 
