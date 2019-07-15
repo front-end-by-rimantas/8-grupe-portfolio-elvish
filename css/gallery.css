@@ -2,10 +2,9 @@
 #gallery_list .list {
     display: grid;
     width: 100%;
-    grid-template-areas:
-     ". . .";
+    grid-template-areas:    ". . .";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     grid-gap: 30px;
     place-items: start; 
 }

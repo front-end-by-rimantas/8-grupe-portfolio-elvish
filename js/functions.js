@@ -77,24 +77,72 @@ function MobMenuIcon() {
     }
   }
 
-
 // Ourblog
 
 function generateBlog (data) {
 var HTML ='';
 for ( var i=0; i<data.length; i++ ) {
-    HTML=HTML+ `<div class="blog">
-    <div class="img" style="background-image: url(img/${data[i].image});"></div>
-    <h4>${data[i].heading}</h4>
+    
+    
+    HTML=HTML+ `<div class="blog " data-index"${i}>`
+    if(i==data.length-1){
+        HTML+=`<div class= "btns">
+                    <div class= "imgLeft" > < </div>
+                    <div class="imgRight"> > </div>
+                </div>`
+}
+if(i==data.length-2){
+    HTML+='<div class = "video"> </div>'
+}
+if(i==data.length-1){
+    HTML+='<div class = "block3">'
+}
+    if(data[i].image.length> 1){
+        for(var img0 = 0; img0< data[i].image.length; img0++){
+            console.log(data[i].image[img0].img)
+           HTML+= ` <img  class=" img allThreeImg  ${img0===0 ? 'active': ''}" data-index = "${img0}" id= "number${img0}" src="img//${data[i].image[img0].img}" data-index="${img0}">`
+        } 
+    } else{
+        HTML+=` <img class="img" src="img//${data[i].image[0].img}" data-index="${img0}" >`
+    }
+    HTML+=`<h4>${data[i].heading}</h4>
     <h5>${data[i].topic}</h5>
     <span> ${data[i].date} <b>By Envato</b> </span>
     <p>${data[i].description}</p>
     <a href="${data[i].link}">Read more...</a>
+</div>
 </div>`;
 
-HTML
 }
 return HTML;
+}
+
+function showImg (value) {
+    var direction ='',
+    current_index= parseInt(document.querySelector('.allThreeImg.active').getAttribute('data-index')),
+    next_index = 0;
+
+    if(value.target.className.indexOf('imgLeft') >= 0) {
+    direction= -1;
+}
+    if(value.target.className.indexOf('imgRight') !== -1) {
+    direction= 1;
+}
+    next_index = current_index + direction;
+
+    if(current_index === 0 && direction === -1 ){
+    next_index=document.querySelectorAll('.allThreeImg').length-1;
+    }
+
+    if(current_index === (document.querySelectorAll('.allThreeImg').length - 1 ) && direction === 1 ){
+    next_index = 0;
+    }
+    
+    
+    document.querySelector('.allThreeImg.active').classList.remove('active');
+    document.querySelector('.allThreeImg[data-index="'+next_index+'"]').classList.add('active');
+    
+return;
 }
 // services
 

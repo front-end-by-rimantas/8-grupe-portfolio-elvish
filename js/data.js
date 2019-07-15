@@ -44,7 +44,7 @@ var footerIcons = [
 
 var blogItems = [
 { 
-    image:'blog1.jpeg',
+    image:[{ img:'blog-1.jpg'}],
     heading:'There are many variations',
     topic: 'Lifestyle',
     date: '13 February 2018',
@@ -52,7 +52,7 @@ var blogItems = [
     link:'#',
 },
 { 
-    image:'blog1.jpeg',
+    image:[{ img:'blog-2.jpg'}],
     heading:'There are many variations',
     topic: 'Lifestyle',
     date: '13 February 2018',
@@ -60,7 +60,18 @@ var blogItems = [
     link:'#',
 },
 { 
-    image:'blog1.jpeg',
+    image:[
+        {
+           img: 'blog-3.jpg',
+        },
+        {
+            img: 'blog-4.jpg',
+        },
+        {
+            img: 'blog-5.jpg'
+        }
+        ],
+        
     heading:'There are many variations',
     topic: 'Lifestyle',
     date: '13 February 2018',
@@ -68,6 +79,7 @@ var blogItems = [
     link:'#',
 }
 ];
+
 // services
 
 var services = [
@@ -327,7 +339,7 @@ var gallery_items =[
     galleryPhoto:'1.jpg',
     topic:'Category',
     title:'Project title',
-    tag:[ 'Work','Wordpress'],
+    tag:[ 'Work'],
 },
 {
     galleryPhoto:'2.jpg',
@@ -345,13 +357,13 @@ var gallery_items =[
     galleryPhoto:'4.jpg',
     topic:'Category',
     title:'Project title',
-    tag:['Work', 'Wordpress'],
+    tag:['Webdesign', 'Wordpress'],
 },
 {
     galleryPhoto:'5.jpg',
     topic:'Category',
     title:'Project title',
-    tag: ['Seo', 'Webdesign'],
+    tag: ['Seo', 'Webdesign', 'Work', 'Wordpress'],
 },
 {
     galleryPhoto:'6.jpg',
