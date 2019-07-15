@@ -661,6 +661,18 @@ body * {
     height: 100%;
     position: relative;
 }
+.blog .block3{
+    display: inline-block;
+    width: 100%;
+}
+.allThreeImg{
+    display: none;
+    width: 100%;
+}
+
+.allThreeImg.img.active{
+    display: inline-block;
+}
 .blog {
     display: inline-block;
     text-align: center;
@@ -672,21 +684,19 @@ body * {
     background-color: #FFF;
     border-radius: 8px;
     box-shadow: 0 4px 8px #CCC;
-    overflow: hidden;
     position: relative;
 }
         .blog  .img {
-            padding: 5px;
             width: 100%;
-            position: relative;
+            border-radius: 4%;
         }
-        .blog > h4{
+        .blog h4{
             padding: 10px;
         }
-        .blog > h5 {
+        .blog h5 {
             padding: 10px;
         }
-        .blog > p{
+        .blog p{
             padding: 20px  5px 20px  5px;
         }
         .blog .p {
@@ -701,37 +711,29 @@ body * {
             margin-top:10px;
             padding: 10px 5px 5px 5px;
         }
-        #number0{
-            display: inline-block;
-
-        }
         .btns{
             display: inline-block;
             position: absolute;
-            top:10%;
+            top:100px;
             left: 10%;
             color: #fff;
             width: 80%;
-            /* margin: 0 5px 0 5px; */
             height: 50px;
             z-index: 5;
+            font-size: 25px; 
+            font-family: 'Courier New', Courier, monospace; 
         }
             div> .imgLeft{
                 display: inline-block;
                 float: left;
                 height: 100%;
-                font-size: 45px;
                 cursor: pointer;
             }
             div> .imgRight{
                 display: inline-block;
                 height: 100%;
                 float: right;
-                font-size: 45px; 
                 cursor: pointer;
-            }
-            .threeImg .active{
-                display: inline-block;
             }
 /* Get in Touch */
 
