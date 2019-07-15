@@ -4,7 +4,6 @@ body * {
     padding: 0;
     vertical-align: top;
     box-sizing: border-box;
-    word-break: break-all;
 }
 
 /* colors classes */
@@ -1079,8 +1078,9 @@ footer .row{
     
 #particles-js{ 
   position:absolute; 
-  width: 80%; 
-  height: 100%; 
+  width: 100%; 
+  height: 100%;
+  left: 0;
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: 50% 50%; 
