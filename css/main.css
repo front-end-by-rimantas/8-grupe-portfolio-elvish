@@ -875,19 +875,12 @@ footer .row{
             position: absolute;
             bottom: 30%;
         }
-        .gallery .filter{
-            
-        margin:0;
+        .gallery .filter {
+        margin: 20px 0px;
         width: 100%;
+        text-align: center;
         } 
-        .gallery .filter *{
-            padding: 20px;
-        }
-        .gallery .listClick:last-child{
-            
-            padding-left: 38px;
-        }
-
+        
 /* Our blog */
         .blog {
             width: 100%;
@@ -931,9 +924,9 @@ footer .row{
         #header nav > a {
             display: inline-block;
         }
-        #header nav > a:first-child {
+        /* #header nav > a:first-child {
             margin: 0 0 0 20px;
-        }
+        } */
         #header .bars {
             display: inline-block;
             float: right;
@@ -981,12 +974,10 @@ footer .row{
                 }
 /* Our Works */
 
-    .gallery .filter {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+    .gallery .filter * {
+        padding: 20px;
     }
+
     #gallery_list .list {
         grid-template-areas: ".";
         grid-template-columns: auto;
@@ -1030,6 +1021,11 @@ footer .row{
         h3 {
             line-height: 40px;    
         }
+/* Our Works */
+
+    .gallery .filter * {
+        padding: 10px;
+    }
 /* greatpeople*/
         .line {
             width: 170px;
