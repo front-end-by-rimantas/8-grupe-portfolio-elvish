@@ -83,19 +83,64 @@ function MobMenuIcon() {
 function generateBlog (data) {
 var HTML ='';
 for ( var i=0; i<data.length; i++ ) {
-    HTML=HTML+ `<div class="blog">
-    <div class="img" style="background-image: url(img/${data[i].image});"></div>
-    <h4>${data[i].heading}</h4>
+    
+    HTML=HTML+ `<div class="blog ">`
+    if(i==data.length-1){
+        HTML+=`<div class= "btns">
+                    <div class= "imgLeft" > < </div>
+                    <div class="imgRight"> > </div>
+                </div>`
+}
+if(i==data.length-1){
+    HTML+='<div class = "block3">'
+}
+    if(data[i].image.length> 1){
+        for(var img0 = 0; img0< data[i].image.length; img0++){
+            console.log(data[i].image[img0].img)
+           HTML+= ` <img  class=" allThreeImg img ${img0===0 ? 'active': ''}" data-index = "${img0}" id= "number${img0}" src="img//${data[i].image[img0].img}" data-index="${img0}">`
+        } 
+    } else{
+        HTML+=` <img class="img" src="img//${data[i].image[0].img}" data-index="${img0}" >`
+    }
+    HTML+=`<h4>${data[i].heading}</h4>
     <h5>${data[i].topic}</h5>
     <span> ${data[i].date} <b>By Envato</b> </span>
     <p>${data[i].description}</p>
     <a href="${data[i].link}">Read more...</a>
+</div>
 </div>`;
 
-HTML
 }
 return HTML;
 }
+
+function showImg (value) {
+    var direction ='',
+    currentIndex= parseInt(document.querySelector('.allThreeImg').getAttribute('data-index')),
+    nextIndex = 0;
+
+    if(value.target.className.indexOf('imgLeft') >= 0) {
+    direction= -1;
+}
+    if(value.target.className.indexOf('imgRight') !== -1) {
+    direction= 1;
+}
+    nextIndex = currentIndex + direction;
+
+    if(currentIndex === 0 && direction === -1 ){
+    nextIndex=document.querySelectorAll('.allThreeImg').length-1
+    }
+
+    if(currentIndex === (document.querySelectorAll('.allThreeImg').length-1) && direction === 1 ){
+    nextIndex = 0;
+    }
+    
+    document.querySelector('.allThreeImg.img.active').classList.remove('active');
+    document.querySelector('.allThreeImg.img[data-index= "'+nextIndex+'"]').classList.add('active');
+    
+return;
+}
+
 // services
 
 function generateServices( data ) {
