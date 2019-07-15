@@ -77,19 +77,22 @@ function MobMenuIcon() {
     }
   }
 
-
 // Ourblog
 
 function generateBlog (data) {
 var HTML ='';
 for ( var i=0; i<data.length; i++ ) {
     
-    HTML=HTML+ `<div class="blog ">`
+    
+    HTML=HTML+ `<div class="blog " data-index"${i}>`
     if(i==data.length-1){
         HTML+=`<div class= "btns">
                     <div class= "imgLeft" > < </div>
                     <div class="imgRight"> > </div>
                 </div>`
+}
+if(i==data.length-2){
+    HTML+='<div class = "video"> </div>'
 }
 if(i==data.length-1){
     HTML+='<div class = "block3">'
@@ -97,7 +100,7 @@ if(i==data.length-1){
     if(data[i].image.length> 1){
         for(var img0 = 0; img0< data[i].image.length; img0++){
             console.log(data[i].image[img0].img)
-           HTML+= ` <img  class=" allThreeImg img ${img0===0 ? 'active': ''}" data-index = "${img0}" id= "number${img0}" src="img//${data[i].image[img0].img}" data-index="${img0}">`
+           HTML+= ` <img  class=" img allThreeImg  ${img0===0 ? 'active': ''}" data-index = "${img0}" id= "number${img0}" src="img//${data[i].image[img0].img}" data-index="${img0}">`
         } 
     } else{
         HTML+=` <img class="img" src="img//${data[i].image[0].img}" data-index="${img0}" >`
@@ -116,8 +119,8 @@ return HTML;
 
 function showImg (value) {
     var direction ='',
-    currentIndex= parseInt(document.querySelector('.allThreeImg').getAttribute('data-index')),
-    nextIndex = 0;
+    current_index= parseInt(document.querySelector('.allThreeImg.active').getAttribute('data-index')),
+    next_index = 0;
 
     if(value.target.className.indexOf('imgLeft') >= 0) {
     direction= -1;
@@ -125,22 +128,22 @@ function showImg (value) {
     if(value.target.className.indexOf('imgRight') !== -1) {
     direction= 1;
 }
-    nextIndex = currentIndex + direction;
+    next_index = current_index + direction;
 
-    if(currentIndex === 0 && direction === -1 ){
-    nextIndex=document.querySelectorAll('.allThreeImg').length-1
+    if(current_index === 0 && direction === -1 ){
+    next_index=document.querySelectorAll('.allThreeImg').length-1;
     }
 
-    if(currentIndex === (document.querySelectorAll('.allThreeImg').length-1) && direction === 1 ){
-    nextIndex = 0;
+    if(current_index === (document.querySelectorAll('.allThreeImg').length - 1 ) && direction === 1 ){
+    next_index = 0;
     }
     
-    document.querySelector('.allThreeImg.img.active').classList.remove('active');
-    document.querySelector('.allThreeImg.img[data-index= "'+nextIndex+'"]').classList.add('active');
+    
+    document.querySelector('.allThreeImg.active').classList.remove('active');
+    document.querySelector('.allThreeImg[data-index="'+next_index+'"]').classList.add('active');
     
 return;
 }
-
 // services
 
 function generateServices( data ) {
