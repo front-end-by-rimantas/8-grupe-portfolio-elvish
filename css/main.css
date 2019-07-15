@@ -554,7 +554,7 @@ body * {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
+    min-height: 300px;
     font-family: 'Courier New', Courier, monospace;
 }
 .container h2{
