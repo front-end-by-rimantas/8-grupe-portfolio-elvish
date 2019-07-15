@@ -160,15 +160,12 @@ body * {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* height: 100vh; */
 }
 
 #container_hero:after {
     content: "";
     position: absolute;
-    /* bottom: -40px; */
     left: 0;
-    /* z-index: 1; */
     width: 100%;
     height: 100px;
     background: transparent;
@@ -180,12 +177,9 @@ body * {
         display: inline-block;
         text-align: center;
         width: 100%;
-        /* width: 1000px;
-        margin: 0 calc( ( 100% - 1000px) / 2 ); */
         color:var(--white-color);
         margin-top: 180px;
         margin-bottom: 90px;
-        /* height: 300px; */
     }
         .hero h6{
             font-size: 20px;
@@ -200,7 +194,6 @@ body * {
             font-weight: lighter;
             padding: 20px;
             width: 100%;
-            /* margin:0 20px; */
         }
         .hero span:before{
             content: "";
@@ -372,7 +365,6 @@ body * {
             margin-bottom: 40px;
         }
         .container > .row > .hello {
-            /* display: inline-block; */
             font-family: 'Montserrat', sans-serif;
             width: 100%;
             text-align: center;
@@ -431,7 +423,6 @@ body * {
     margin-top: 10px;
     padding: 20px;
     text-align: center;
-    /* border: 0.1px dotted; */
 }
     .service:nth-child(3n+1) {
         margin-left: 0;
@@ -637,7 +628,6 @@ body * {
         width: 0;
     }
     .newsletter input {
-        /* max-width: 550px; */
         width: 88%;
         margin: 0;
         padding: 14px 145px 14px 30px;
@@ -681,14 +671,6 @@ body * {
     overflow: hidden;
     position: relative;
 }
-    /* .blog:nth-child(3n+1) {
-        margin-left: 0;
-    }
-    .blog:nth-child(1),
-    .blog:nth-child(2),
-    .blog:nth-child(3) {
-        margin-top: 0;
-    } */
     .blog > .img {
         height: 300px;
         height: 200px;
@@ -799,7 +781,6 @@ footer .row{
 
 /* Back-to-top button */
 
-
 .back_top {
     text-align: center;
     position: fixed;
@@ -837,7 +818,6 @@ footer .row{
         margin: 0 calc(( 100% - 750px ) / 2 );
         }
         #line{
-            /* display: grid; */
             grid-template-columns: repeat(3, 170px);
             grid-auto-rows: 100px;
             grid-row-gap: 20px;
@@ -1056,7 +1036,7 @@ footer .row{
         }
     }
     
-    /* ---- particles.js container ---- */ 
+/* ---- particles.js container ---- */ 
     #particles-js { 
         position:absolute; 
         width: 100%; 
@@ -1066,7 +1046,7 @@ footer .row{
         background-position: 50% 50%;
         left: 0;
     } 
-    /* ---- stats.js ---- */ 
+/* ---- stats.js ---- */ 
     .count-particles{ 
         background: #000022; 
         position: absolute; 
