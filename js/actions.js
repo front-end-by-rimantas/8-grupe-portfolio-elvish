@@ -13,6 +13,12 @@ document.getElementById('hero_icons').innerHTML = generateIcons( heroIcons );
 document.getElementById('footer_icons').innerHTML = generateIcons( footerIcons );
 document.getElementById('blog_items').innerHTML = generateBlog ( blogItems );
 
+var leftBtn = document.querySelector('#blog_items .blog .imgLeft'),
+ rightBtn = document.querySelector('#blog_items .blog .imgRight');
+
+ leftBtn.addEventListener('click', showImg);
+ rightBtn.addEventListener('click', showImg);
+
 // services
 
 document.getElementById('services-list').innerHTML = generateServices( services );
@@ -31,7 +37,6 @@ var testimonials = document.querySelectorAll('.dotsBlock > .dots').forEach( item
     item.addEventListener('click', showTestimonial);
 });
 
-// testimonialsData0.addEventListener( 'click', showTestimonials0);
 
 // get in touch 
 
@@ -56,7 +61,6 @@ document.querySelectorAll('#gallery_list .filter > div').forEach (filter =>{
     filter.addEventListener('click', filterWork)
 });
 
-
 // our blog lightbox
 document.querySelector('#blog h3').addEventListener('click', showLightbox);
 document.querySelector('.lightbox > .background').addEventListener('click', hideLightbox);
@@ -71,3 +75,4 @@ function hideLightbox() {
     document.querySelector('.lightbox').classList.remove('active');
     document.querySelector('.lightbox .content').innerHTML = '';
 }
+
