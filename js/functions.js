@@ -92,11 +92,9 @@ for ( var i=0; i<data.length; i++ ) {
                 </div>`
 }
 if(i==data.length-2){
-    HTML+=`<div class = "video"> 
-                <div class = "roundBtn"data-youtube="RtwlLiz9Kio">
+    HTML+=`<div class = "roundBtn"data-youtube="RtwlLiz9Kio">
                     <i class="fa fa-caret-right" data-youtube="RtwlLiz9Kio"></i>
-                </div>
-            </div>`
+                </div>`
 }
 if(i==data.length-1){
     HTML+=`<div class = "block3">`
