@@ -32,3 +32,15 @@
     color: black;
     border: 2px solid black;
 }
+    .video .roundBtn{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: inline-block;
+        position:absolute;
+        top: 80px;
+        left: 150px;
+        z-index: 1;
+        cursor: pointer;
+    }

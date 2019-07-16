@@ -62,7 +62,7 @@ document.querySelectorAll('#gallery_list .filter > div').forEach (filter =>{
 });
 
 // our blog lightbox
-document.querySelector('#blog h3').addEventListener('click', showLightbox);
+document.querySelector('.video .roundBtn').addEventListener('click', showLightbox);
 document.querySelector('.lightbox > .background').addEventListener('click', hideLightbox);
 
 function showLightbox( event ) {

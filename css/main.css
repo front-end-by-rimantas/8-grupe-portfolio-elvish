@@ -737,6 +737,14 @@ body * {
                 float: right;
                 cursor: pointer;
             }
+            .fa-caret-right{
+                color: black;
+                display: inline-block;
+            }
+            i.fa{
+                font-size: 30px;
+                text-align: center;
+            }
 /* Get in Touch */
 
 #contact.row > .address_info {
