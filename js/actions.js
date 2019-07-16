@@ -13,6 +13,12 @@ document.getElementById('hero_icons').innerHTML = generateIcons( heroIcons );
 document.getElementById('footer_icons').innerHTML = generateIcons( footerIcons );
 document.getElementById('blog_items').innerHTML = generateBlog ( blogItems );
 
+var leftBtn = document.querySelector('#blog_items .blog .imgLeft'),
+ rightBtn = document.querySelector('#blog_items .blog .imgRight');
+
+ leftBtn.addEventListener('click', showImg);
+ rightBtn.addEventListener('click', showImg);
+
 // services
 
 document.getElementById('services-list').innerHTML = generateServices( services );
@@ -55,9 +61,18 @@ document.querySelectorAll('#gallery_list .filter > div').forEach (filter =>{
     filter.addEventListener('click', filterWork)
 });
 
+// our blog lightbox
+document.querySelector('#blog h3').addEventListener('click', showLightbox);
+document.querySelector('.lightbox > .background').addEventListener('click', hideLightbox);
 
-var leftBtn = document.querySelector('#blog_items .blog .imgLeft'),
- rightBtn = document.querySelector('#blog_items .blog .imgRight');
+function showLightbox( event ) {
+    document.querySelector('.lightbox').classList.add('active');
+    let video = event.target.getAttribute('data-youtube');
+    document.querySelector('.lightbox .content').innerHTML = `<iframe src="https://www.youtube.com/embed/${video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+}
 
- leftBtn.addEventListener('click', showImg);
- rightBtn.addEventListener('click', showImg);
+function hideLightbox() {
+    document.querySelector('.lightbox').classList.remove('active');
+    document.querySelector('.lightbox .content').innerHTML = '';
+}
+
