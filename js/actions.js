@@ -51,7 +51,9 @@ document.getElementById('education_list').innerHTML = generateEducation( educati
 
 document.getElementById('gallery_list').innerHTML = generateGallery( gallery_items);
 
-
+document.querySelectorAll('#gallery_list .filter > div').forEach (filter =>{
+    filter.addEventListener('click', filterWork)
+});
 
 
 var leftBtn = document.querySelector('#blog_items .blog .imgLeft'),
