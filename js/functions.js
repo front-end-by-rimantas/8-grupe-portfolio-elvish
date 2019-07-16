@@ -291,6 +291,8 @@ function generateEducation( data ) {
     });
         return HTML;
 }
+
+
 //ourWork
 function generateGallery (data) {
     var HTML ='<div class="filter"><div class = "listCLick" "active" id = "all" >ALL </div>';
@@ -369,6 +371,7 @@ function filterWork( event ) {
 
 }
     console.log(gallery_items)
+
 
 //ourClient
 function generateTestimonials( data ) {

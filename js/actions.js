@@ -12,6 +12,12 @@ window.addEventListener("scroll", function(){
 document.getElementById('hero_icons').innerHTML = generateIcons( heroIcons );
 document.getElementById('footer_icons').innerHTML = generateIcons( footerIcons );
 document.getElementById('blog_items').innerHTML = generateBlog ( blogItems );
+var leftBtn = document.querySelector('#blog_items .blog .imgLeft'),
+ rightBtn = document.querySelector('#blog_items .blog .imgRight');
+
+ leftBtn.addEventListener('click', showImg);
+ rightBtn.addEventListener('click', showImg);
+
 
 var leftBtn = document.querySelector('#blog_items .blog .imgLeft'),
  rightBtn = document.querySelector('#blog_items .blog .imgRight');
