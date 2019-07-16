@@ -737,6 +737,14 @@ body * {
                 float: right;
                 cursor: pointer;
             }
+            .fa-caret-right{
+                color: black;
+                display: inline-block;
+            }
+            i.fa{
+                font-size: 30px;
+                text-align: center;
+            }
 /* Get in Touch */
 
 #contact.row > .address_info {
@@ -1075,7 +1083,40 @@ footer .row{
             grid-template-columns: repeat(1, 170px);
         }
     }
-    
+
+    /* lightbox */
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99;
+        }
+            .lightbox.active {
+                display: inline-block;
+            }
+            .lightbox > .background {
+                display: inline-block;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .lightbox > .content {
+                display: inline-block;
+                width: 50%;
+                height: 50vh;
+                margin-top: -75vh;
+                margin-left: 25%;
+                background-color: #FFF
+            }
+                .lightbox > .content > * {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
 
 #particles-js{ 
   position:absolute; 
@@ -1085,4 +1126,4 @@ footer .row{
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: 50% 50%; 
-} 
+}
