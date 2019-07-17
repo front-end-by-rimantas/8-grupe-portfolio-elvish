@@ -177,6 +177,8 @@ function generateFacts( data ) {
 
 function animatedCounter (id, end) {
     var obj = document.getElementById(id),
+        scroller = window.scrollY + (window.innerHeight),
+        factsBorder = document.getElementById('facts').offsetTop,    
         start = 0,
         current = start,
         duration = 3000,        // ms
@@ -185,15 +187,17 @@ function animatedCounter (id, end) {
         timer;
             
             if(obj.textContent == 0) {
-                timer = setInterval(() => {  
-                    current += increment;
-                    obj.textContent = Math.floor(current);
+                if (scroller > factsBorder) {
+                    timer = setInterval(() => {  
+                        current += increment;
+                        obj.textContent = Math.floor(current);
         
-                    if (current >= end) {
-                        obj.textContent = end;
-                        clearInterval(timer);        // stops the execution of timer
-                    }
-                }, duration / stepping );  
+                        if (current >= end) {
+                            obj.textContent = end;
+                            clearInterval(timer);        // stops the execution of timer
+                        }
+                    }, duration / stepping );
+                }  
             }
     return;
 }
