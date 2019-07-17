@@ -37,10 +37,11 @@
         height: 70px;
         border-radius: 50%;
         background-color: #fff;
-        display: inline-block;
+        display: flex;
         position:absolute;
-        top: 80px;
-        left: 150px;
+        top: 16%;
+        left: 40%;
+        justify-content: center;
         z-index: 1;
         cursor: pointer;
     }
