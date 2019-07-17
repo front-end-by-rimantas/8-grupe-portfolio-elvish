@@ -992,11 +992,10 @@ footer .row{
             display: inline-block;
             color: black;
             font-size: 30px;
-            margin-right: 40px;
             margin-top: 0px;
         }
-            #header.transparent .bars {
-                background-color: #FFF;
+            #header.transparent .fa.fa-bars {
+                color: #FFF;
             }
         .hero h5 {
             font-size: 40px;
